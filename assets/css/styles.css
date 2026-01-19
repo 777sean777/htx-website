@@ -1,10 +1,10 @@
 /* RESET & VARIABLES */
 :root {
-    --c-bg: #F9F9F7;            /* 大地色系：米白/紙張白 */
-    --c-text-main: #2D2D2D;     /* 石墨灰 */
-    --c-text-muted: #666666;    /* 淺灰 */
-    --c-border: #E0E0E0;        /* 鋁合金灰 */
-    --c-accent: #4A5568;        /* 冷灰藍 */
+    --c-bg: #F9F9F7;            
+    --c-text-main: #2D2D2D;     
+    --c-text-muted: #666666;    
+    --c-border: #E0E0E0;        
+    --c-accent: #4A5568;        
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -29,7 +29,7 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
 .lang-switch a { margin-left: 10px; color: #999; }
 .lang-switch a.active { color: var(--c-text-main); font-weight: bold; }
 
-/* HERO SECTIONS (內頁橫幅) */
+/* HERO SECTIONS */
 .page-hero {
     padding: 6rem 2rem;
     background-size: cover;
@@ -48,21 +48,19 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
 .page-hero h1 { font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
 .page-hero p { color: #f0f0f0; max-width: 600px; font-size: 1.1rem; text-shadow: 0 2px 8px rgba(0,0,0,0.6); font-weight: 500; }
 
-/* HOME SPLIT SCREEN (首頁分流) */
+/* HOME SPLIT SCREEN */
 .split-screen { display: flex; height: calc(100vh - 80px); width: 100%; }
 .split-panel {
     flex: 1;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     text-align: center; padding: 2rem;
     background-size: cover;
-    /* 移除這裡的預設 center，改在 html 裡個別設定 */
     position: relative;
     color: white; 
     text-shadow: 0 4px 15px rgba(0,0,0,0.8); 
 }
 .split-panel::before {
     content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
-    /* 🔴 關鍵修改：加深濾鏡濃度，解決斷層感，統一色調 */
     background: rgba(30, 40, 55, 0.5); 
     z-index: 1; transition: background 0.3s;
 }
@@ -78,8 +76,27 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
 .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding-bottom: 4rem; }
 .card { background: white; border: 1px solid var(--c-border); padding: 2rem; transition: transform 0.3s; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 1.5rem; filter: grayscale(100%); transition: filter 0.3s; }
-.card:hover img { filter: grayscale(0%); }
+
+/* ⬇️ 一般卡片（Materials 和其他頁面）：維持預設黑白 */
+.card img { 
+    width: 100%; height: 200px; object-fit: cover; margin-bottom: 1.5rem; 
+    filter: grayscale(100%); /* 預設黑白 */
+    transition: transform 0.4s ease, filter 0.4s ease; 
+}
+.card:hover img { 
+    filter: grayscale(0%); /* 滑鼠移上去變彩色 */
+    transform: scale(1.02); 
+}
+
+/* ⬇️ 【精準鎖定】只針對檔名有 'sys-' 的圖片（那 6 張）強制取消濾鏡 */
+/* 這樣 Materials 頁面完全不會被影響 */
+.card img[src*="sys-"] {
+    filter: none !important;
+}
+.card:hover img[src*="sys-"] {
+    transform: scale(1.02); /* 只有放大效果，不用變色 */
+}
+
 .card h3 { margin-bottom: 0.5rem; }
 .card p { color: var(--c-text-muted); font-size: 0.9rem; }
 .btn { padding: 12px 28px; background-color: #fff; color: #000; font-weight:bold; border-radius: 2px; border:none; cursor:pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
