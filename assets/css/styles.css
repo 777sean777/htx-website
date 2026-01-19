@@ -1,0 +1,49 @@
+/* RESET & VARIABLES */
+:root {
+    --c-bg: #F9F9F7;            /* 米白/紙張白 */
+    --c-surface: #FFFFFF;       /* 純白 */
+    --c-text-main: #2D2D2D;     /* 石墨灰 */
+    --c-text-muted: #666666;    /* 淺灰 */
+    --c-border: #E0E0E0;        /* 鋁合金灰 */
+    --c-accent: #4A5568;        /* 冷灰藍 */
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--c-bg);
+    color: var(--c-text-main);
+    line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+a:hover { opacity: 0.7; }
+
+/* LAYOUT */
+.split-screen {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.split-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--c-border);
+    transition: background 0.3s;
+    text-align: center;
+    padding: 2rem;
+    color: var(--c-text-main);
+}
+.split-panel:hover { background-color: #F0F0F0; cursor: pointer; }
+.split-panel h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: 400; }
+.split-panel p { color: var(--c-text-muted); margin-bottom: 2rem; }
+.btn {
+    padding: 12px 24px;
+    background-color: var(--c-accent);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
