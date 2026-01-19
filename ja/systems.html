@@ -8,43 +8,68 @@
 </head>
 <body>
 
-    <header style="display:flex; justify-content:space-between; align-items:center; padding:0 2rem; height:80px; border-bottom:1px solid #E0E0E0; background:#F9F9F7;">
-        <a href="../index.html" style="font-weight:700; font-size:1.5rem;">HTX</a>
+    <header>
+        <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
+        </a>
         <nav>
-            <a href="systems.html" style="margin-right:20px; font-weight:bold; border-bottom: 2px solid #2D2D2D;">システム</a>
-            <a href="materials.html" style="margin-right:20px; color:#666;">マテリアル</a>
-            <a href="contact.html" style="margin-right:20px; color:#666;">お問い合わせ</a>
-            <span style="border-left:1px solid #ccc; padding-left:20px; font-size:0.9rem;">
-                <a href="../en/systems.html" style="color:#666; margin-right:10px;">EN</a>
-                <a href="../zh/systems.html" style="color:#666; margin-right:10px;">繁中</a>
-                <a href="systems.html" style="font-weight:bold;">JP</a>
+            <a href="systems.html" class="active">システム</a>
+            <a href="materials.html">マテリアル</a>
+            <a href="contact.html">お問い合わせ</a>
+            <span class="lang-switch">
+                <a href="../en/systems.html">EN</a>
+                <a href="../zh/systems.html">繁中</a>
+                <a href="systems.html" class="active">JP</a>
             </span>
         </nav>
     </header>
 
-    <div style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto;">
-        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">製造システムと金型技術</h1>
-        <p style="color: #666; max-width: 600px;">
-            私たちは、長期的な稼働安定性を備えた工業用量産システムの構築に注力しています。
-            精密コーティング、自動化統合、およびスケーラブルなロール・トゥ・ロール（R2R）プロセスを核心能力としています。
-        </p>
+    <div class="page-hero" style="background-image: url('../assets/img/hero-machinery.png');">
+        <div class="container">
+            <h1>製造システムと金型技術</h1>
+            <p>長期的な稼働安定性を備えた工業用量産システムの構築。精密コーティング、自動化、およびR2Rプロセスを核心能力としています。</p>
+        </div>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 0 2rem 4rem; max-width: 1200px; margin: 0 auto;">
-        <div style="background: white; border: 1px solid #E0E0E0; padding: 2rem;">
-            <img src="../assets/img/placeholder.svg" style="width:100%; height:200px; object-fit:cover; margin-bottom:1.5rem; filter: grayscale(100%);">
-            <h3>モノフィラメント・コーティング</h3>
-            <p style="color:#666; font-size:0.9rem;">連続繊維向けの超精密コーティングライン。均一な膜厚と機能層の密着性を保証します。</p>
-        </div>
-        <div style="background: white; border: 1px solid #E0E0E0; padding: 2rem;">
-            <img src="../assets/img/placeholder.svg" style="width:100%; height:200px; object-fit:cover; margin-bottom:1.5rem; filter: grayscale(100%);">
-            <h3>ロール・トゥ・ロール (R2R 1.6m)</h3>
-            <p style="color:#666; font-size:0.9rem;">広幅の工業用織物やフィルム処理に対応。デリケートな基材向けに最適化された張力制御システム。</p>
-        </div>
-        <div style="background: white; border: 1px solid #E0E0E0; padding: 2rem;">
-            <img src="../assets/img/placeholder.svg" style="width:100%; height:200px; object-fit:cover; margin-bottom:1.5rem; filter: grayscale(100%);">
-            <h3>自動化とロボット統合</h3>
-            <p style="color:#666; font-size:0.9rem;">特注のエンドエフェクタとロボットセルにより、材料のハンドリングと後処理プロセスを合理化します。</p>
+    <div class="container" style="margin-top: 4rem;">
+        <div class="grid-3">
+            
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>モノフィラメント・コーティング</h3>
+                <p>精密な繊維ハンドリングと制御された堆積挙動に焦点を当て、連続繊維上の均一なコーティング厚を保証します。</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>ロール・トゥ・ロール (R2R 1.6m)</h3>
+                <p>長時間の連続稼働を想定した広幅搬送安定性。デリケートな基材に最適化された張力制御。</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>遮熱コーティング (TBC)</h3>
+                <p>熱管理および高温環境での使用向けに設計された、厚膜・多層コーティングシステム。</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>粉体塗装システム</h3>
+                <p>先進的な粉体技術のためのプロセス開発とシステム統合。大量生産市場ではなく、新興用途をターゲットとしています。</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>自動化と統合</h3>
+                <p>ロボットによるハンドリングとシステムレベルの統合。再現性のある動作と手動介入の削減を実現します。</p>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/placeholder.svg">
+                <h3>プロセス安定性と制御</h3>
+                <p>長期的な信頼性とプロセス監視。過酷な産業環境における一貫性のために設計されています。</p>
+            </div>
+
         </div>
     </div>
 
