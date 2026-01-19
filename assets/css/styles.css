@@ -1,13 +1,10 @@
 /* RESET & VARIABLES */
 :root {
     --c-bg: #F9F9F7;            /* 米白/紙張白 */
-    --c-surface: #FFFFFF;       /* 純白 */
     --c-text-main: #2D2D2D;     /* 石墨灰 */
     --c-text-muted: #666666;    /* 淺灰 */
     --c-border: #E0E0E0;        /* 鋁合金灰 */
     --c-accent: #4A5568;        /* 冷灰藍 */
-    --container-width: 1200px;
-    --header-height: 80px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -19,31 +16,47 @@ body {
 a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
 a:hover { opacity: 0.7; }
 
-/* LAYOUT */
-.split-screen {
-    display: flex;
-    height: 100vh;
-    width: 100%;
+/* HEADER & LOGO */
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 2rem; height: 80px; border-bottom: 1px solid var(--c-border);
+    background: #fff; /* 改回純白背景讓 Logo 更突出 */
 }
-.split-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid var(--c-border);
-    transition: background 0.3s;
-    text-align: center;
-    padding: 2rem;
-    color: var(--c-text-main);
+.brand-logo { height: 32px; width: auto; display: block; } /* Logo 高度設定 */
+nav a { margin-left: 2rem; font-size: 0.95rem; color: var(--c-text-main); }
+nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
+.lang-switch { border-left: 1px solid #ccc; padding-left: 20px; margin-left: 20px; font-size: 0.9rem; }
+.lang-switch a { margin-left: 10px; color: #999; }
+.lang-switch a.active { color: var(--c-text-main); font-weight: bold; }
+
+/* HERO SECTION (大圖橫幅) */
+.page-hero {
+    padding: 6rem 2rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white; /* 背景深色，文字變白 */
 }
-.split-panel:hover { background-color: #F0F0F0; cursor: pointer; }
-.split-panel h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: 400; }
-.split-panel p { color: var(--c-text-muted); margin-bottom: 2rem; }
-.btn {
-    padding: 12px 24px;
-    background-color: var(--c-accent);
-    color: #fff;
-    border-radius: 4px;
-    font-size: 0.9rem;
+/* 黑色半透明遮罩，讓文字更清晰 */
+.page-hero::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6); z-index: 1;
 }
+.page-hero > * { position: relative; z-index: 2; }
+.page-hero h1 { font-size: 2.8rem; margin-bottom: 1rem; font-weight: 400; letter-spacing: -0.02em; }
+.page-hero p { color: rgba(255,255,255,0.8); max-width: 600px; font-size: 1.1rem; }
+
+/* LAYOUT & CARDS */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding-bottom: 4rem; }
+.card { background: white; border: 1px solid var(--c-border); padding: 2rem; transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 1.5rem; filter: grayscale(100%); }
+.card h3 { margin-bottom: 0.5rem; }
+.card p { color: var(--c-text-muted); font-size: 0.9rem; }
+
+/* HOME SPLIT SCREEN */
+.split-screen { display: flex; height: 100vh; width: 100%; }
+.split-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid var(--c-border); transition: background 0.3s; text-align: center; padding: 2rem; color: var(--c-text-main); background: #fff;}
+.split-panel:hover { background-color: #F0F0F0; }
+.btn { padding: 12px 24px; background-color: var(--c-accent); color: #fff; border-radius: 4px; font-size: 0.9rem; margin-top: 2rem;}
