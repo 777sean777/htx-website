@@ -10,14 +10,27 @@
         .tech-detail-list li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; line-height: 1.6; }
         .tech-detail-list li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
         .tech-detail-list strong { color: #2D2D2D; font-weight: 600; }
-        .cta-box { background-color: #f8f8f8; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 3rem; }
-        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #e0e0e0; padding-top: 1rem; }
+        
+        /* 優化 CTA 區塊 */
+        .cta-box { background-color: #fff; border: 1px solid #e0e0e0; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        
+        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
         .req-list li::before { content: "- "; color: #999; }
+
+        /* 【新增】灰色背景區塊，解決「浮浮的」視覺問題 */
+        .highlight-section {
+            background-color: #F8F9FA; /* 極淺的灰，增加份量感 */
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem; /* 讓背景稍微往左右延伸，比文字寬一點 */
+        }
         
-        /* 我把原本這裡「移除濾鏡」的代碼刪掉了。
-           現在它會自動繼承 styles.css 裡的設定，
-           呈現您喜歡的「原本色調（鈦灰色/黑白感）」 */
+        /* 讓內容回到原本寬度 */
+        .highlight-content {
+            max-width: 100%; 
+        }
     </style>
 </head>
 <body>
@@ -47,36 +60,38 @@
 
     <div class="container" style="margin-top: 4rem; max-width: 800px; padding-bottom: 6rem;">
         
-        <div style="margin-bottom: 3.5rem;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; color: #2D2D2D;">System Overview</h2>
-            <p style="font-size: 1.05rem; color: #444;">
+        <div style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; padding-bottom: 0.5rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D;">System Overview</h2>
+            <p style="font-size: 1.1rem; color: #444; line-height: 1.8;">
                 Rather than prioritizing continuous line speed, the system architecture focuses on process stability, repeatability, and coating consistency across each batch. 
                 All fiber handling, including unwinding, coating, and rewinding, is performed entirely inside a single vacuum chamber, ensuring stable vacuum conditions during fiber motion.
             </p>
         </div>
 
-        <div style="margin-bottom: 3.5rem;">
-            <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D;">Design Focus</h2>
-            <ul class="tech-detail-list" style="list-style: none;">
-                <li>
-                    <strong>Batch-Type Vacuum Sputtering Architecture:</strong><br>
-                    Optimized for controlled, repeatable deposition cycles where coating quality is prioritized over throughput speed.
-                </li>
-                <li>
-                    <strong>Long Fiber Handling (Synthetic / Chemical Fiber):</strong><br>
-                    Fiber transport designed around ceramic eyelet guidance to ensure positional stability without roller-induced drift.
-                </li>
-                <li>
-                    <strong>Single-Chamber Processing:</strong><br>
-                    Unwind, coating, and rewind operations integrated into a single vacuum environment to maintain pressure stability during fiber motion.
-                </li>
-            </ul>
+        <div class="highlight-section">
+            <div class="highlight-content">
+                <h2 style="font-size: 1.4rem; margin-bottom: 1.5rem; color: #2D2D2D;">Design Focus</h2>
+                <ul class="tech-detail-list" style="list-style: none;">
+                    <li>
+                        <strong>Batch-Type Vacuum Sputtering Architecture:</strong><br>
+                        Optimized for controlled, repeatable deposition cycles where coating quality is prioritized over throughput speed.
+                    </li>
+                    <li>
+                        <strong>Long Fiber Handling (Synthetic / Chemical Fiber):</strong><br>
+                        Fiber transport designed around ceramic eyelet guidance to ensure positional stability without roller-induced drift.
+                    </li>
+                    <li>
+                        <strong>Single-Chamber Processing:</strong><br>
+                        Unwind, coating, and rewind operations integrated into a single vacuum environment to maintain pressure stability during fiber motion.
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 3.5rem;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 3.5rem; margin-top: 3rem;">
             
             <div>
-                <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D;">Material Compatibility</h2>
+                <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Material Compatibility</h2>
                 <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">System configurations available for:</p>
                 <ul class="tech-detail-list" style="list-style: none;">
                     <li>Silver (Ag)</li>
@@ -87,7 +102,7 @@
             </div>
 
             <div>
-                <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D;">Typical Applications</h2>
+                <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Typical Applications</h2>
                 <ul class="tech-detail-list" style="list-style: none;">
                     <li>Antibacterial & hygiene-related textile components</li>
                     <li>Thermal-related textile layers, inserts, and linings</li>
@@ -96,7 +111,7 @@
             </div>
         </div>
 
-        <div style="margin-bottom: 3rem;">
+        <div style="margin-bottom: 3rem; border-top: 1px solid #eee; padding-top: 3rem;">
             <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D;">Collaboration Approach</h2>
             <p style="color: #444;">
                 We engage in focused technical dialogue to evaluate feasibility before sampling. 
