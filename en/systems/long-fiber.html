@@ -14,6 +14,12 @@
         .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #e0e0e0; padding-top: 1rem; }
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
         .req-list li::before { content: "- "; color: #999; }
+
+        /* 【特殊處理】針對這個頁面的 Hero 圖片，強制解除黑白濾鏡，保持原色 */
+        .page-hero::before {
+            backdrop-filter: none !important; /* 移除灰階濾鏡 */
+            background: rgba(45, 55, 72, 0.3) !important; /* 稍微降低黑色遮罩的濃度，讓插畫更亮眼 */
+        }
     </style>
 </head>
 <body>
@@ -34,7 +40,7 @@
         </nav>
     </header>
 
-    <div class="page-hero" style="background-image: url('../../assets/img/hero-machinery.png'); background-position: center; background-size: cover;">
+    <div class="page-hero" style="background-image: url('../../assets/img/hero-long-fiber-sketch.png'); background-position: center; background-size: cover;">
         <div class="container">
             <h1>Long Fiber Coating Systems</h1>
             <p>HTX Long Fiber Coating Systems are engineered specifically for batch-type vacuum sputtering of synthetic (chemical) long fibers.</p>
