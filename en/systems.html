@@ -3,74 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manufacturing Systems | HTX</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Thermal Barrier Coating Systems | HTX</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <style>
+        /* 子頁面專屬樣式 */
+        .tech-detail-list li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; line-height: 1.6; }
+        .tech-detail-list li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
+        .tech-detail-list strong { color: #2D2D2D; font-weight: 600; }
+        
+        .cta-box { background-color: #fff; border: 1px solid #e0e0e0; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+        .req-list li { list-style: none; margin-bottom: 0.3rem; }
+        .req-list li::before { content: "- "; color: #999; }
+
+        /* 灰底區塊 */
+        .highlight-section {
+            background-color: #F4F6F8 !important; 
+            border-top: 1px solid #D1D5DB;
+            border-bottom: 1px solid #D1D5DB;
+            padding: 4rem 2rem;
+            margin: 3rem -2rem; 
+        }
+        .highlight-content { max-width: 100%; }
+
+        .section-title { font-size: 1.8rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; }
+
+        /* 圖片樣式 */
+        .content-image { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
+        
+        /* 手機版設定 */
+        @media (max-width: 768px) {
+            .apps-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
+        <a href="../../index.html">
+            <img src="../../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
         </a>
         <nav>
-            <a href="systems.html" class="active">Systems</a>
-            <a href="materials.html">Materials</a>
-            <a href="contact.html">Contact</a>
+            <a href="../../en/systems.html" class="active">Systems</a>
+            <a href="../../en/materials.html">Materials</a>
+            <a href="../../en/contact.html">Contact</a>
+            
             <span class="lang-switch">
-                <a href="systems.html" class="active">EN</a>
-                <a href="../zh/systems.html">繁中</a>
-                <a href="../ja/systems.html">JP</a>
+                <a href="#" class="active">EN</a>
+                <a href="../../zh/systems/tbc.html">繁中</a>
+                <a href="../../ja/systems/tbc.html">JP</a>
             </span>
         </nav>
     </header>
 
-    <div class="page-hero" style="background-image: url('../assets/img/hero-machinery.png');">
+    <div class="page-hero" style="background-image: url('../../assets/img/hero-tbc-sketch.jpg'); background-position: center; background-size: cover;">
         <div class="container">
-            <h1>Manufacturing Systems</h1>
-            <p>Engineered for long-term operational stability. Precision coating, automation, and scalable R2R processes.</p>
+            <h1>Thermal Barrier Coating Systems</h1>
+            <p>Engineered for thermal insulation, heat protection, and thermal management in high-temperature environments.</p>
         </div>
     </div>
 
-    <div class="container" style="margin-top: 4rem;">
-        <div class="grid-3">
-            
-            <a href="systems/long-fiber.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-monofilament.jpg" alt="Monofilament Coating" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Monofilament Coating</h3>
-                <p>Focus on precision fiber handling and controlled deposition behavior. Ensuring uniform coating thickness on continuous filaments.</p>
-            </a>
-
-            <a href="systems/roll-to-roll.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-r2r.jpg" alt="Roll-to-Roll Systems" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Roll-to-Roll Systems (1.6m)</h3>
-                <p>Wide-format transport stability designed for long-run operation. Optimized tension control for delicate substrates.</p>
-            </a>
-
-            <a href="systems/tbc.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-tbc.jpg" alt="Thermal Barrier Coatings" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Thermal Barrier Coatings</h3>
-                <p>Thick-film, multi-layered coating systems engineered for heat management and high-temperature industrial applications.</p>
-            </a>
-
-            <div class="card">
-                <img src="../assets/img/sys-powder.jpg" alt="Powder Coating Systems" style="filter: none !important;">
-                <h3>Powder Coating Systems</h3>
-                <p>Process development and system integration for advanced powder-based technologies. Targeting emerging material applications.</p>
-            </div>
-
-            <div class="card">
-                <img src="../assets/img/sys-automation.jpg" alt="Automation Integration" style="filter: none !important;">
-                <h3>Automation Integration</h3>
-                <p>Robotic handling and system-level integration. Designed for repeatable operation and reduced manual intervention.</p>
-            </div>
-
-            <div class="card">
-                <img src="../assets/img/sys-process.jpg" alt="ODM & Supply Chain Integration" style="filter: none !important;">
-                <h3>ODM & Supply Chain Integration</h3>
-                <p>Engineering-driven ODM services with supply chain coordination for reliable production execution.</p>
-            </div>
-
+    <div class="container" style="margin-top: 4rem; max-width: 800px; padding-bottom: 6rem;">
+        
+        <div style="margin-bottom: 3rem;">
+            <h2 class="section-title">System Overview</h2>
+            <p style="font-size: 1.1rem; color: #444; line-height: 1.8; margin-bottom: 2rem;">
+                HTX Thermal Barrier Coating Systems are designed for applications involving thermal insulation, heat protection, and thermal management in high-temperature environments.<br><br>
+                The system focuses on equipment-level process configurability and structural stability, supporting multilayer and relatively thick coating architectures for components subjected to thermal gradients or sustained heat loads.
+            </p>
         </div>
+
+        <div class="highlight-section">
+            <div class="highlight-content">
+                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #2D2D2D; font-weight: 700;">Design Focus</h2>
+                <ul class="tech-detail-list" style="list-style: none;">
+                    <li>
+                        <strong>Thick and Multilayer Coating Structures:</strong><br>
+                        The system supports coating architectures requiring increased thickness or multilayer configurations, suitable for thermal barrier and heat-management applications.
+                    </li>
+                    <li>
+                        <strong>Process Stability-Oriented Design:</strong><br>
+                        System design prioritizes process repeatability and operational stability rather than laboratory-scale extreme performance metrics.
+                    </li>
+                    <li>
+                        <strong>e-Gun and Sputtering Process Integration:</strong><br>
+                        The platform allows integration of e-Gun evaporation and vacuum sputtering processes, enabling flexible configuration based on coating structure and material requirements.
+                    </li>
+                    <li>
+                        <strong>Target Material Compatibility:</strong><br>
+                        System configurations support metallic and oxide-based target materials for thermal barrier and thermal management coating applications.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 3.5rem; margin-top: 4rem;">
+            <h2 class="section-title">Typical Applications & Structure</h2>
+            
+            <div class="apps-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start;">
+                
+                <div>
+                    <ul class="tech-detail-list" style="list-style: none;">
+                        <li>Thermal barrier coating system configurations for turbine blade applications</li>
+                        <li>High-temperature insulation coatings for power generation equipment</li>
+                        <li>Thermal management and heat-protection structures for civil aviation components</li>
+                        <li>Functional thermal barrier coatings for high-temperature industrial equipment</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; font-style: italic;">
+                        (Applications listed describe equipment applicability. Coating design and production specifications are defined by the customer.)
+                    </p>
+                </div>
+
+                <div>
+                    <img src="../../assets/img/sys-tbc-micro.jpg" alt="TBC Microstructure Cross-section" class="content-image" style="margin-top: 0;">
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;">Fig 1. Cross-section of a typical TBC structure showing columnar grain growth (SEM).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">Start a Technical Discussion</h3>
+            <p style="margin-bottom: 1.5rem; color: #666;">We welcome technical discussions regarding thermal barrier coating system configurations and process requirements to evaluate feasibility and application suitability.</p>
+            
+            <a href="mailto:HTX@huntertex.official.com" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 10px 24px;">Contact HTX Engineering</a>
+
+            <div class="req-list">
+                <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">If possible, please include the following information in your inquiry:</p>
+                <ul>
+                    <li>Substrate material and component type</li>
+                    <li>Target operating temperature range and environment</li>
+                    <li>Coating purpose (thermal insulation, heat protection, thermal management, etc.)</li>
+                    <li>Existing coating structure or equipment configuration requirements, if any</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem;">
+            <a href="../../en/systems.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; Back to Systems Overview</a>
+        </div>
+
     </div>
 
 </body>
