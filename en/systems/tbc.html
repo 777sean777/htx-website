@@ -6,45 +6,18 @@
     <title>Thermal Barrier Coating Systems | HTX</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
-        /* 子頁面專屬樣式 */
         .tech-detail-list li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; line-height: 1.6; }
         .tech-detail-list li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
         .tech-detail-list strong { color: #2D2D2D; font-weight: 600; }
-        
-        /* CTA 區塊優化 */
         .cta-box { background-color: #fff; border: 1px solid #e0e0e0; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        
         .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
         .req-list li::before { content: "- "; color: #999; }
-
-        /* 灰底區塊設定 */
-        .highlight-section {
-            background-color: #F4F6F8 !important; 
-            border-top: 1px solid #D1D5DB;
-            border-bottom: 1px solid #D1D5DB;
-            padding: 4rem 2rem;
-            margin: 3rem -2rem; 
-        }
-        
+        .highlight-section { background-color: #F4F6F8 !important; border-top: 1px solid #D1D5DB; border-bottom: 1px solid #D1D5DB; padding: 4rem 2rem; margin: 3rem -2rem; }
         .highlight-content { max-width: 100%; }
-
-        /* 標題樣式 */
-        .section-title {
-            font-size: 1.8rem; 
-            margin-bottom: 1.5rem; 
-            padding-bottom: 0.5rem; 
-            color: #2D2D2D; 
-            border-bottom: 2px solid #2D2D2D; 
-        }
-
-        /* 內文圖片樣式 */
+        .section-title { font-size: 1.8rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; }
         .content-image { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
-        
-        /* 手機版調整：讓應用區塊變成單欄 */
-        @media (max-width: 768px) {
-            .apps-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-        }
+        @media (max-width: 768px) { .apps-grid { grid-template-columns: 1fr !important; gap: 2rem !important; } }
     </style>
 </head>
 <body>
@@ -57,10 +30,11 @@
             <a href="../../en/systems.html" class="active">Systems</a>
             <a href="../../en/materials.html">Materials</a>
             <a href="../../en/contact.html">Contact</a>
+            
             <span class="lang-switch">
                 <a href="#" class="active">EN</a>
-                <a href="#" style="opacity:0.3; cursor: default;">繁中</a>
-                <a href="#" style="opacity:0.3; cursor: default;">JP</a>
+                <a href="../../zh/systems/tbc.html">繁中</a>
+                <a href="../../ja/systems/tbc.html">JP</a>
             </span>
         </nav>
     </header>
@@ -109,7 +83,7 @@
         <div style="margin-bottom: 3.5rem; margin-top: 4rem;">
             <h2 class="section-title">Typical Applications & Structure</h2>
             
-            <div class="apps-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+            <div class="apps-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start;">
                 
                 <div>
                     <ul class="tech-detail-list" style="list-style: none;">
@@ -125,7 +99,7 @@
 
                 <div>
                     <img src="../../assets/img/sys-tbc-micro.jpg" alt="TBC Microstructure Cross-section" class="content-image" style="margin-top: 0;">
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;">Cross-section of a typical TBC structure.</p>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;">Fig 1. Cross-section of a typical TBC structure showing columnar grain growth (SEM).</p>
                 </div>
             </div>
         </div>
