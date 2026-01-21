@@ -3,142 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thermal Barrier Coating Systems | HTX</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <title>HTX - TBC System Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
-        /* 子頁面專屬樣式 */
-        .tech-detail-list li { margin-bottom: 0.8rem; position: relative; padding-left: 1.5rem; line-height: 1.6; }
-        .tech-detail-list li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
-        .tech-detail-list strong { color: #2D2D2D; font-weight: 600; }
-        
-        /* CTA 區塊優化 */
-        .cta-box { background-color: #fff; border: 1px solid #e0e0e0; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 3rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        
-        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
-        .req-list li { list-style: none; margin-bottom: 0.3rem; }
-        .req-list li::before { content: "- "; color: #999; }
-
-        /* 灰底區塊設定 */
-        .highlight-section {
-            background-color: #F4F6F8 !important; 
-            border-top: 1px solid #D1D5DB;
-            border-bottom: 1px solid #D1D5DB;
-            padding: 4rem 2rem;
-            margin: 3rem -2rem; 
+        /* 頁面專屬微調 */
+        .system-content {
+            line-height: 1.8;
+            color: #444;
         }
-        
-        .highlight-content { max-width: 100%; }
-
-        /* 標題樣式 */
-        .section-title {
-            font-size: 1.8rem; 
-            margin-bottom: 1.5rem; 
-            padding-bottom: 0.5rem; 
-            color: #2D2D2D; 
-            border-bottom: 2px solid #2D2D2D; 
-        }
-
-        /* 內文圖片樣式 */
-        .content-image { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="../../index.html">
-            <img src="../../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
-        <nav>
-            <a href="../../en/systems.html" class="active">Systems</a>
-            <a href="../../en/materials.html">Materials</a>
-            <a href="../../en/contact.html">Contact</a>
-            <span class="lang-switch">
-                <a href="#" class="active">EN</a>
-                <a href="#" style="opacity:0.3; cursor: default;">繁中</a>
-                <a href="#" style="opacity:0.3; cursor: default;">JP</a>
-            </span>
-        </nav>
-    </header>
-
-    <div class="page-hero" style="background-image: url('../../assets/img/hero-tbc-sketch.jpg'); background-position: center; background-size: cover;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <h1>Thermal Barrier Coating Systems</h1>
-            <p>Engineered for thermal insulation, heat protection, and thermal management in high-temperature environments.</p>
-        </div>
-    </div>
-
-    <div class="container" style="margin-top: 4rem; max-width: 800px; padding-bottom: 6rem;">
-        
-        <div style="margin-bottom: 3rem;">
-            <h2 class="section-title">System Overview</h2>
-            <p style="font-size: 1.1rem; color: #444; line-height: 1.8; margin-bottom: 2rem;">
-                HTX Thermal Barrier Coating Systems are designed for applications involving thermal insulation, heat protection, and thermal management in high-temperature environments.<br><br>
-                The system focuses on equipment-level process configurability and structural stability, supporting multilayer and relatively thick coating architectures for components subjected to thermal gradients or sustained heat loads.
-            </p>
-            
-            <img src="../../assets/img/sys-tbc-micro.jpg" alt="TBC Microstructure Cross-section" class="content-image">
-            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; text-align: center;">Cross-section of a multilayer thermal barrier coating structure.</p>
-        </div>
-
-        <div class="highlight-section">
-            <div class="highlight-content">
-                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: #2D2D2D; font-weight: 700;">Design Focus</h2>
-                <ul class="tech-detail-list" style="list-style: none;">
-                    <li>
-                        <strong>Thick and Multilayer Coating Structures:</strong><br>
-                        The system supports coating architectures requiring increased thickness or multilayer configurations, suitable for thermal barrier and heat-management applications.
-                    </li>
-                    <li>
-                        <strong>Process Stability-Oriented Design:</strong><br>
-                        System design prioritizes process repeatability and operational stability rather than laboratory-scale extreme performance metrics.
-                    </li>
-                    <li>
-                        <strong>e-Gun and Sputtering Process Integration:</strong><br>
-                        The platform allows integration of e-Gun evaporation and vacuum sputtering processes, enabling flexible configuration based on coating structure and material requirements.
-                    </li>
-                    <li>
-                        <strong>Target Material Compatibility:</strong><br>
-                        System configurations support metallic and oxide-based target materials for thermal barrier and thermal management coating applications.
-                    </li>
+            <a class="navbar-brand fw-bold" href="../../index.html">HTX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
+    </nav>
 
-        <div style="margin-bottom: 3.5rem; margin-top: 4rem;">
-            <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem;">Typical Applications</h2>
-            <ul class="tech-detail-list" style="list-style: none;">
-                <li>Thermal barrier coating system configurations for turbine blade applications</li>
-                <li>High-temperature insulation coatings for power generation equipment</li>
-                <li>Thermal management and heat-protection structures for civil aviation components</li>
-                <li>Functional thermal barrier coatings for high-temperature industrial equipment</li>
-            </ul>
-            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; font-style: italic;">
-                (Applications listed describe equipment applicability. Coating design and production specifications are defined by the customer.)
-            </p>
-        </div>
+    <div class="container my-5 system-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                        <li class="breadcrumb-item">Systems</li>
+                        <li class="breadcrumb-item active" aria-current="page">TBC</li>
+                    </ol>
+                </nav>
 
-        <div class="cta-box">
-            <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">Start a Technical Discussion</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">We welcome technical discussions regarding thermal barrier coating system configurations and process requirements to evaluate feasibility and application suitability.</p>
-            
-            <a href="mailto:HTX@huntertex.official.com" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 10px 24px;">Contact HTX Engineering</a>
+                <h2 class="mb-4 border-bottom pb-2">System Overview</h2>
 
-            <div class="req-list">
-                <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">If possible, please include the following information in your inquiry:</p>
+                <p>
+                    HTX Thermal Barrier Coating Systems are designed for applications involving thermal 
+                    insulation, heat protection, and thermal management in high-temperature environments.
+                </p>
+
+                <p>
+                    The system focuses on equipment-level process configurability and structural stability, 
+                    supporting multilayer and relatively thick coating architectures for components subjected to 
+                    thermal gradients or sustained heat loads.
+                </p>
+
+                <figure class="text-center my-5">
+                    <img 
+                        class="img-fluid rounded shadow-lg d-block mx-auto" 
+                        src="../../assets/images/tbc-sem.jpg" 
+                        alt="SEM Image of Thermal Barrier Coating (TBC)" 
+                        style="max-width: 70%;"
+                    >
+                    <figcaption class="figure-caption mt-2">Cross-sectional SEM view of the TBC structure.</figcaption>
+                </figure>
+
+                <h4 class="mt-5">Key Features</h4>
                 <ul>
-                    <li>Substrate material and component type</li>
-                    <li>Target operating temperature range and environment</li>
-                    <li>Coating purpose (thermal insulation, heat protection, thermal management, etc.)</li>
-                    <li>Existing coating structure or equipment configuration requirements, if any</li>
+                    <li>High thermal resistance for extreme environments.</li>
+                    <li>Customizable multilayer architecture.</li>
+                    <li>Enhanced durability against thermal cycling.</li>
                 </ul>
+
             </div>
         </div>
-
-        <div style="margin-top: 4rem; border-top: 1px solid #eee; padding-top: 2rem;">
-            <a href="../../en/systems.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; Back to Systems Overview</a>
-        </div>
-
     </div>
 
+    <footer class="bg-light text-center text-lg-start mt-auto py-4 border-top">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2024 HTX Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
