@@ -16,7 +16,7 @@ body {
     background-color: var(--c-bg); 
     color: var(--c-text-main);
     line-height: 1.6;
-    overflow-x: hidden; /* 防止手機版左右滑動出現白邊 */
+    overflow-x: hidden; /* 防止左右滑動白邊 */
 }
 
 a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
@@ -52,12 +52,17 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
    ========================================= */
 .page-hero {
     padding: 6rem 2rem;
-    background-size: cover;
-    background-position: center;
+    
+    /* 關鍵修正：背景圖設定 */
+    background-size: cover;       /* 強制填滿 */
+    background-position: center;  /* 居中對齊 */
+    background-repeat: no-repeat; /* 禁止重複！ */
+    
     position: relative;
     color: white;
     background-color: #2D3748; 
 }
+
 /* 濾鏡遮罩 */
 .page-hero::before { 
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -65,7 +70,6 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
     backdrop-filter: grayscale(30%); 
     z-index: 1;
 }
-/* 內容層級 */
 .page-hero > * { position: relative; z-index: 2; }
 
 .page-hero h1 { font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
@@ -80,7 +84,12 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
     flex: 1;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     text-align: center; padding: 2rem;
+    
+    /* 關鍵修正：背景圖絕對不重複 */
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    
     position: relative;
     color: white; 
     text-shadow: 0 4px 15px rgba(0,0,0,0.8); 
@@ -108,116 +117,120 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
 }
 
 /* =========================================
-   6. CARDS & IMAGES (卡片與圖片優化)
+   6. CARDS & IMAGES (圖片優化 & 浮水印隱藏)
    ========================================= */
 .card { 
     background: white; 
     border: 1px solid var(--c-border); 
     padding: 2rem; 
     transition: transform 0.3s; 
-    overflow: hidden; /* 關鍵：裁掉放大的邊緣 */
+    overflow: hidden; /* 確保放大的圖片邊緣被切掉 */
 }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
-/* 圖片設定：包含浮水印隱藏術 */
+/* 卡片圖片設定 */
 .card img { 
     width: 100%; 
     height: 200px; 
     object-fit: cover; 
     margin-bottom: 1.5rem; 
     
-    /* 預設維持深色濾鏡 */
     filter: grayscale(100%); 
     
-    /* 【關鍵】稍微放大 3% (1.03)，把邊緣浮水印擠出去 */
-    transform: scale(1.03); 
+    /* 【關鍵修正】放大 5% (1.05)，確保浮水印被擠出去 */
+    transform: scale(1.05); 
     
     transition: transform 0.4s ease, filter 0.4s ease; 
 }
 
-/* Systems 頁面的圖片強制彩色，但依然保持放大裁切 */
+/* Systems 頁面 & Hero 圖片強制彩色，但維持放大 */
 .card img[src*="sys-"], .card img[src*="hero-"] {
     filter: none !important; 
 }
 
-/* 滑鼠移上去的效果 */
 .card:hover img { 
     filter: grayscale(0%);
-    /* 移上去再稍微放大一點點 */
-    transform: scale(1.06); 
+    /* 滑鼠移上去再放大一點 */
+    transform: scale(1.08); 
 }
 
 .card h3 { margin-bottom: 0.5rem; }
 .card p { color: var(--c-text-muted); font-size: 0.9rem; }
 
-/* 按鈕樣式 */
 .btn { padding: 12px 28px; background-color: #fff; color: #000; font-weight:bold; border-radius: 2px; border:none; cursor:pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 .btn:hover { background-color: #f0f0f0; }
 
-/* 子頁面內容圖片 */
 .content-image { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
 
 
 /* =========================================
    7. MOBILE RESPONSIVE (手機版專用設定)
    ========================================= */
-@media (max-width: 768px) {
+/* 設定 900px 以下就啟動手機模式，比較安全 */
+@media (max-width: 900px) {
     
-    /* Header 變高，內容垂直排列 */
+    /* Header 改為垂直排列 */
     header {
         height: auto;
         flex-direction: column;
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
     }
     
-    .brand-logo { margin-bottom: 1rem; }
+    .brand-logo { 
+        height: 40px; /* 手機上 Logo 稍微大一點點 */
+        margin-bottom: 0.5rem; 
+    }
     
     nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
-        margin-bottom: 0.5rem;
+        gap: 1.5rem; /* 增加間距 */
+        width: 100%;
     }
     
-    nav a { margin-left: 0; margin: 0 0.5rem; font-size: 0.9rem; }
+    nav a { 
+        margin-left: 0; 
+        font-size: 1rem; 
+        padding: 5px; /* 增加點擊區域 */
+    }
     
     .lang-switch {
         border-left: none;
         padding-left: 0;
         margin-left: 0;
-        margin-top: 0.5rem;
         width: 100%;
         justify-content: center;
+        margin-top: 0.5rem;
     }
 
-    /* 首頁左右分流 -> 變成上下堆疊 */
+    /* 首頁 Split Screen 變成上下堆疊 */
     .split-screen {
         flex-direction: column;
-        height: auto; /* 高度不再鎖死 */
+        height: auto; 
     }
     
     .split-panel {
-        min-height: 50vh; /* 每個面板至少佔一半螢幕高 */
-        padding: 4rem 2rem;
+        min-height: 60vh; /* 每個區塊高度增加，讓圖片更好看 */
+        padding: 4rem 1.5rem;
+        /* 手機版強制 Cover 填滿，不留白邊 */
+        background-size: cover;
     }
 
-    /* Hero 字體縮小 */
+    /* Hero 字體調整 */
     .page-hero { padding: 4rem 1.5rem; }
-    .page-hero h1 { font-size: 2rem; }
+    .page-hero h1 { font-size: 2.2rem; }
     
-    /* 卡片與格線變成單欄 */
-    .grid-3 { grid-template-columns: 1fr; gap: 1.5rem; }
+    /* 格線變單欄 */
+    .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
     .container { padding: 0 1.5rem; }
     
-    /* 灰底區塊邊距調整 */
-    .highlight-section {
-        margin: 2rem -1.5rem; 
-        padding: 3rem 1.5rem;
-    }
-    
-    /* 修正子頁面雙欄佈局 -> 變成單欄 */
+    /* 修正子頁面雙欄 */
     div[style*="grid-template-columns: 1fr 1fr"] {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
     }
+    
+    /* 灰底區塊邊距 */
+    .highlight-section { margin: 2rem -1.5rem; padding: 3rem 1.5rem; }
 }
