@@ -3,15 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTX - TBC System Overview</title>
+    <title>HTX - Thermal Barrier Coating Systems</title>
+    <meta name="description" content="Engineered for thermal insulation and heat protection in high-temperature environments.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
         /* 頁面專屬微調 */
         .system-content {
             line-height: 1.8;
             color: #444;
+        }
+        /* 英雄區塊樣式 */
+        .hero-section {
+            background: url('../../assets/images/hero-bg.jpg') no-repeat center center/cover; /* 替換為你的背景圖 */
+            color: white;
+            padding: 100px 0;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 深色遮罩 */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: #222;
         }
     </style>
 </head>
@@ -33,54 +57,85 @@
         </div>
     </nav>
 
+    <header class="hero-section text-center">
+        <div class="container hero-content">
+            <h1 class="display-4 fw-bold">Thermal Barrier Coating Systems</h1>
+            <p class="lead mx-auto" style="max-width: 700px;">Engineered for thermal insulation, heat protection, and thermal management in high-temperature environments.</p>
+        </div>
+    </header>
+
     <div class="container my-5 system-content">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">Home</a></li>
                         <li class="breadcrumb-item">Systems</li>
                         <li class="breadcrumb-item active" aria-current="page">TBC</li>
                     </ol>
                 </nav>
 
-                <h2 class="mb-4 border-bottom pb-2">System Overview</h2>
+                <section class="mb-5">
+                    <h2 class="section-title">System Overview</h2>
+                    <p>
+                        HTX Thermal Barrier Coating Systems are designed for applications involving thermal 
+                        insulation, heat protection, and thermal management in high-temperature environments.
+                    </p>
+                    <p>
+                        The system focuses on equipment-level process configurability and structural stability, 
+                        supporting multilayer and relatively thick coating architectures for components subjected to 
+                        thermal gradients or sustained heat loads.
+                    </p>
+                </section>
 
-                <p>
-                    HTX Thermal Barrier Coating Systems are designed for applications involving thermal 
-                    insulation, heat protection, and thermal management in high-temperature environments.
-                </p>
+                <section class="mb-5 bg-light p-4 rounded shadow-sm">
+                    <h4 class="mb-3 fw-bold">Design Focus</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <strong>Thick and Multilayer Coating Structures:</strong> The system supports coating architectures requiring increased thickness or multilayer configurations, suitable for thermal barrier and heat management applications.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <strong>Process Stability-Oriented Design:</strong> System design prioritizes process repeatability and operational stability rather than laboratory-scale extreme performance metrics.
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <strong>e-Gun and Sputtering Process Integration:</strong> The platform allows integration of e-Gun evaporation and vacuum sputtering processes, enabling flexible configuration based on coating structure and material requirements.
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <strong>Target Material Compatibility:</strong> System configurations support metallic and oxide-based target materials for thermal barrier and thermal management coating applications.
+                        </li>
+                    </ul>
+                </section>
 
-                <p>
-                    The system focuses on equipment-level process configurability and structural stability, 
-                    supporting multilayer and relatively thick coating architectures for components subjected to 
-                    thermal gradients or sustained heat loads.
-                </p>
-
-                <figure class="text-center my-5">
+                <section>
+                    <h4 class="mb-4 fw-bold">Typical Applications</h4>
+                    
                     <img 
-                        class="img-fluid rounded shadow-lg d-block mx-auto" 
                         src="../../assets/images/tbc-sem.jpg" 
-                        alt="SEM Image of Thermal Barrier Coating (TBC)" 
-                        style="max-width: 70%;"
+                        alt="TBC SEM Structure Micrograph" 
+                        class="img-fluid rounded shadow-sm float-end ms-4 mb-3"
+                        style="max-width: 220px;"
                     >
-                    <figcaption class="figure-caption mt-2">Cross-sectional SEM view of the TBC structure.</figcaption>
-                </figure>
-
-                <h4 class="mt-5">Key Features</h4>
-                <ul>
-                    <li>High thermal resistance for extreme environments.</li>
-                    <li>Customizable multilayer architecture.</li>
-                    <li>Enhanced durability against thermal cycling.</li>
-                </ul>
+                    
+                    <ul>
+                        <li class="mb-2">Thermal barrier coating system configurations for turbine blade applications.</li>
+                        <li class="mb-2">High-temperature insulator coatings for power generation equipment.</li>
+                        <li class="mb-2">Thermal management and heat-protection structures for civil aviation components.</li>
+                        <li>Functional thermal barrier coatings for high-temperature industrial equipment.</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </section>
 
             </div>
         </div>
     </div>
 
-    <footer class="bg-light text-center text-lg-start mt-auto py-4 border-top">
-        <div class="container text-center">
-            <p class="text-muted mb-0">&copy; 2024 HTX Technology. All Rights Reserved.</p>
+    <footer class="bg-dark text-light text-center mt-auto py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 HTX Technology. All Rights Reserved.</p>
         </div>
     </footer>
 
