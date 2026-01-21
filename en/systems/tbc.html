@@ -40,6 +40,11 @@
 
         /* 內文圖片樣式 */
         .content-image { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block; }
+        
+        /* 手機版調整：讓應用區塊變成單欄 */
+        @media (max-width: 768px) {
+            .apps-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+        }
     </style>
 </head>
 <body>
@@ -75,9 +80,6 @@
                 HTX Thermal Barrier Coating Systems are designed for applications involving thermal insulation, heat protection, and thermal management in high-temperature environments.<br><br>
                 The system focuses on equipment-level process configurability and structural stability, supporting multilayer and relatively thick coating architectures for components subjected to thermal gradients or sustained heat loads.
             </p>
-            
-            <img src="../../assets/img/sys-tbc-micro.jpg" alt="TBC Microstructure Cross-section" class="content-image">
-            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem; text-align: center;">Cross-section of a multilayer thermal barrier coating structure.</p>
         </div>
 
         <div class="highlight-section">
@@ -105,16 +107,27 @@
         </div>
 
         <div style="margin-bottom: 3.5rem; margin-top: 4rem;">
-            <h2 style="font-size: 1.4rem; margin-bottom: 1rem; color: #2D2D2D; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem;">Typical Applications</h2>
-            <ul class="tech-detail-list" style="list-style: none;">
-                <li>Thermal barrier coating system configurations for turbine blade applications</li>
-                <li>High-temperature insulation coatings for power generation equipment</li>
-                <li>Thermal management and heat-protection structures for civil aviation components</li>
-                <li>Functional thermal barrier coatings for high-temperature industrial equipment</li>
-            </ul>
-            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; font-style: italic;">
-                (Applications listed describe equipment applicability. Coating design and production specifications are defined by the customer.)
-            </p>
+            <h2 class="section-title">Typical Applications & Structure</h2>
+            
+            <div class="apps-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: start;">
+                
+                <div>
+                    <ul class="tech-detail-list" style="list-style: none;">
+                        <li>Thermal barrier coating system configurations for turbine blade applications</li>
+                        <li>High-temperature insulation coatings for power generation equipment</li>
+                        <li>Thermal management and heat-protection structures for civil aviation components</li>
+                        <li>Functional thermal barrier coatings for high-temperature industrial equipment</li>
+                    </ul>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; font-style: italic;">
+                        (Applications listed describe equipment applicability. Coating design and production specifications are defined by the customer.)
+                    </p>
+                </div>
+
+                <div>
+                    <img src="../../assets/img/sys-tbc-micro.jpg" alt="TBC Microstructure Cross-section" class="content-image" style="margin-top: 0;">
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; text-align: center;">Fig 1. Cross-section of a typical TBC structure showing columnar grain growth (SEM).</p>
+                </div>
+            </div>
         </div>
 
         <div class="cta-box">
