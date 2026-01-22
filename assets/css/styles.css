@@ -85,7 +85,9 @@ nav a.active { font-weight: bold; border-bottom: 2px solid var(--c-text-main); }
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     text-align: center; padding: 2rem;
     
-    /* 關鍵修正：背景圖絕對不重複 */
+    /* 1. 設定背景底色：深灰色 (讓它跟圖片載入前的顏色一樣) */
+    background-color: #2D2D2D; 
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
