@@ -6,20 +6,15 @@
     <title>抗菌金属コーティング・ファブリック | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles (Compact & Engineered) --- */
-        
-        /* 1. Global Reset */
         img { filter: none !important; opacity: 1 !important; display: block; }
         p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
         h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; font-weight: 600; }
         h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.05rem; margin-top: 0; }
 
-        /* 2. Layout Utilities */
         .container { max-width: 1000px; padding-bottom: 4rem; }
         .section-spacing { margin-bottom: 4rem; }
         
-        /* Split Layout */
         .split-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -27,7 +22,6 @@
             align-items: start;
         }
         
-        /* Highlight Section */
         .highlight-section {
             background-color: #F8F9FA;
             border-top: 1px solid #E2E8F0;
@@ -37,24 +31,21 @@
             border-radius: 4px;
         }
 
-        /* 3. Component Styles */
-        
-        /* App Grid */
-        .app-text-col ul { margin-bottom: 1.5rem; padding-left: 1.2rem; margin-top: 0; }
-        .app-img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
+        .app-img-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
-        .app-img-grid img {
+        .app-img-stack img {
             width: 100%;
-            height: 220px;
+            height: 280px;
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        /* Test Box */
         .test-box {
             border: 1px solid #E2E8F0;
             padding: 2rem;
@@ -85,7 +76,6 @@
             border-radius: 4px;
         }
 
-        /* Contact Box (System Style) */
         .cta-box { 
             background-color: #fff; 
             border: 1px solid #e0e0e0; 
@@ -98,13 +88,10 @@
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
         .req-list li::before { content: "- "; color: #999; }
 
-        /* Disclaimer */
         .disclaimer { font-size: 0.8rem; color: #718096; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem; font-style: italic; }
 
-        /* RWD */
         @media (max-width: 900px) {
             .split-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .app-img-grid { grid-template-columns: 1fr; }
             .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
         }
     </style>
@@ -157,8 +144,8 @@
             </div>
         </div>
 
-        <div class="section-spacing">
-            <h2>主な用途</h2>
+        <div class="highlight-section">
+            <h2 style="border-bottom: 2px solid #CBD5E0; margin-bottom: 2rem;">主な用途</h2>
             <div class="split-layout">
                 <div class="app-text-col">
                     <h4>肌着・アパレル (Close-to-Skin)</h4>
@@ -182,15 +169,15 @@
                     </ul>
                 </div>
 
-                <div class="app-img-grid">
+                <div class="app-img-stack">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="肌着用途イメージ">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="テキスタイル詳細">
                 </div>
             </div>
         </div>
 
-        <div class="highlight-section">
-            <h2 style="border-bottom: none; margin-bottom: 1.5rem;">供給体制とプラットフォーム</h2>
+        <div class="section-spacing">
+            <h2>供給体制とプラットフォーム</h2>
             <div class="split-layout">
                 <div>
                     <p>HTXの抗菌ファブリックは、表面処理パラメータと性能挙動によって定義された標準化マテリアル・プラットフォームとして提供されます。</p>
