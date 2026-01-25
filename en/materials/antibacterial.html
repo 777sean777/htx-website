@@ -6,20 +6,19 @@
     <title>Antibacterial Metal-Coated Fabrics | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles (Compact & Engineered) --- */
+        /* --- Page Specific Styles (Refined & Balanced) --- */
         
-        /* 1. Global Reset for this page */
+        /* Global Reset */
         img { filter: none !important; opacity: 1 !important; display: block; }
         p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
         h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; font-weight: 600; }
         h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.05rem; margin-top: 0; }
 
-        /* 2. Layout Utilities */
         .container { max-width: 1000px; padding-bottom: 4rem; }
         .section-spacing { margin-bottom: 4rem; }
         
-        /* Split Layout (Left/Right) */
+        /* Split Layout */
         .split-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -27,31 +26,32 @@
             align-items: start;
         }
         
-        /* Highlight Section (Grey Background like Systems) */
+        /* Highlight Section (Grey Box - System Style) */
         .highlight-section {
             background-color: #F8F9FA;
             border-top: 1px solid #E2E8F0;
             border-bottom: 1px solid #E2E8F0;
             padding: 3rem 2rem;
-            margin: 3rem -2rem; /* Extend to edge within container if needed, or adjust container */
+            margin: 3rem -2rem; /* Stretch slightly */
             border-radius: 4px;
         }
 
-        /* 3. Specific Component Styles */
+        /* --- Component Styles --- */
         
-        /* Application Grid */
-        .app-text-col ul { margin-bottom: 1.5rem; padding-left: 1.2rem; margin-top: 0; }
-        .app-img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        /* Application Section - Now Vertically Stacked Images */
+        .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
+        .app-img-stack {
+            display: flex;
+            flex-direction: column; /* Vertical Stack */
+            gap: 1.5rem; /* Space between images */
         }
-        .app-img-grid img {
+        .app-img-stack img {
             width: 100%;
-            height: 220px; /* Tighter height */
+            height: 280px; /* Taller images to balance text height */
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         /* Test Data Box */
@@ -78,33 +78,31 @@
         
         .chart-img {
             width: 100%; 
-            max-height: 280px; /* Limit chart height */
+            max-height: 280px; 
             object-fit: contain; 
             border: 1px solid #eee;
             padding: 10px;
             border-radius: 4px;
         }
 
-        /* Contact Box (System Style Match) */
+        /* Contact Box (System Style) */
         .cta-box { 
             background-color: #fff; 
             border: 1px solid #e0e0e0; 
             border-left: 4px solid var(--c-accent); 
             padding: 2rem; 
-            margin-top: 0; /* Removing top margin as it's inside a section */
+            margin-top: 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
         .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
         .req-list li::before { content: "- "; color: #999; }
 
-        /* Disclaimer */
         .disclaimer { font-size: 0.8rem; color: #718096; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem; font-style: italic; }
 
         /* RWD */
         @media (max-width: 900px) {
             .split-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .app-img-grid { grid-template-columns: 1fr; }
             .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
         }
     </style>
@@ -157,8 +155,8 @@
             </div>
         </div>
 
-        <div class="section-spacing">
-            <h2>Typical Applications</h2>
+        <div class="highlight-section">
+            <h2 style="border-bottom: 2px solid #CBD5E0; margin-bottom: 2rem;">Typical Applications</h2>
             <div class="split-layout">
                 <div class="app-text-col">
                     <h4>Close-to-Skin Apparel</h4>
@@ -182,15 +180,15 @@
                     </ul>
                 </div>
 
-                <div class="app-img-grid">
+                <div class="app-img-stack">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="Close-to-skin application">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Textile detail view">
                 </div>
             </div>
         </div>
 
-        <div class="highlight-section">
-            <h2 style="border-bottom: none; margin-bottom: 1.5rem;">Material Platform & Supply</h2>
+        <div class="section-spacing">
+            <h2>Material Platform & Supply</h2>
             <div class="split-layout">
                 <div>
                     <p>HTX antibacterial fabrics are offered as standardized material platforms defined by surface treatment parameters and performance behavior.</p>
