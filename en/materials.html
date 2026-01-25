@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functional Materials | HTX</title>
-    <link rel="preload" as="image" href="../assets/img/materials-hero-functional-textile.jpg">
+    <link rel="preload" as="image" href="../assets/img/hero-materials-woven.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
         /* Materials Page Specific Styles */
         
+        /* 1. 確保圖片全彩，不反灰 */
+        .card img {
+            filter: none !important; /* 強制移除任何濾鏡 */
+            opacity: 1 !important;
+        }
+
         /* Supply Model / Intro Box */
         .supply-model-box {
             background-color: #F4F6F8;
@@ -61,6 +67,7 @@
             background-color: #000;
             border-radius: 4px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .feature-video-container video {
             position: absolute;
@@ -102,7 +109,7 @@
         </nav>
     </header>
 
-    <div class="page-hero" style="background-image: url('../assets/img/materials-hero-functional-textile.jpg');">
+    <div class="page-hero" style="background-image: url('../assets/img/hero-materials-woven.png'); background-position: center; background-size: cover;">
         <div class="container">
             <h1>Functional Materials</h1>
             <p>Standardized, production-ready materials engineered at the surface.<br>
