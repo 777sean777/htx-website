@@ -9,29 +9,13 @@
     <style>
         /* --- Page Specific Overrides --- */
         
-        /* 1. Force Full Color Images */
+        /* 1. Force Full Color Images (No Grayscale) */
         .card img, .content-image, .thumb img {
             filter: none !important;
             opacity: 1 !important;
         }
 
-        /* 2. Layout & Containers */
-        /* Standard container for wide content (Cards, Features) */
-        .container-wide {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-        
-        /* Narrower container for text intros to ensure readability */
-        .section-intro { 
-            max-width: 800px; 
-            margin: 0 auto 4rem auto; 
-            text-align: left; 
-        }
-
-        /* 3. Supply Model Box */
+        /* 2. Supply Model Box */
         .supply-model-box {
             background-color: #F4F6F8;
             border-left: 4px solid #2D2D2D;
@@ -40,7 +24,8 @@
         }
         .supply-model-box h3 { margin-top: 0; color: #2D2D2D; font-size: 1.4rem; }
 
-        /* 4. Section Titles */
+        /* 3. Section Styling */
+        .section-intro { max-width: 800px; margin: 0 auto 4rem auto; text-align: left; }
         .section-title-bar {
             border-bottom: 2px solid #2D2D2D;
             padding-bottom: 1rem;
@@ -54,7 +39,7 @@
         .section-title-bar h2 { margin: 0; font-size: 1.8rem; color: #2D2D2D; }
         .section-title-bar p { margin: 0; color: #666; font-size: 0.95rem; max-width: 600px; }
 
-        /* 5. Feature Sections (Air Coating / Waterless) */
+        /* 4. Feature Sections (Air Coating / Waterless / Identification) */
         .feature-split {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -85,41 +70,31 @@
         .feature-content h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #2D2D2D; }
         .feature-content p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1rem; }
         .feature-content ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
-        .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; }
+        .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
         .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
 
-        /* 6. Material Identification Section (Full Width Background) */
-        .ident-section-wrapper {
-            background-color: #FAFAFA; /* Light gray background */
-            width: 100%;
-            padding: 5rem 0;
+        /* 5. Identification Section (Special Style) */
+        .ident-section {
+            background-color: #FAFAFA; /* Very light grey background */
+            padding: 4rem 2rem;
+            margin: 0 -2rem 4rem -2rem; /* Stretch full width */
             border-top: 1px solid #eee;
-            margin-top: 4rem;
+            border-bottom: 1px solid #eee;
         }
-        
-        /* Inner alignment for identification section */
-        .ident-inner {
+        .ident-container {
+            max-width: 1100px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        /* 7. Footer (Minimal) */
-        .footer-minimal {
-            text-align: center; 
-            padding: 4rem 2rem; 
-            border-top: 1px solid #eee;
-            background-color: #fff;
-        }
-
-        /* Responsive Fixes */
+        /* Responsive */
         @media (max-width: 900px) {
-            .feature-split, .feature-split.reverse, .ident-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-            .section-intro { padding: 0; }
-            
-            /* Ensure container padding is consistent on mobile */
-            .container-wide { padding-left: 1.5rem; padding-right: 1.5rem; }
+            .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; }
+            .section-intro { padding: 0 1rem; }
+            .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; }
         }
     </style>
 </head>
@@ -149,7 +124,7 @@
         </div>
     </div>
 
-    <div class="container-wide" style="margin-top: 4rem;">
+    <div class="container" style="margin-top: 4rem; padding-bottom: 2rem;">
         
         <div class="section-intro">
             <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2D2D2D;">Material Overview</h2>
@@ -214,7 +189,7 @@
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="Transdermal Support Sheet Materials">
                     <div class="card-content">
                         <h3>Transdermal Support Sheet Materials</h3>
-                        <p>Multi-layer oxide + metal coating architecture designed for sheet material platforms. Intended for downstream formulation and product integration discussions.</p>
+                        <p>Sheet material platforms designed to support enhanced skin interaction and improved absorption of functional formulations. Intended for downstream product integration and application-specific development discussions.</p>
                     </div>
                 </div>
 
@@ -239,8 +214,8 @@
                     Positioned as a standardized process platform, it supports functional coatings across multiple material families.
                 </p>
                 <ul>
-                    <li>Visually invisible surface treatment</li>
-                    <li>Maintains original color, softness, and flexibility</li>
+                    <li>Thin surface treatment designed to minimize visual and tactile impact</li>
+                    <li>Designed to preserve the intended color direction and the original breathability, stretch behavior, and flexibility of the textile</li>
                     <li>Engineered for large-scale, repeatable material production</li>
                 </ul>
                 <p style="font-size: 0.9rem; color: #666; margin-top: 1rem; font-style: italic;">
@@ -270,37 +245,37 @@
             </div>
         </div>
 
-    </div> <div class="ident-section-wrapper">
-        <div class="container-wide">
-            <div class="ident-inner">
-                <div>
-                    <img src="../assets/img/material-identification-air-coating-01.jpg" alt="Material Identification Hangtag" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                </div>
+    </div> <div class="ident-section">
+        <div class="ident-container">
+            <div>
+                <img src="../assets/img/material-identification-air-coating-01.jpg" alt="Material Identification Hangtag" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            </div>
 
-                <div class="feature-content">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Material Identification</h3>
-                    <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
-                        Material identification tools help partners clearly explain material-level technologies to end customers.
-                    </p>
-                    <p style="font-size: 1rem; color: #555;">
-                        For materials treated with Air Coating, HTX provides optional material identification tags and info cards.
-                    </p>
-                    <p style="font-size: 1rem; color: #555;">
-                        These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.
-                    </p>
-                    <p style="font-size: 1rem; color: #555;">
-                        Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.
-                    </p>
-                </div>
+            <div class="feature-content">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Material Identification</h3>
+                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
+                    Material identification tools help partners clearly explain material-level technologies to end customers.
+                </p>
+                <p style="font-size: 1rem; color: #555;">
+                    For materials treated with Air Coating, HTX provides optional material identification tags and info cards.
+                </p>
+                <p style="font-size: 1rem; color: #555;">
+                    These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.
+                </p>
+                <p style="font-size: 1rem; color: #555;">
+                    Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="footer-minimal">
-        <p style="font-size: 1.1rem; color: #666; margin: 0;">
-            Materials presented on this page are standardized platforms.<br>
-            Application-specific integration and commercial discussions are handled separately.
-        </p>
+    <div class="container" style="padding-bottom: 6rem;">
+        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 3rem;">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">
+                Materials presented on this page are standardized platforms.<br>
+                Application-specific integration and commercial discussions are handled separately.
+            </p>
+        </div>
     </div>
 
 </body>
