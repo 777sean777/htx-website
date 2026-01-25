@@ -7,103 +7,30 @@
     <link rel="preload" as="image" href="../assets/img/hero-materials-woven.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Page Specific Overrides --- */
-        
-        /* 1. 強制圖片全彩 (無濾鏡) */
-        .card img, .content-image, .thumb img {
-            filter: none !important;
-            opacity: 1 !important;
-        }
-
-        /* 2. 供應模式說明區塊 */
-        .supply-model-box {
-            background-color: #F4F6F8;
-            border-left: 4px solid #2D2D2D;
-            padding: 2rem;
-            margin: 3rem 0;
-        }
+        .card img, .content-image, .thumb img { filter: none !important; opacity: 1 !important; }
+        .supply-model-box { background-color: #F4F6F8; border-left: 4px solid #2D2D2D; padding: 2rem; margin: 3rem 0; }
         .supply-model-box h3 { margin-top: 0; color: #2D2D2D; font-size: 1.4rem; }
-
-        /* 3. 區塊樣式 */
         .section-intro { max-width: 800px; margin: 0 auto 4rem auto; text-align: left; }
-        .section-title-bar {
-            border-bottom: 2px solid #2D2D2D;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+        .section-title-bar { border-bottom: 2px solid #2D2D2D; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
         .section-title-bar h2 { margin: 0; font-size: 1.8rem; color: #2D2D2D; }
         .section-title-bar p { margin: 0; color: #666; font-size: 0.95rem; max-width: 600px; }
-
-        /* 4. 特色區塊 (Air Coating / Waterless) */
-        .feature-split {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            margin-bottom: 6rem;
-            align-items: center;
-        }
+        .feature-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; margin-bottom: 6rem; align-items: center; }
         .feature-split.reverse { grid-template-columns: 0.8fr 1.2fr; }
-        
-        .feature-video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 比例 */
-            background-color: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        .feature-video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+        .feature-video-container { position: relative; width: 100%; padding-bottom: 56.25%; background-color: #000; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .feature-video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
         .feature-content h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #2D2D2D; }
         .feature-content p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1rem; }
         .feature-content ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
         .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
         .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
-
-        /* 5. 識別系統區塊 (特別樣式) */
-        .ident-section {
-            background-color: #FAFAFA; /* 極淺灰背景 */
-            padding: 4rem 2rem;
-            margin: 0 -2rem 4rem -2rem; /* 延伸至全寬 */
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .ident-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        /* 響應式調整 */
-        @media (max-width: 900px) {
-            .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; }
-            .section-intro { padding: 0 1rem; }
-            .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; }
-        }
+        .ident-section { background-color: #FAFAFA; padding: 4rem 2rem; margin: 0 -2rem 4rem -2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .ident-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        @media (max-width: 900px) { .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; } .section-intro { padding: 0 1rem; } .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; } }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo"></a>
         <nav>
             <a href="systems.html">系統設備</a>
             <a href="materials.html" class="active">機能材料</a>
@@ -119,29 +46,18 @@
     <div class="page-hero" style="background-image: url('../assets/img/hero-materials-woven.png');">
         <div class="container">
             <h1>機能材料</h1>
-            <p>基於表面工程技術的標準化量產材料。<br>
-            專為服飾、醫療與熱管理應用設計的實戰級交付方案——在不改變原有外觀與手感的前提下，賦予材料全新機能。</p>
+            <p>基於表面工程技術的標準化量產材料。<br>專為服飾、醫療與熱管理應用設計的實戰級交付方案——在不改變原有外觀與手感的前提下，賦予材料全新機能。</p>
         </div>
     </div>
 
     <div class="container" style="margin-top: 4rem; padding-bottom: 2rem;">
-        
         <div class="section-intro">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2D2D2D;">材料總覽</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 2rem;">
-                HTX 材料是透過受控塗層與表面改質製程所生產的機能性紡織品與表面處理材料。
-                這些材料可依據應用需求，以半成品或成品形式交付。
-            </p>
-            
+            <h2>材料總覽</h2>
+            <p>HTX 材料是透過受控塗層與表面改質製程所生產的機能性紡織品與表面處理材料。這些材料可依據應用需求，以半成品或成品形式交付。</p>
             <div class="supply-model-box">
                 <h3>生產與供應模式</h3>
-                <p style="margin-bottom: 0.5rem; color: #444; line-height: 1.6;">
-                    HTX 定義所有材料的塗層製程、材料結構與性能標準。
-                    生產可於 HTX 內部產線進行，或透過合格的製造合作夥伴在受控的製程窗口下執行。
-                </p>
-                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">
-                    材料以「製程定義產出物」的形式供應，獨立於設備銷售業務之外。
-                </p>
+                <p>HTX 定義所有材料的塗層製程、材料結構與性能標準。生產可於 HTX 內部產線進行，或透過合格的製造合作夥伴在受控的製程窗口下執行。</p>
+                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">材料以「製程定義產出物」的形式供應，獨立於設備銷售業務之外。</p>
             </div>
         </div>
 
@@ -150,17 +66,14 @@
                 <h2>標準材料平台</h2>
                 <p>請優先選擇標準材料。客製化開發將在確認目標應用與限制條件後進行。</p>
             </div>
-
             <div class="grid-3">
-                
-                <div class="card">
+                <a href="materials/antibacterial.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-antibacterial-metal-fabric-underwear-01.jpg" alt="抗菌金屬鍍層布料">
                     <div class="card-content">
-                        <h3>抗菌金屬鍍層布料</h3>
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">抗菌金屬鍍層布料</h3>
                         <p>基於銀/鈦的機能性紡織品，針對內襯與貼身應用設計。常見用途包括鞋材內裡、服飾夾層、嬰兒泳褲及內著組件。</p>
                     </div>
-                </div>
-
+                </a>
                 <div class="card">
                     <img src="../assets/img/materials-thermal-recovery-metal-layer-02.jpg" alt="保暖與恢復感布料">
                     <div class="card-content">
@@ -168,7 +81,6 @@
                         <p>基於鈦/不鏽鋼的鍍層紡織品，專為保暖與舒適感設計。適用於外套、內睡衣及保暖層應用。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-heat-insulation-reflective-fabric-03.jpg" alt="隔熱與熱反射材料">
                     <div class="card-content">
@@ -176,7 +88,6 @@
                         <p>基於鋁金屬的反射性布料，用於減少輻射熱。典型案例包括遮陽簾、隔熱層及熱管理組件。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-silver-bandage-functional-textile-04.jpg" alt="銀繃帶紡織材料">
                     <div class="card-content">
@@ -184,7 +95,6 @@
                         <p>針對敷料與繃帶材料開發的機能性銀基紡織平台。以標準化供應形式提供，便於下游轉換加工。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="經皮吸收支援片材">
                     <div class="card-content">
@@ -192,7 +102,6 @@
                         <p>專為提升皮膚交互作用與機能配方吸收率而設計的片材平台。旨在支援下游產品整合與特定應用的開發討論。</p>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -202,17 +111,12 @@
             <div class="feature-video-container">
                 <video autoplay muted loop playsinline>
                     <source src="../assets/video/materials-air-coating-process-loop-01.mp4" type="video/mp4">
-                    您的瀏覽器不支援影片標籤。
                 </video>
             </div>
-            
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">技術平台</span>
                 <h3>Air Coating：源自表面的工程技術</h3>
-                <p>
-                    Air Coating 是 HTX 獨有的乾式表面處理製程，直接應用於材料層級。
-                    作為標準化製程平台，它支援跨多種材料家族的機能性塗層。
-                </p>
+                <p>Air Coating 是 HTX 獨有的乾式表面處理製程，直接應用於材料層級。作為標準化製程平台，它支援跨多種材料家族的機能性塗層。</p>
                 <ul>
                     <li>極薄表面處理，將視覺與觸覺影響降至最低</li>
                     <li>旨在保留紡織品原本的色彩方向、透氣性、延展性與柔軟度</li>
@@ -225,54 +129,35 @@
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">製程永續性</span>
                 <h3>無水與無溶劑製程</h3>
-                <p>
-                    採用乾式製程思維，旨在降低操作複雜度並避免表面處理流程中的液體處理環節。
-                </p>
-                <p>
-                    Air Coating 採用乾式真空製程，不使用水或液態溶劑。此方法顯著減少了廢水產生與化學排放，同時維持穩定且可重複的塗層品質。
-                </p>
-                <p style="font-weight: 600; color: #4A5568;">
-                    環境責任是整合在製程設計之中，而非事後的附加考量。
-                </p>
+                <p>採用乾式製程思維，旨在降低操作複雜度並避免表面處理流程中的液體處理環節。</p>
+                <p>Air Coating 採用乾式真空製程，不使用水或液態溶劑。此方法顯著減少了廢水產生與化學排放，同時維持穩定且可重複的塗層品質。</p>
+                <p style="font-weight: 600; color: #4A5568;">環境責任是整合在製程設計之中，而非事後的附加考量。</p>
             </div>
-
             <div>
                 <img src="../assets/img/materials-waterless-solvent-free-process-06.jpg" alt="無水製程概念" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
             </div>
         </div>
+    </div>
 
-    </div> <div class="ident-section">
+    <div class="ident-section">
         <div class="ident-container">
             <div>
                 <img src="../assets/img/material-identification-air-coating-01.jpg" alt="材料識別吊牌" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
             </div>
-
             <div class="feature-content">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">材料識別系統</h3>
-                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
-                    材料識別工具協助合作夥伴向終端客戶清晰說明材料層級的技術。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    針對經過 Air Coating 處理的材料，HTX 提供選配的識別吊牌與資訊卡。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    這些識別工具支援 B 到 C 的下游溝通，讓品牌能以清晰一致的方式說明表面技術、機能行為與材料價值。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    吊牌並非用於改變產品外觀或品牌形象，而是作為材料工程與日常使用之間的資訊橋樑。
-                </p>
+                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">材料識別工具協助合作夥伴向終端客戶清晰說明材料層級的技術。</p>
+                <p style="font-size: 1rem; color: #555;">針對經過 Air Coating 處理的材料，HTX 提供選配的識別吊牌與資訊卡。</p>
+                <p style="font-size: 1rem; color: #555;">這些識別工具支援 B 到 C 的下游溝通，讓品牌能以清晰一致的方式說明表面技術、機能行為與材料價值。</p>
+                <p style="font-size: 1rem; color: #555;">吊牌並非用於改變產品外觀或品牌形象，而是作為材料工程與日常使用之間的資訊橋樑。</p>
             </div>
         </div>
     </div>
 
     <div class="container" style="padding-bottom: 6rem;">
         <div style="text-align: center; border-top: 1px solid #eee; padding-top: 3rem;">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">
-                本頁面展示之材料均為標準化平台。<br>
-                特定應用的整合與商務討論將另行處理。
-            </p>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">本頁面展示之材料均為標準化平台。<br>特定應用的整合與商務討論將另行處理。</p>
         </div>
     </div>
-
 </body>
 </html>
