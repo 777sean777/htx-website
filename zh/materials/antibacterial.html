@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抗菌金屬鍍層布料 | HTX Materials</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <style>
+        /* --- 頁面專屬樣式 (緊湊與工程風格) --- */
+        
+        /* 1. 全域設定 */
+        img { filter: none !important; opacity: 1 !important; display: block; }
+        p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
+        h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; font-weight: 600; }
+        h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.05rem; margin-top: 0; }
+
+        /* 2. 佈局工具 */
+        .container { max-width: 1000px; padding-bottom: 4rem; }
+        .section-spacing { margin-bottom: 4rem; }
+        
+        /* 雙欄佈局 (左/右) */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        /* 強調區塊 (淺灰背景，類似 Systems 頁面) */
+        .highlight-section {
+            background-color: #F8F9FA;
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+            border-radius: 4px;
+        }
+
+        /* 3. 組件樣式 */
+        
+        /* 應用案例網格 */
+        .app-text-col ul { margin-bottom: 1.5rem; padding-left: 1.2rem; margin-top: 0; }
+        .app-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .app-img-grid img {
+            width: 100%;
+            height: 220px; /* 限制高度 */
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+
+        /* 測試數據框 */
+        .test-box {
+            border: 1px solid #E2E8F0;
+            padding: 2rem;
+            border-radius: 4px;
+            background: #fff;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .data-table th { background-color: #f8f9fa; font-weight: 600; color: #4a5568; }
+        
+        .chart-img {
+            width: 100%; 
+            max-height: 280px; /* 限制圖表高度 */
+            object-fit: contain; 
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* Contact Box (與 System 風格一致) */
+        .cta-box { 
+            background-color: #fff; 
+            border: 1px solid #e0e0e0; 
+            border-left: 4px solid var(--c-accent); 
+            padding: 2rem; 
+            margin-top: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+        .req-list li { list-style: none; margin-bottom: 0.3rem; }
+        .req-list li::before { content: "- "; color: #999; }
+
+        /* 免責聲明 */
+        .disclaimer { font-size: 0.8rem; color: #718096; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem; font-style: italic; }
+
+        /* RWD */
+        @media (max-width: 900px) {
+            .split-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .app-img-grid { grid-template-columns: 1fr; }
+            .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html">
+            <img src="../../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
+        </a>
+        <nav>
+            <a href="../../zh/systems.html">系統設備</a>
+            <a href="../../zh/materials.html" class="active">機能材料</a>
+            <a href="../../zh/contact.html">聯絡我們</a>
+            <span class="lang-switch">
+                <a href="../../en/materials/antibacterial.html">EN</a>
+                <a href="#" class="active">繁中</a>
+                <a href="../../ja/materials/antibacterial.html">JP</a>
+            </span>
+        </nav>
+    </header>
+
+    <div class="page-hero" style="background-image: url('../../assets/img/materials-antibacterial-hero-baby-swimshorts-01.jpg'); background-position: center; background-size: cover;">
+        <div class="container">
+            <h1>抗菌金屬鍍層布料</h1>
+            <p>專為衛生敏感與貼身應用設計的表面工程紡織品。</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 3rem;">
+        
+        <div class="section-spacing">
+            <h2>材料總覽</h2>
+            <div class="split-layout">
+                <div>
+                    <p>HTX 抗菌金屬鍍層布料是專為貼身環境衛生控制所設計的機能性紡織平台。透過在材料層級應用受控的金屬表面處理，此布料旨在減少致味細菌，並支援長期的潔淨穿著體驗。</p>
+                    <p>此處理技術旨在與紡織表面完全整合，而不改變基布原本的結構、舒適度或穿著行為。</p>
+                </div>
+                
+                <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
+                    <h3>關鍵材料特性</h3>
+                    <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.95rem;">
+                        <li>專為衛生敏感與皮膚接觸應用設計</li>
+                        <li>透過表面層級的抗菌行為支援異味控制</li>
+                        <li>保留原本的柔軟度、透氣性與延展行為</li>
+                        <li>適用於日常穿著、重複接觸與長時間使用</li>
+                        <li>以標準化、可量產的材料平台形式供應</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacing">
+            <h2>典型應用</h2>
+            <div class="split-layout">
+                <div class="app-text-col">
+                    <h4>貼身服飾 (Close-to-Skin)</h4>
+                    <ul>
+                        <li>內著 (Underwear)</li>
+                        <li>打底層 (Base layers)</li>
+                        <li>襪類</li>
+                    </ul>
+
+                    <h4>嬰幼兒與敏感肌紡織品</h4>
+                    <ul>
+                        <li>嬰兒泳裝</li>
+                        <li>寶寶內層衣物</li>
+                    </ul>
+
+                    <h4>鞋材與內襯組件</h4>
+                    <ul>
+                        <li>鞋內裡</li>
+                        <li>鞋墊</li>
+                        <li>易受潮的紡織組件</li>
+                    </ul>
+                </div>
+
+                <div class="app-img-grid">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="貼身應用情境">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="紡織品細節特寫">
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-section">
+            <h2 style="border-bottom: none; margin-bottom: 1.5rem;">材料平台與供應模式</h2>
+            <div class="split-layout">
+                <div>
+                    <p>HTX 抗菌布料是以表面處理參數與性能行為定義的標準化材料平台。</p>
+                    <p style="font-weight: 600; color: #2D2D2D;">材料供應獨立於設備銷售業務之外。</p>
+                    <p>生產可於 HTX 內部產線進行，或透過在受控製程條件下運作的合格合作夥伴執行。材料可依應用需求，以適合下游裁剪、車縫或貼合的形式交付。</p>
+                </div>
+                <div>
+                    <img src="../../assets/img/materials-antibacterial-swatch-closeup-03.jpg" alt="材料樣布特寫" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacing">
+            <h2>抗菌性能驗證</h2>
+            <p style="max-width: 800px; margin-bottom: 2.5rem;">抗菌性能已透過多種國際認可的測試方法進行評估，反映不同的接觸條件與評估觀點。以下結果摘要了獨立實驗室測試的代表性成果。</p>
+
+            <div class="test-box">
+                <div class="split-layout">
+                    <div>
+                        <span style="font-size: 0.85rem; color: #718096; font-weight: 700; letter-spacing: 0.05em;">測試方法 01</span>
+                        <h3 style="margin-top: 0.5rem;">動態接觸抗菌活性 (ASTM E2149-20)</h3>
+                        <p style="font-size:0.95rem;">此方法評估動態接觸條件下的抗菌活性，模擬移動、攪動與重複交互作用。特別適用於布料在使用中會經歷移動與摩擦的穿戴應用。</p>
+                        <ul style="font-size:0.9rem; padding-left:1.2rem;">
+                            <li><strong>E. coli (大腸桿菌):</strong> >99.99% 減少率 (報告數值 <30 CFU/ml)</li>
+                            <li><strong>Staphylococcus aureus (金黃色葡萄球菌):</strong> 觀察到高減少率</li>
+                            <li><strong>MRSA:</strong> 在動態暴露下呈現顯著減少</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../../assets/img/materials-antibacterial-evidence-astmE2149-02.jpg" alt="ASTM E2149 數據摘要" class="chart-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box">
+                <div class="split-layout">
+                    <div>
+                        <span style="font-size: 0.85rem; color: #718096; font-weight: 700; letter-spacing: 0.05em;">測試方法 02</span>
+                        <h3 style="margin-top: 0.5rem;">時間依賴型抑菌測試 (AATCC 100)</h3>
+                        <p style="font-size:0.95rem;">基於受控接觸時間評估抗菌有效性。提供靜態條件下抗菌行為的時間依賴觀點。</p>
+                        
+                        <p style="font-size:0.85rem; font-weight:700; margin-bottom:0.3rem;">MRSA (BCRC 15211)</p>
+                        <table class="data-table">
+                            <tr><td>1 小時</td><td>33.1%</td></tr>
+                            <tr><td>6 小時</td><td>99.5%</td></tr>
+                            <tr><td>24 小時</td><td>>99.9%</td></tr>
+                        </table>
+                    </div>
+                    <div>
+                        <img src="../../assets/img/materials-antibacterial-evidence-aattc100-01.jpg" alt="AATCC 100 數據摘要" class="chart-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-layout" style="margin-top: 3rem;">
+                <div>
+                    <h3>測試結果解讀</h3>
+                    <p style="font-size: 0.95rem;">兩種測試方法代表不同的使用觀點。ASTM E2149-20 反映真實動態環境下的抗菌行為，而 AATCC 100 (2019) 說明抗菌效果隨時間的變化。這些數據共同提供了針對典型穿著情境的互補性觀點。</p>
+                </div>
+                <div>
+                    <div class="disclaimer">
+                        所示抗菌性能數據代表在實驗室條件下獲得的材料層級測試結果。最終產品性能可能因設計、結構與使用環境而異。測試結果僅供材料參考，不用於醫療宣稱。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-section" style="background-color: #fff; border: none; padding: 0; margin-bottom: 0;">
+            <div class="cta-box">
+                <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">開始技術洽談</h3>
+                <p style="margin-bottom: 1.5rem; color: #666;">歡迎討論以評估材料對您特定應用的適用性。</p>
+                
+                <a href="mailto:htx-all@huntertex.com" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 10px 24px; text-decoration:none; border-radius:4px;">聯絡 HTX 材料團隊</a>
+
+                <div class="req-list">
+                    <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">如有可能，請包含：</p>
+                    <ul>
+                        <li>目標應用 (如：內著、鞋材內裡、運動服飾)</li>
+                        <li>基布偏好 (如：聚酯纖維、尼龍、棉混紡)</li>
+                        <li>預估數量或開發階段 (原型製作 / 量產)</li>
+                        <li>特定性能需求 (如：耐水洗次數)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
+            <a href="../../zh/materials.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; 返回材料總覽</a>
+        </div>
+
+    </div>
+</body>
+</html>
