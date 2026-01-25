@@ -7,103 +7,30 @@
     <link rel="preload" as="image" href="../assets/img/hero-materials-woven.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Page Specific Overrides --- */
-        
-        /* 1. 画像をフルカラーで表示（グレーフィルターなし） */
-        .card img, .content-image, .thumb img {
-            filter: none !important;
-            opacity: 1 !important;
-        }
-
-        /* 2. 供給モデル説明ボックス */
-        .supply-model-box {
-            background-color: #F4F6F8;
-            border-left: 4px solid #2D2D2D;
-            padding: 2rem;
-            margin: 3rem 0;
-        }
+        .card img, .content-image, .thumb img { filter: none !important; opacity: 1 !important; }
+        .supply-model-box { background-color: #F4F6F8; border-left: 4px solid #2D2D2D; padding: 2rem; margin: 3rem 0; }
         .supply-model-box h3 { margin-top: 0; color: #2D2D2D; font-size: 1.4rem; }
-
-        /* 3. セクションスタイル */
         .section-intro { max-width: 800px; margin: 0 auto 4rem auto; text-align: left; }
-        .section-title-bar {
-            border-bottom: 2px solid #2D2D2D;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+        .section-title-bar { border-bottom: 2px solid #2D2D2D; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
         .section-title-bar h2 { margin: 0; font-size: 1.8rem; color: #2D2D2D; }
         .section-title-bar p { margin: 0; color: #666; font-size: 0.95rem; max-width: 600px; }
-
-        /* 4. 特集セクション (Air Coating / Waterless) */
-        .feature-split {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            margin-bottom: 6rem;
-            align-items: center;
-        }
+        .feature-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; margin-bottom: 6rem; align-items: center; }
         .feature-split.reverse { grid-template-columns: 0.8fr 1.2fr; }
-        
-        .feature-video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 アスペクト比 */
-            background-color: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        .feature-video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
+        .feature-video-container { position: relative; width: 100%; padding-bottom: 56.25%; background-color: #000; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .feature-video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
         .feature-content h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #2D2D2D; }
         .feature-content p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1rem; }
         .feature-content ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
         .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
         .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
-
-        /* 5. 識別システムセクション (特別スタイル) */
-        .ident-section {
-            background-color: #FAFAFA; /* 極薄グレー背景 */
-            padding: 4rem 2rem;
-            margin: 0 -2rem 4rem -2rem; /* 全幅表示 */
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .ident-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        /* レスポンシブ調整 */
-        @media (max-width: 900px) {
-            .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; }
-            .section-intro { padding: 0 1rem; }
-            .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; }
-        }
+        .ident-section { background-color: #FAFAFA; padding: 4rem 2rem; margin: 0 -2rem 4rem -2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .ident-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        @media (max-width: 900px) { .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; } .section-intro { padding: 0 1rem; } .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; } }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo"></a>
         <nav>
             <a href="systems.html">システム</a>
             <a href="materials.html" class="active">マテリアル</a>
@@ -119,29 +46,18 @@
     <div class="page-hero" style="background-image: url('../assets/img/hero-materials-woven.png');">
         <div class="container">
             <h1>機能性マテリアル</h1>
-            <p>表面工学技術に基づく標準化された量産材料。<br>
-            アパレル、医療、熱管理用途向けに、元の外観や風合いを損なうことなく、新たな機能を提供します。</p>
+            <p>表面工学技術に基づく標準化された量産材料。<br>アパレル、医療、熱管理用途向けに、元の外観や風合いを損なうことなく、新たな機能を提供します。</p>
         </div>
     </div>
 
     <div class="container" style="margin-top: 4rem; padding-bottom: 2rem;">
-        
         <div class="section-intro">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2D2D2D;">マテリアル概要</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 2rem;">
-                HTXのマテリアルは、制御されたコーティングおよび表面改質プロセスを通じて製造される機能性テキスタイルおよび表面処理材料です。
-                これらの材料は、用途の要件に応じて、半製品または完成品として提供されます。
-            </p>
-            
+            <h2>マテリアル概要</h2>
+            <p>HTXのマテリアルは、制御されたコーティングおよび表面改質プロセスを通じて製造される機能性テキスタイルおよび表面処理材料です。これらの材料は、用途の要件に応じて、半製品または完成品として提供されます。</p>
             <div class="supply-model-box">
                 <h3>生産および供給モデル</h3>
-                <p style="margin-bottom: 0.5rem; color: #444; line-height: 1.6;">
-                    HTXは、提供するすべての材料について、コーティングプロセス、材料構造、および性能基準を定義しています。
-                    生産は、HTXの社内ライン、または管理されたプロセス条件下にある認定製造パートナーを通じて行われます。
-                </p>
-                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">
-                    マテリアルは、装置販売とは独立した「プロセス定義の成果物」として供給されます。
-                </p>
+                <p>HTXは、提供するすべての材料について、コーティングプロセス、材料構造、および性能基準を定義しています。生産は、HTXの社内ライン、または管理されたプロセス条件下にある認定製造パートナーを通じて行われます。</p>
+                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">マテリアルは、装置販売とは独立した「プロセス定義の成果物」として供給されます。</p>
             </div>
         </div>
 
@@ -150,17 +66,14 @@
                 <h2>標準マテリアル・プラットフォーム</h2>
                 <p>まずは標準材料からお選びください。カスタム開発は、ターゲットとなる用途と制約条件が確認された後に行われます。</p>
             </div>
-
             <div class="grid-3">
-                
-                <div class="card">
+                <a href="materials/antibacterial.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-antibacterial-metal-fabric-underwear-01.jpg" alt="抗菌金属コーティング・ファブリック">
                     <div class="card-content">
-                        <h3>抗菌金属コーティング・ファブリック</h3>
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">抗菌金属コーティング・ファブリック</h3>
                         <p>ライナーや肌に密着する用途向けに設計された、銀/チタンベースの機能性テキスタイルです。主な用途には、靴の裏地、アパレル層、下着、ベビー水着などがあります。</p>
                     </div>
-                </div>
-
+                </a>
                 <div class="card">
                     <img src="../assets/img/materials-thermal-recovery-metal-layer-02.jpg" alt="保温・リカバリー・ファブリック">
                     <div class="card-content">
@@ -168,7 +81,6 @@
                         <p>保温性と快適性を追求して設計されたチタン/ステンレスベースのコーティングテキスタイル。ジャケット、寝間着、および断熱層に適しています。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-heat-insulation-reflective-fabric-03.jpg" alt="遮熱・熱反射マテリアル">
                     <div class="card-content">
@@ -176,7 +88,6 @@
                         <p>輻射熱を低減するためのアルミニウムベースの反射布。主な用途には、遮光カーテン、遮熱バリア、および熱管理コンポーネントが含まれます。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-silver-bandage-functional-textile-04.jpg" alt="シルバーバンデージ・テキスタイル">
                     <div class="card-content">
@@ -184,7 +95,6 @@
                         <p>創傷ケアおよび包帯材料開発向けに意図された機能性銀ベースのテキスタイルプラットフォーム。下流工程での変換用に標準化された供給形態です。</p>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="経皮吸収サポートシート材料">
                     <div class="card-content">
@@ -192,7 +102,6 @@
                         <p>皮膚との相互作用を高め、機能性配合物の吸収を向上させるために設計されたシート材料プラットフォーム。下流製品への統合および用途別の開発検討を目的としています。</p>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -202,17 +111,12 @@
             <div class="feature-video-container">
                 <video autoplay muted loop playsinline>
                     <source src="../assets/video/materials-air-coating-process-loop-01.mp4" type="video/mp4">
-                    お使いのブラウザは動画タグをサポートしていません。
                 </video>
             </div>
-            
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">技術プラットフォーム</span>
                 <h3>Air Coating：表面から設計された技術</h3>
-                <p>
-                    Air Coatingは、材料レベルで直接適用されるHTX独自の乾式表面処理プロセスです。
-                    標準化されたプロセスプラットフォームとして位置づけられ、複数の材料ファミリーにわたって機能性コーティングをサポートします。
-                </p>
+                <p>Air Coatingは、材料レベルで直接適用されるHTX独自の乾式表面処理プロセスです。標準化されたプロセスプラットフォームとして位置づけられ、複数の材料ファミリーにわたって機能性コーティングをサポートします。</p>
                 <ul>
                     <li>視覚的および触覚的な影響を最小限に抑えるよう設計された極薄の表面処理</li>
                     <li>テキスタイルの意図された色味、通気性、伸縮性、柔軟性を維持するよう設計</li>
@@ -225,54 +129,35 @@
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">プロセスの持続可能性</span>
                 <h3>水・溶剤不使用 (Waterless & Solvent-Free)</h3>
-                <p>
-                    運用上の複雑さを軽減し、表面処理ワークフローにおける液体処理を回避するために設計された、ドライプロセスの考え方です。
-                </p>
-                <p>
-                    Air Coatingは、水や液体溶剤を使用しない乾式真空プロセスを使用して実行されます。このアプローチにより、廃水の発生と化学物質の排出が大幅に削減されると同時に、安定的で再現性のあるコーティング品質が維持されます。
-                </p>
-                <p style="font-weight: 600; color: #4A5568;">
-                    環境への責任は、後付けではなく、プロセス設計に統合されています。
-                </p>
+                <p>運用上の複雑さを軽減し、表面処理ワークフローにおける液体処理を回避するために設計された、ドライプロセスの考え方です。</p>
+                <p>Air Coatingは、水や液体溶剤を使用しない乾式真空プロセスを使用して実行されます。このアプローチにより、廃水の発生と化学物質の排出が大幅に削減されると同時に、安定的で再現性のあるコーティング品質が維持されます。</p>
+                <p style="font-weight: 600; color: #4A5568;">環境への責任は、後付けではなく、プロセス設計に統合されています。</p>
             </div>
-
             <div>
                 <img src="../assets/img/materials-waterless-solvent-free-process-06.jpg" alt="ウォーターレスプロセスの概念" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
             </div>
         </div>
+    </div>
 
-    </div> <div class="ident-section">
+    <div class="ident-section">
         <div class="ident-container">
             <div>
                 <img src="../assets/img/material-identification-air-coating-01.jpg" alt="マテリアル識別タグ" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
             </div>
-
             <div class="feature-content">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">マテリアル識別システム</h3>
-                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
-                    マテリアル識別ツールは、パートナーがエンドユーザーに対して材料レベルの技術を明確に説明するのに役立ちます。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    Air Coating処理された材料に対して、HTXはオプションの識別タグ（下げ札）と情報カードを提供します。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    これらの識別ツールはB to Cの下流コミュニケーションをサポートし、ブランドが表面レベルの技術、機能的挙動、および材料の価値を明確かつ一貫した方法で説明できるようにします。
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    製品の外観やブランディングを変更するのではなく、下げ札は材料工学と日常使用との間の情報の架け橋として機能します。
-                </p>
+                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">マテリアル識別ツールは、パートナーがエンドユーザーに対して材料レベルの技術を明確に説明するのに役立ちます。</p>
+                <p style="font-size: 1rem; color: #555;">Air Coating処理された材料に対して、HTXはオプションの識別タグ（下げ札）と情報カードを提供します。</p>
+                <p style="font-size: 1rem; color: #555;">これらの識別ツールはB to Cの下流コミュニケーションをサポートし、ブランドが表面レベルの技術、機能的挙動、および材料の価値を明確かつ一貫した方法で説明できるようにします。</p>
+                <p style="font-size: 1rem; color: #555;">製品の外観やブランディングを変更するのではなく、下げ札は材料工学と日常使用との間の情報の架け橋として機能します。</p>
             </div>
         </div>
     </div>
 
     <div class="container" style="padding-bottom: 6rem;">
         <div style="text-align: center; border-top: 1px solid #eee; padding-top: 3rem;">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">
-                本ページに掲載されている材料は標準化されたプラットフォームです。<br>
-                アプリケーション固有の統合および商務に関する議論は別途行われます。
-            </p>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">本ページに掲載されている材料は標準化されたプラットフォームです。<br>アプリケーション固有の統合および商務に関する議論は別途行われます。</p>
         </div>
     </div>
-
 </body>
 </html>
