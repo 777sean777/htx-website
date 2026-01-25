@@ -3,282 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antibacterial Metal-Coated Fabrics | HTX Materials</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <title>Functional Materials | HTX</title>
+    <link rel="preload" as="image" href="../assets/img/hero-materials-woven.png">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles (Refined & Balanced) --- */
-        
-        /* Global Reset */
-        img { filter: none !important; opacity: 1 !important; display: block; }
-        p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
-        h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-        h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; font-weight: 600; }
-        h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.05rem; margin-top: 0; }
-
-        .container { max-width: 1000px; padding-bottom: 4rem; }
-        .section-spacing { margin-bottom: 4rem; }
-        
-        /* Split Layout */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-        
-        /* Highlight Section (Grey Box - System Style) */
-        .highlight-section {
-            background-color: #F8F9FA;
-            border-top: 1px solid #E2E8F0;
-            border-bottom: 1px solid #E2E8F0;
-            padding: 3rem 2rem;
-            margin: 3rem -2rem; /* Stretch slightly */
-            border-radius: 4px;
-        }
-
-        /* --- Component Styles --- */
-        
-        /* Application Section - Now Vertically Stacked Images */
-        .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
-        .app-img-stack {
-            display: flex;
-            flex-direction: column; /* Vertical Stack */
-            gap: 1.5rem; /* Space between images */
-        }
-        .app-img-stack img {
-            width: 100%;
-            height: 280px; /* Taller images to balance text height */
-            object-fit: cover;
-            border-radius: 4px;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* Test Data Box */
-        .test-box {
-            border: 1px solid #E2E8F0;
-            padding: 2rem;
-            border-radius: 4px;
-            background: #fff;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-        .data-table th, .data-table td {
-            text-align: left;
-            padding: 8px 12px;
-            border-bottom: 1px solid #eee;
-        }
-        .data-table th { background-color: #f8f9fa; font-weight: 600; color: #4a5568; }
-        
-        .chart-img {
-            width: 100%; 
-            max-height: 280px; 
-            object-fit: contain; 
-            border: 1px solid #eee;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        /* Contact Box (System Style) */
-        .cta-box { 
-            background-color: #fff; 
-            border: 1px solid #e0e0e0; 
-            border-left: 4px solid var(--c-accent); 
-            padding: 2rem; 
-            margin-top: 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
-        .req-list li { list-style: none; margin-bottom: 0.3rem; }
-        .req-list li::before { content: "- "; color: #999; }
-
-        .disclaimer { font-size: 0.8rem; color: #718096; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem; font-style: italic; }
-
-        /* RWD */
-        @media (max-width: 900px) {
-            .split-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
-        }
+        .card img, .content-image, .thumb img { filter: none !important; opacity: 1 !important; }
+        .supply-model-box { background-color: #F4F6F8; border-left: 4px solid #2D2D2D; padding: 2rem; margin: 3rem 0; }
+        .supply-model-box h3 { margin-top: 0; color: #2D2D2D; font-size: 1.4rem; }
+        .section-intro { max-width: 800px; margin: 0 auto 4rem auto; text-align: left; }
+        .section-title-bar { border-bottom: 2px solid #2D2D2D; padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+        .section-title-bar h2 { margin: 0; font-size: 1.8rem; color: #2D2D2D; }
+        .section-title-bar p { margin: 0; color: #666; font-size: 0.95rem; max-width: 600px; }
+        .feature-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; margin-bottom: 6rem; align-items: center; }
+        .feature-split.reverse { grid-template-columns: 0.8fr 1.2fr; }
+        .feature-video-container { position: relative; width: 100%; padding-bottom: 56.25%; background-color: #000; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .feature-video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .feature-content h3 { font-size: 1.6rem; margin-bottom: 1rem; color: #2D2D2D; }
+        .feature-content p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1rem; }
+        .feature-content ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+        .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
+        .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
+        .ident-section { background-color: #FAFAFA; padding: 4rem 2rem; margin: 0 -2rem 4rem -2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .ident-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        @media (max-width: 900px) { .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; } .section-intro { padding: 0 1rem; } .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; } }
     </style>
 </head>
 <body>
-
     <header>
-        <a href="../../index.html">
-            <img src="../../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo"></a>
         <nav>
-            <a href="../../en/systems.html">Systems</a>
-            <a href="../../en/materials.html" class="active">Materials</a>
-            <a href="../../en/contact.html">Contact</a>
+            <a href="systems.html">Systems</a>
+            <a href="materials.html" class="active">Materials</a>
+            <a href="contact.html">Contact</a>
             <span class="lang-switch">
                 <a href="#" class="active">EN</a>
-                <a href="#" style="opacity: 0.5; pointer-events: none;">繁中</a>
-                <a href="#" style="opacity: 0.5; pointer-events: none;">JP</a>
+                <a href="../zh/materials.html">繁中</a>
+                <a href="../ja/materials.html">JP</a>
             </span>
         </nav>
     </header>
 
-    <div class="page-hero" style="background-image: url('../../assets/img/materials-antibacterial-hero-baby-swimshorts-01.jpg'); background-position: center; background-size: cover;">
+    <div class="page-hero" style="background-image: url('../assets/img/hero-materials-woven.png');">
         <div class="container">
-            <h1>Antibacterial Metal-Coated Fabrics</h1>
-            <p>Surface-engineered textiles designed for hygiene-sensitive and close-to-skin applications.</p>
+            <h1>Functional Materials</h1>
+            <p>Standardized, production-ready materials engineered at the surface.<br>Designed for real-world delivery across apparel, medical, and thermal applications — without disrupting the original look and feel.</p>
         </div>
     </div>
 
-    <div class="container" style="margin-top: 3rem;">
-        
-        <div class="section-spacing">
+    <div class="container" style="margin-top: 4rem; padding-bottom: 2rem;">
+        <div class="section-intro">
             <h2>Material Overview</h2>
-            <div class="split-layout">
-                <div>
-                    <p>HTX antibacterial metal-coated fabrics are functional textile platforms engineered for hygiene control in close-to-skin environments. By applying a controlled metal-based surface treatment at the material level, these fabrics are designed to help reduce odor-causing bacteria and support cleaner wear conditions over time.</p>
-                    <p>The treatment is engineered to integrate with the textile surface without altering the intended structure, comfort, or wear behavior of the base fabric.</p>
-                </div>
-                
-                <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
-                    <h3>Key Material Characteristics</h3>
-                    <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.95rem;">
-                        <li>Designed for hygiene-sensitive and skin-contact applications</li>
-                        <li>Supports odor control through surface-level antibacterial behavior</li>
-                        <li>Maintains original softness, breathability, and stretch behavior</li>
-                        <li>Compatible with daily wear, repeated contact, and prolonged use</li>
-                        <li>Supplied as standardized, production-ready material platforms</li>
-                    </ul>
-                </div>
+            <p>HTX materials are functional textile and surface-treated material outputs produced through controlled coating and surface modification processes. These materials are delivered as semi-finished or finished products, depending on application requirements.</p>
+            <div class="supply-model-box">
+                <h3>Production & Supply Model</h3>
+                <p>HTX defines coating processes, material structures, and performance criteria for all materials offered. Manufacturing may be performed on HTX internal lines or through qualified manufacturing partners under controlled process conditions.</p>
+                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">Materials are supplied as process-defined outputs, independent of equipment sales.</p>
             </div>
         </div>
 
-        <div class="highlight-section">
-            <h2 style="border-bottom: 2px solid #CBD5E0; margin-bottom: 2rem;">Typical Applications</h2>
-            <div class="split-layout">
-                <div class="app-text-col">
-                    <h4>Close-to-Skin Apparel</h4>
-                    <ul>
-                        <li>Underwear</li>
-                        <li>Base layers</li>
-                        <li>Socks</li>
-                    </ul>
-
-                    <h4>Infant & Sensitive-Use Textiles</h4>
-                    <ul>
-                        <li>Infant swimwear</li>
-                        <li>Baby inner layers</li>
-                    </ul>
-
-                    <h4>Footwear & Lining Components</h4>
-                    <ul>
-                        <li>Shoe linings</li>
-                        <li>Insoles</li>
-                        <li>Moisture-exposed textile components</li>
-                    </ul>
-                </div>
-
-                <div class="app-img-stack">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="Close-to-skin application">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Textile detail view">
-                </div>
+        <div style="margin-bottom: 6rem;">
+            <div class="section-title-bar">
+                <h2>Standard Material Platforms</h2>
+                <p>Choose from standard materials. Custom development follows once target applications are confirmed.</p>
             </div>
-        </div>
-
-        <div class="section-spacing">
-            <h2>Material Platform & Supply</h2>
-            <div class="split-layout">
-                <div>
-                    <p>HTX antibacterial fabrics are offered as standardized material platforms defined by surface treatment parameters and performance behavior.</p>
-                    <p style="font-weight: 600; color: #2D2D2D;">Material supply is independent of equipment sales.</p>
-                    <p>Manufacturing may be performed on HTX internal lines or through qualified partners operating under controlled process conditions. Materials are delivered in formats suitable for downstream cutting, sewing, or lamination, depending on application needs.</p>
-                </div>
-                <div>
-                    <img src="../../assets/img/materials-antibacterial-swatch-closeup-03.jpg" alt="Fabric Swatch Close-up" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                </div>
-            </div>
-        </div>
-
-        <div class="section-spacing">
-            <h2>Antibacterial Performance Validation</h2>
-            <p style="max-width: 800px; margin-bottom: 2.5rem;">Antibacterial performance has been evaluated using multiple internationally recognized test methods, reflecting different contact conditions and evaluation perspectives. The results below summarize representative outcomes from independent laboratory testing.</p>
-
-            <div class="test-box">
-                <div class="split-layout">
-                    <div>
-                        <span style="font-size: 0.85rem; color: #718096; font-weight: 700; letter-spacing: 0.05em;">TEST METHOD 01</span>
-                        <h3 style="margin-top: 0.5rem;">Dynamic Contact (ASTM E2149-20)</h3>
-                        <p style="font-size:0.95rem;">This method evaluates antibacterial activity under dynamic contact conditions, simulating movement, agitation, and repeated interaction. Relevant for wearable applications where fabrics experience motion and friction.</p>
-                        <ul style="font-size:0.9rem; padding-left:1.2rem;">
-                            <li><strong>E. coli:</strong> >99.99% reduction (<30 CFU/ml)</li>
-                            <li><strong>Staphylococcus aureus:</strong> High reduction observed</li>
-                            <li><strong>MRSA:</strong> Significant reduction under dynamic exposure</li>
-                        </ul>
+            <div class="grid-3">
+                <a href="materials/antibacterial.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/materials-antibacterial-metal-fabric-underwear-01.jpg" alt="Antibacterial Metal-Coated Fabrics">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Antibacterial Metal-Coated Fabrics</h3>
+                        <p>Silver / titanium-based functional textiles for liners and close-to-skin applications. Common uses include footwear linings, apparel layers, and underwear.</p>
                     </div>
-                    <div>
-                        <img src="../../assets/img/materials-antibacterial-evidence-astmE2149-02.jpg" alt="ASTM E2149 Data Summary" class="chart-img">
+                </a>
+                <div class="card">
+                    <img src="../assets/img/materials-thermal-recovery-metal-layer-02.jpg" alt="Warmth & Recovery Fabrics">
+                    <div class="card-content">
+                        <h3>Warmth & Recovery Fabrics</h3>
+                        <p>Titanium / stainless-based coated textiles designed for warmth retention and comfort. Suitable for jackets, inner sleepwear, and insulation layers.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="test-box">
-                <div class="split-layout">
-                    <div>
-                        <span style="font-size: 0.85rem; color: #718096; font-weight: 700; letter-spacing: 0.05em;">TEST METHOD 02</span>
-                        <h3 style="margin-top: 0.5rem;">Time-Based Reduction (AATCC 100)</h3>
-                        <p style="font-size:0.95rem;">Evaluates antibacterial effectiveness based on controlled contact time. Provides a time-dependent view of behavior under static conditions.</p>
-                        
-                        <p style="font-size:0.85rem; font-weight:700; margin-bottom:0.3rem;">MRSA (BCRC 15211)</p>
-                        <table class="data-table">
-                            <tr><td>1 hr</td><td>33.1%</td></tr>
-                            <tr><td>6 hr</td><td>99.5%</td></tr>
-                            <tr><td>24 hr</td><td>>99.9%</td></tr>
-                        </table>
-                    </div>
-                    <div>
-                        <img src="../../assets/img/materials-antibacterial-evidence-aattc100-01.jpg" alt="AATCC 100 Data Summary" class="chart-img">
+                <div class="card">
+                    <img src="../assets/img/materials-heat-insulation-reflective-fabric-03.jpg" alt="Thermal Insulation (Heat Reflection)">
+                    <div class="card-content">
+                        <h3>Thermal Insulation (Heat Reflection)</h3>
+                        <p>Aluminum-based reflective fabrics for reducing radiant heat. Typical use cases include shading curtains, heat barriers, and thermal management layers.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="split-layout" style="margin-top: 3rem;">
-                <div>
-                    <h3>Understanding the Test Results</h3>
-                    <p style="font-size: 0.95rem;">The two test methods represent different usage perspectives. ASTM E2149-20 reflects antibacterial behavior under dynamic, real-world movement conditions, while AATCC 100 (2019) illustrates how effectiveness develops over time.</p>
+                <div class="card">
+                    <img src="../assets/img/materials-silver-bandage-functional-textile-04.jpg" alt="Silver Bandage Textile">
+                    <div class="card-content">
+                        <h3>Silver Bandage Textile</h3>
+                        <p>Functional silver-based textile platform intended for dressing and bandage material development. Standardized supply format for downstream conversion.</p>
+                    </div>
                 </div>
-                <div>
-                    <div class="disclaimer">
-                        Antibacterial performance data shown represents material-level test results obtained under laboratory conditions. Final product performance may vary depending on design, construction, and usage environment. Test results are presented as material-level reference data and are not intended as product-level medical claims.
+                <div class="card">
+                    <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="Transdermal Support Sheet Materials">
+                    <div class="card-content">
+                        <h3>Transdermal Support Sheet Materials</h3>
+                        <p>Sheet material platforms designed to support enhanced skin interaction and improved absorption of functional formulations. Intended for downstream product integration and application-specific development discussions.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="highlight-section" style="background-color: #fff; border: none; padding: 0; margin-bottom: 0;">
-            <div class="cta-box">
-                <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">Start a Technical Discussion</h3>
-                <p style="margin-bottom: 1.5rem; color: #666;">We welcome discussions to evaluate material suitability for your specific application.</p>
-                
-                <a href="mailto:htx-all@huntertex.com" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 10px 24px; text-decoration:none; border-radius:4px;">Email HTX Materials</a>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 5rem 0;">
 
-                <div class="req-list">
-                    <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">If possible, please include:</p>
-                    <ul>
-                        <li>Target application (e.g., underwear, footwear lining, sportswear)</li>
-                        <li>Base fabric preferences (e.g., Polyester, Nylon, Cotton blend)</li>
-                        <li>Estimated volume or development stage (Prototyping / Mass Production)</li>
-                        <li>Specific performance requirements (e.g., wash durability cycles)</li>
-                    </ul>
-                </div>
+        <div class="feature-split">
+            <div class="feature-video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="../assets/video/materials-air-coating-process-loop-01.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="feature-content">
+                <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">Technology Platform</span>
+                <h3>Air Coating: Engineered at the Surface</h3>
+                <p>Air Coating is HTX’s proprietary dry surface treatment process applied directly at the material level. Positioned as a standardized process platform, it supports functional coatings across multiple material families.</p>
+                <ul>
+                    <li>Thin surface treatment designed to minimize visual and tactile impact</li>
+                    <li>Designed to preserve the intended color direction and the original breathability, stretch behavior, and flexibility of the textile</li>
+                    <li>Engineered for large-scale, repeatable material production</li>
+                </ul>
             </div>
         </div>
 
-        <div style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
-            <a href="../../en/materials.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; Back to Materials Overview</a>
+        <div class="feature-split reverse">
+            <div class="feature-content">
+                <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">Sustainability in Process</span>
+                <h3>Waterless & Solvent-Free</h3>
+                <p>A dry process mindset designed to reduce operational complexity and avoid liquid handling in surface treatment workflows.</p>
+                <p>Air Coating is performed using a dry, vacuum-based process without water or liquid solvents. This approach significantly reduces wastewater generation and chemical discharge, while maintaining stable and repeatable coating quality.</p>
+                <p style="font-weight: 600; color: #4A5568;">Environmental responsibility is integrated into the process design, not added as an afterthought.</p>
+            </div>
+            <div>
+                <img src="../assets/img/materials-waterless-solvent-free-process-06.jpg" alt="Waterless Process Concept" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            </div>
         </div>
+    </div>
 
+    <div class="ident-section">
+        <div class="ident-container">
+            <div>
+                <img src="../assets/img/material-identification-air-coating-01.jpg" alt="Material Identification Hangtag" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+            </div>
+            <div class="feature-content">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Material Identification</h3>
+                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">Material identification tools help partners clearly explain material-level technologies to end customers.</p>
+                <p style="font-size: 1rem; color: #555;">For materials treated with Air Coating, HTX provides optional material identification tags and info cards.</p>
+                <p style="font-size: 1rem; color: #555;">These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.</p>
+                <p style="font-size: 1rem; color: #555;">Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-bottom: 6rem;">
+        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 3rem;">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">Materials presented on this page are standardized platforms.<br>Application-specific integration and commercial discussions are handled separately.</p>
+        </div>
     </div>
 </body>
 </html>
