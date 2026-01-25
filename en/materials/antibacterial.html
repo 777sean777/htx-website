@@ -6,55 +6,89 @@
     <title>Antibacterial Metal-Coated Fabrics | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
+        /* --- Page Specific Styles (Compact Layout) --- */
+        
+        /* 全域設定：讓圖片全彩，並縮減行距 */
         img { filter: none !important; opacity: 1 !important; }
-        .evidence-grid {
+        p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; }
+        h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; }
+
+        /* 減少區塊間距 */
+        .section-spacing { margin-bottom: 3.5rem; }
+        
+        /* 雙欄佈局 (左文右圖 或 左圖右文) */
+        .split-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 4rem;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 4rem;
+            gap: 2.5rem;
+            align-items: start;
         }
-        .evidence-grid:last-child { border-bottom: none; }
-        .evidence-content h3 { font-size: 1.4rem; color: #2D2D2D; margin-bottom: 1rem; }
-        .evidence-content ul { padding-left: 1.2rem; margin-bottom: 1.5rem; }
-        .evidence-content li { margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
+
+        /* 應用案例區塊：左側文字列表，右側圖片集 */
+        .app-text-col h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.1rem; }
+        .app-text-col ul { margin-bottom: 1.5rem; padding-left: 1.2rem; }
+        
+        .app-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 兩張圖並排 */
+            gap: 1rem;
+        }
+        .app-img-grid img {
+            width: 100%;
+            height: 250px; /* 限制高度，避免太佔版面 */
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* 測試數據區塊 */
+        .test-box {
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 4px;
+            background: #fafafa;
+            margin-bottom: 1.5rem;
+        }
         .data-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
             font-size: 0.9rem;
+            margin-top: 0.5rem;
+            background: #fff;
         }
         .data-table th, .data-table td {
             text-align: left;
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-bottom: 1px solid #eee;
-            color: #444;
         }
-        .data-table th { font-weight: 600; color: #2D2D2D; background-color: #f9f9f9; }
-        .use-case-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 1rem;
+        .data-table th { background-color: #f0f0f0; font-weight: 600; }
+        
+        /* 限制圖表圖片大小 */
+        .chart-img {
+            width: 100%; 
+            max-height: 300px; 
+            object-fit: contain; 
+            background: #fff; 
+            border: 1px solid #eee;
+            padding: 10px;
         }
-        .supply-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 2rem;
-            align-items: center;
+
+        /* Contact Box (System Style) */
+        .cta-box { 
+            background-color: #F4F6F8; 
+            border: 1px solid #e0e0e0; 
+            border-left: 4px solid var(--c-accent); 
+            padding: 2rem; 
+            margin-top: 3rem; 
         }
-        .ident-box {
-            background-color: #FAFAFA;
-            padding: 3rem;
-            margin-top: 4rem;
-            margin-bottom: 4rem;
-            border-radius: 4px;
-        }
+        .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #d1d5db; padding-top: 1rem; }
+        .req-list li { list-style: none; margin-bottom: 0.3rem; }
+        .req-list li::before { content: "- "; color: #999; }
+
+        /* RWD */
         @media (max-width: 900px) {
-            .evidence-grid, .supply-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .use-case-gallery { grid-template-columns: 1fr; }
+            .split-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+            .app-img-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -79,168 +113,133 @@
     <div class="page-hero" style="background-image: url('../../assets/img/materials-antibacterial-hero-baby-swimshorts-01.jpg'); background-position: center; background-size: cover;">
         <div class="container">
             <h1>Antibacterial Metal-Coated Fabrics</h1>
-            <p>Production-ready coated textiles for close-to-skin applications — designed to reduce odor-causing bacteria while preserving comfort and wearability.</p>
+            <p>Surface-engineered textiles designed for hygiene-sensitive and close-to-skin applications.</p>
         </div>
     </div>
 
-    <div class="container" style="margin-top: 4rem; max-width: 900px; padding-bottom: 6rem;">
+    <div class="container" style="margin-top: 3rem; max-width: 1000px; padding-bottom: 4rem;">
         
-        <div style="margin-bottom: 3rem;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem;">Material Overview</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: #444;">
-                HTX antibacterial metal-coated fabrics are standardized material platforms engineered for hygiene-oriented textile components.<br><br>
-                They are supplied as process-defined outputs (semi-finished or finished formats), ready for downstream cutting, lamination, sewing, or conversion.
-            </p>
-        </div>
-
-        <div style="margin-bottom: 4rem;">
-            <h3 style="font-size: 1.4rem; color: #2D2D2D; margin-bottom: 1rem;">Key Features</h3>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: #555;">
-                    <span style="position: absolute; left: 0; color: var(--c-accent); font-weight: bold;">•</span>
-                    Helps reduce odor-causing bacterial growth on textile surfaces
-                </li>
-                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: #555;">
-                    <span style="position: absolute; left: 0; color: var(--c-accent); font-weight: bold;">•</span>
-                    Suitable for humid, close-to-skin environments (liners, inner layers, underwear)
-                </li>
-                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: #555;">
-                    <span style="position: absolute; left: 0; color: var(--c-accent); font-weight: bold;">•</span>
-                    Designed to remain breathable and wearable for daily use
-                </li>
-                <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; color: #555;">
-                    <span style="position: absolute; left: 0; color: var(--c-accent); font-weight: bold;">•</span>
-                    Compatible with brand-side product design and styling workflows
-                </li>
-            </ul>
-        </div>
-
-        <div style="margin-bottom: 5rem;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem;">Typical Applications</h2>
-            <div style="margin-bottom: 3rem;">
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #333;">1. Underwear & Close-to-Skin Layers</h3>
-                <p style="color: #666; margin-bottom: 1rem;">Innerwear, base layers, comfort liners. Odor control and hygiene support for daily wear.</p>
-                <div class="use-case-gallery">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="Antibacterial underwear application" style="width: 100%; border-radius: 4px;">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Antibacterial textile detail" style="width: 100%; border-radius: 4px;">
-                </div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div class="section-spacing">
+            <h2>Material Overview</h2>
+            <div class="split-layout">
                 <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #333;">2. Footwear Linings & Insoles</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Shoe lining textile, sock-liner layers, soft inserts. Hygienic support in heat/moisture heavy conditions.</p>
+                    <p>HTX antibacterial metal-coated fabrics are functional textile platforms engineered for hygiene control in close-to-skin environments. By applying a controlled metal-based surface treatment at the material level, these fabrics are designed to help reduce odor-causing bacteria and support cleaner wear conditions over time.</p>
+                    <p>The treatment is engineered to integrate with the textile surface without altering the intended structure, comfort, or wear behavior of the base fabric.</p>
                 </div>
-                <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: #333;">3. Baby & Sensitive-Skin Products</h3>
-                    <p style="color: #666; font-size: 0.95rem;">Baby swim shorts lining / baby apparel inner layers. Emphasis on mildness and comfort.</p>
-                </div>
-            </div>
-        </div>
-
-        <div style="background-color: #f9f9f9; padding: 2rem; border-radius: 4px; margin-bottom: 5rem;">
-            <div class="supply-grid">
-                <div>
-                    <h3 style="margin-top: 0; color: #2D2D2D;">Standard Supply Format</h3>
-                    <p style="color: #666; margin-bottom: 1rem;">Supply form examples (confirm per project):</p>
-                    <ul style="margin-bottom: 1.5rem; padding-left: 1.2rem; color: #555;">
-                        <li>Fabric rolls / cut panels</li>
-                        <li>Liner-grade textile substrates</li>
-                        <li>Conversion-ready specification packages (per partner request)</li>
+                <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 4px;">
+                    <h3>Key Material Characteristics</h3>
+                    <ul style="padding-left: 1.2rem; margin: 0;">
+                        <li>Designed for hygiene-sensitive and skin-contact applications</li>
+                        <li>Supports odor control through surface-level antibacterial behavior</li>
+                        <li>Maintains original softness, breathability, and stretch behavior</li>
+                        <li>Compatible with daily wear, repeated contact, and prolonged use</li>
+                        <li>Supplied as standardized, production-ready material platforms</li>
                     </ul>
-                    <p style="font-size: 0.9rem; color: #888; margin: 0;">
-                        <em>Note: Materials are supplied as standard platforms. Application-specific integration and commercialization are handled separately.</em>
-                    </p>
-                </div>
-                <div>
-                    <img src="../../assets/img/materials-antibacterial-swatch-closeup-03.jpg" alt="Antibacterial fabric swatch close-up" style="width: 100%; border-radius: 4px; border: 1px solid #e0e0e0;">
                 </div>
             </div>
         </div>
 
-        <div style="margin-bottom: 5rem;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 2rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem;">Performance Evidence</h2>
-            <div class="evidence-grid">
-                <div class="evidence-content">
-                    <h3>Time-Based Bacterial Reduction</h3>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Method: AATCC 100 (2019)</p>
-                    <p style="font-weight: 600; color: #444; margin-bottom: 0.5rem;">MRSA (BCRC 15211)</p>
-                    <table class="data-table">
-                        <tr><td>1 hr</td><td>33.1% reduction</td></tr>
-                        <tr><td>2 hr</td><td>83.2% reduction</td></tr>
-                        <tr><td>4 hr</td><td>97.7% reduction</td></tr>
-                        <tr><td>6 hr</td><td>99.5% reduction</td></tr>
-                        <tr><td>24 hr</td><td>>99.9% reduction</td></tr>
-                    </table>
-                    <p style="font-weight: 600; color: #444; margin-top: 1.5rem; margin-bottom: 0.5rem;">Pseudomonas aeruginosa (BCRC 111633)</p>
-                    <table class="data-table">
-                        <tr><td>0.5 hr</td><td>73.1% reduction</td></tr>
-                        <tr><td>1 hr</td><td>99.8% reduction</td></tr>
-                        <tr><td>2 hr</td><td>>99.9% reduction</td></tr>
-                    </table>
-                </div>
-                <div>
-                    <img src="../../assets/img/materials-antibacterial-evidence-aattc100-01.jpg" alt="AATCC 100 Test Report Summary" style="width: 100%; border: 1px solid #eee; border-radius: 4px;">
-                </div>
-            </div>
-            <div class="evidence-grid">
-                <div>
-                    <img src="../../assets/img/materials-antibacterial-evidence-astmE2149-02.jpg" alt="ASTM E2149 Test Report Summary" style="width: 100%; border: 1px solid #eee; border-radius: 4px;">
-                </div>
-                <div class="evidence-content">
-                    <h3>Multi-Strain Antibacterial Activity</h3>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Method: ASTM E2149-20</p>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">
-                            <strong>E. coli (ATCC 25922)</strong><br>
-                            Reduction >99.99% (Reported <30 CFU/ml)
-                        </li>
+        <div class="section-spacing">
+            <h2>Typical Applications</h2>
+            <div class="split-layout">
+                <div class="app-text-col">
+                    <h4>Close-to-Skin Apparel</h4>
+                    <ul>
+                        <li>Underwear</li>
+                        <li>Base layers</li>
+                        <li>Socks</li>
                     </ul>
-                    <p style="font-size: 0.95rem; color: #444; margin-bottom: 0.5rem;">Time-based summary (6/12/24 hr) examples:</p>
-                    <table class="data-table">
-                        <tr><th>Strain</th><th>Max Reduction</th></tr>
-                        <tr><td>S. aureus</td><td>99.979%</td></tr>
-                        <tr><td>MRSA</td><td>99.8%</td></tr>
-                        <tr><td>E. coli (ATCC 8739)</td><td>>99.999%</td></tr>
-                        <tr><td>Listeria</td><td>99.987%</td></tr>
-                        <tr><td>Salmonella</td><td>>99.999%</td></tr>
-                    </table>
+
+                    <h4>Infant & Sensitive-Use Textiles</h4>
+                    <ul>
+                        <li>Infant swimwear</li>
+                        <li>Baby inner layers</li>
+                    </ul>
+
+                    <h4>Footwear & Lining Components</h4>
+                    <ul>
+                        <li>Shoe linings</li>
+                        <li>Insoles</li>
+                        <li>Moisture-exposed textile components</li>
+                    </ul>
+                </div>
+
+                <div class="app-img-grid">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="Close-to-skin application">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Textile detail view">
                 </div>
             </div>
         </div>
 
-        <div style="margin-bottom: 4rem;">
-            <h3 style="font-size: 1.4rem; color: #2D2D2D; margin-bottom: 1rem;">Mildness & Wearability</h3>
-            <p style="color: #555; line-height: 1.7;">
-                Designed for close-to-skin use cases. Material selection and finishing are evaluated under partner-aligned test methods. Final product safety and claims are validated in the partner’s finished-goods context.
-            </p>
+        <div class="section-spacing" style="background-color: #f8f9fa; padding: 2rem; border-radius: 4px;">
+            <h2 style="border-bottom: none; margin-bottom: 1rem;">Material Platform & Supply</h2>
+            <p>HTX antibacterial fabrics are offered as standardized material platforms defined by surface treatment parameters and performance behavior. <strong>Material supply is independent of equipment sales.</strong></p>
+            <p>Manufacturing may be performed on HTX internal lines or through qualified partners operating under controlled process conditions. Materials are delivered in formats suitable for downstream cutting, sewing, or lamination, depending on application needs.</p>
         </div>
 
-        <div class="ident-box">
-            <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <img src="../../assets/img/material-identification-air-coating-01.jpg" alt="Material Identification Hangtag" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div class="section-spacing">
+            <h2>Antibacterial Performance Validation</h2>
+            <p style="max-width: 800px; margin-bottom: 2rem;">Antibacterial performance has been evaluated using multiple internationally recognized test methods, reflecting different contact conditions and evaluation perspectives. The results below summarize representative outcomes from independent laboratory testing.</p>
+
+            <div class="test-box">
+                <div class="split-layout">
+                    <div>
+                        <h3>Dynamic Contact (ASTM E2149-20)</h3>
+                        <p style="font-size:0.95rem;">This method evaluates antibacterial activity under dynamic contact conditions, simulating movement, agitation, and repeated interaction. Relevant for wearable applications where fabrics experience motion and friction.</p>
+                        <ul style="font-size:0.9rem; padding-left:1.2rem;">
+                            <li><strong>E. coli:</strong> >99.99% reduction (<30 CFU/ml)</li>
+                            <li><strong>Staphylococcus aureus:</strong> High reduction observed</li>
+                            <li><strong>MRSA:</strong> Significant reduction under dynamic exposure</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../../assets/img/materials-antibacterial-evidence-astmE2149-02.jpg" alt="ASTM E2149 Data Summary" class="chart-img">
+                    </div>
                 </div>
-                <div style="flex: 1.5; min-width: 300px;">
-                    <h3 style="margin-top: 0; color: #2D2D2D;">Material Identification</h3>
-                    <p style="font-weight: 500; color: #444; margin-bottom: 1rem;">
-                        Material identification tools help partners clearly explain material-level technologies to end customers.
-                    </p>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.7;">
-                        For materials treated with Air Coating, HTX provides optional material identification tags and info cards.<br><br>
-                        These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.<br><br>
-                        Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.
-                    </p>
+            </div>
+
+            <div class="test-box">
+                <div class="split-layout">
+                    <div>
+                        <h3>Time-Based Reduction (AATCC 100)</h3>
+                        <p style="font-size:0.95rem;">Evaluates antibacterial effectiveness based on controlled contact time. Provides a time-dependent view of behavior under static conditions.</p>
+                        
+                        <p style="font-size:0.85rem; font-weight:700; margin-bottom:0.3rem;">MRSA (BCRC 15211)</p>
+                        <table class="data-table">
+                            <tr><td>1 hr</td><td>33.1%</td></tr>
+                            <tr><td>6 hr</td><td>99.5%</td></tr>
+                            <tr><td>24 hr</td><td>>99.9%</td></tr>
+                        </table>
+                    </div>
+                    <div>
+                        <img src="../../assets/img/materials-antibacterial-evidence-aattc100-01.jpg" alt="AATCC 100 Data Summary" class="chart-img">
+                    </div>
                 </div>
+            </div>
+
+            <div style="font-size: 0.85rem; color: #777; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 2rem;">
+                <strong>Understanding the results:</strong> ASTM E2149-20 reflects behavior under dynamic movement; AATCC 100 illustrates effectiveness over time. Test results are presented as material-level reference data and are not intended as product-level medical claims. Final product performance may vary depending on design and usage.
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 4rem; border-top: 1px solid #eee; padding-top: 3rem;">
-            <h3 style="margin-bottom: 1rem; color: #2D2D2D;">Interested in standard specs or sampling?</h3>
-            <p style="margin-bottom: 1.5rem; color: #666;">Request the antibacterial material spec pack via the Contact page.</p>
-            <a href="../../en/contact.html" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 4px;">Contact HTX</a>
+        <div class="cta-box">
+            <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">Start a Technical Discussion</h3>
+            <p style="margin-bottom: 1.5rem; color: #666;">We welcome discussions to evaluate material suitability for your specific application.</p>
+            
+            <a href="mailto:htx-all@huntertex.com" class="btn" style="background-color: var(--c-accent); color: white; display: inline-block; padding: 10px 24px; text-decoration:none; border-radius:4px;">Email HTX Materials</a>
+
+            <div class="req-list">
+                <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">If possible, please include:</p>
+                <ul>
+                    <li>Target application (e.g., underwear, footwear lining, sportswear)</li>
+                    <li>Base fabric preferences (e.g., Polyester, Nylon, Cotton blend)</li>
+                    <li>Estimated volume or development stage (Prototyping / Mass Production)</li>
+                    <li>Specific performance requirements (e.g., wash durability cycles)</li>
+                </ul>
+            </div>
         </div>
 
-        <div style="margin-top: 4rem; text-align: center;">
+        <div style="margin-top: 3rem; text-align: center;">
             <a href="../../en/materials.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; Back to Materials Overview</a>
         </div>
 
