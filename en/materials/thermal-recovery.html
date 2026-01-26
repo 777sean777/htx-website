@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photothermal Warming Materials | HTX Materials</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <style>
+        /* --- Page Specific Styles (Compact & Engineered) --- */
+        
+        /* Global Reset */
+        img { filter: none !important; opacity: 1 !important; display: block; }
+        p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
+        h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; color: #2D2D2D; margin-bottom: 0.8rem; margin-top: 0; font-weight: 600; }
+        h4 { margin-bottom: 0.5rem; color: #333; font-weight: 700; font-size: 1.05rem; margin-top: 0; }
+
+        .container { max-width: 1000px; padding-bottom: 6rem; }
+        .section-spacing { margin-bottom: 4rem; }
+        
+        /* Split Layout */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Highlight Section (Grey Box) */
+        .highlight-section {
+            background-color: #F8F9FA;
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+            padding: 3rem 2rem;
+            margin: 3rem -2rem;
+            border-radius: 4px;
+        }
+
+        /* Material ID Section (Bordered Box) */
+        .id-section {
+            border: 1px solid #eee;
+            padding: 2.5rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            background-color: #fff;
+        }
+
+        /* Image Handling */
+        .img-swatch {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Chart Images - Contain mode to prevent cropping data */
+        .img-chart {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain; 
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background: #fff;
+            padding: 10px;
+        }
+
+        /* Data Table Style */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .data-table th { background-color: #f8f9fa; font-weight: 600; color: #4a5568; }
+
+        @media (max-width: 900px) {
+            .split-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html">
+            <img src="../../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
+        </a>
+        <nav>
+            <a href="../../en/systems.html">Systems</a>
+            <a href="../../en/materials.html" class="active">Materials</a>
+            <a href="../../en/contact.html">Contact</a>
+            <span class="lang-switch">
+                <a href="#" class="active">EN</a>
+                <a href="#" style="opacity:0.5; pointer-events:none;">繁中</a>
+                <a href="#" style="opacity:0.5; pointer-events:none;">JP</a>
+            </span>
+        </nav>
+    </header>
+
+    <div class="page-hero" style="background-image: url('../../assets/img/materials-warmth-urban-light-jacket-hero-01.jpg'); background-position: center; background-size: cover;">
+        <div class="container">
+            <h1>Photothermal Warming Materials</h1>
+            <p>Advanced surface treatments for enhanced heat retention and lightweight thermal comfort.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 3rem;">
+        
+        <div class="section-spacing">
+            <h2>Material Platform Overview</h2>
+            <div class="split-layout" style="align-items: center;">
+                <div>
+                    <p>HTX photothermal warming materials are designed to enhance heat retention through controlled surface-level functional treatment.</p>
+                    <p>By utilizing a titanium-alloy–based surface architecture, these materials respond to light exposure with increased thermal performance while maintaining lightweight textile construction.</p>
+                </div>
+                <div>
+                    <img src="../../assets/img/materials-warmth-ti-alloy-swatch-04.jpg" alt="Titanium Alloy Swatch Texture" class="img-swatch">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacing">
+            <h2>Photothermal Performance</h2>
+            <div class="split-layout">
+                <div>
+                    <p style="margin-bottom: 1.5rem;"><strong>Test Method:</strong> JIS L 1926 (2019)</p>
+                    <p>Under controlled light exposure, Air-Coated variants demonstrate higher temperature rise compared to untreated control materials.</p>
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 0.5rem;">Photothermal Temperature Rise (ΔT)</h4>
+                    <table class="data-table">
+                        <tr>
+                            <th>Variant</th>
+                            <th>Temp Rise (ΔT)</th>
+                        </tr>
+                        <tr>
+                            <td>Ti + Al (Air-Coated)</td>
+                            <td style="color: var(--c-accent); font-weight: 700;">9.4°C</td>
+                        </tr>
+                        <tr>
+                            <td>Ti (Air-Coated)</td>
+                            <td>8.7°C</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #888;">Uncoated Control</td>
+                            <td style="color: #888;">6.2°C</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <img src="../../assets/img/materials-warmth-photothermal-curve-jis1926-01.jpg" alt="Photothermal Curve Chart" class="img-chart">
+                    <img src="../../assets/img/materials-warmth-photothermal-deltaT-jis1926-02.jpg" alt="Delta T Comparison Chart" class="img-chart">
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-section">
+            <h2 style="border-bottom: 2px solid #CBD5E0; margin-bottom: 2rem;">Functional Characteristics</h2>
+            <div class="split-layout" style="align-items: center;">
+                <div>
+                    <ul style="padding-left: 1.2rem; margin: 0; line-height: 1.8;">
+                        <li>Enhanced photothermal response under light exposure</li>
+                        <li>Lightweight warming effect without added thickness</li>
+                        <li>Surface-level functionality without altering base fabric structure</li>
+                        <li>Suitable for static and low-activity thermal comfort use cases</li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; margin-bottom: 1rem;">Material Integrity</h4>
+                        <p style="font-size: 0.95rem;">The surface treatment is designed to minimize impact on the original textile properties.</p>
+                        <ul style="padding-left: 1.2rem; font-size: 0.95rem; color: #555;">
+                            <li>Color appearance remains close to the original fabric.</li>
+                            <li>Breathability, elasticity, stretch recovery, and softness remain governed by the base fabric design.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../assets/img/materials-warmth-control-lining-swatch-03.jpg" alt="Control Lining Swatch" class="img-swatch" style="height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="id-section">
+            <h2 style="border-bottom: 2px solid #eee; margin-bottom: 2rem;">Material Identification</h2>
+            
+            <div class="split-layout" style="align-items: center; gap: 4rem;">
+                <div>
+                    <img src="../../assets/img/htx-22-logo-black.png" alt="HTX-22 Logo" style="width: 100%; max-width: 300px; margin-bottom: 1rem;">
+                    <p style="font-size: 0.9rem; color: #666; text-align: center;">HTX-22 Identification Code</p>
+                </div>
+
+                <div>
+                    <p>Photothermal warming materials may be paired with HTX material identification upon request.</p>
+                    <p>Identification tools support downstream material communication without affecting product design or branding.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; border-top: 1px solid #eee; padding-top: 2rem;">
+            <a href="../../en/materials.html" style="color: #999; font-size: 0.9rem; font-weight: 500;">&larr; Back to Materials Overview</a>
+        </div>
+
+    </div>
+</body>
+</html>
