@@ -23,11 +23,10 @@
             align-items: start;
         }
 
-        /* --- UPDATED ALIGNMENT --- */
-        /* Changed align-items from 'center' to 'end' to align text to the bottom */
+        /* Layout alignment: Text aligns to the bottom to match images */
         .split-layout.app-balance {
             grid-template-columns: 1.5fr 1fr; 
-            align-items: end; /* Aligns text bottom with image bottom */
+            align-items: end; 
             gap: 4rem;
         }
         
@@ -48,16 +47,21 @@
             gap: 1.5rem;
         }
         
-        /* Image 1: Underwear/Socks (Full Height) */
+        /* --- CRITICAL IMAGE FIXES --- */
+        
+        /* Image 1: Underwear/Socks (Cropped Top) */
         .img-underwear {
             width: 100%;
-            height: auto; 
+            height: 320px; /* Fixed height to force cropping */
+            object-fit: cover; /* Fill the frame */
+            /* 'center 35%' moves the focus point down, effectively cropping the top white space */
+            object-position: center 35%; 
             border-radius: 4px;
             border: 1px solid #eee;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* Image 2: Shoe Lining (Fixed Height Detail) */
+        /* Image 2: Shoe Lining (Detail) */
         .img-shoe {
             width: 100%;
             height: 200px; 
@@ -153,6 +157,7 @@
                     <p>HTX antibacterial metal-coated fabrics are functional textile platforms engineered for hygiene control in close-to-skin environments. By applying a controlled metal-based surface treatment at the material level, these fabrics are designed to help reduce odor-causing bacteria and support cleaner wear conditions over time.</p>
                     <p>The treatment is engineered to integrate with the textile surface without altering the intended structure, comfort, or wear behavior of the base fabric.</p>
                 </div>
+                
                 <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
                     <h3>Key Material Characteristics</h3>
                     <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.95rem;">
@@ -193,6 +198,7 @@
 
                 <div class="app-img-stack">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Underwear and socks application" class="img-underwear">
+                    
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="Footwear lining textile detail" class="img-shoe">
                 </div>
             </div>
