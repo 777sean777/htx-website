@@ -6,7 +6,7 @@
     <title>Antibacterial Metal-Coated Fabrics | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles (Compact & Engineered) --- */
+        /* --- Page Specific Styles --- */
         img { filter: none !important; opacity: 1 !important; display: block; }
         p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
         h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
@@ -23,11 +23,13 @@
             align-items: start;
         }
 
-        /* Balance for Application Section */
+        /* Special Layout for Applications: 
+           Text is wider (60%), Images are narrower (40%) but allowed to be taller.
+           This prevents the portrait image from becoming overwhelmingly huge. */
         .split-layout.app-balance {
-            grid-template-columns: 1.4fr 1fr; /* Text wider */
-            align-items: center;
-            gap: 3rem;
+            grid-template-columns: 1.5fr 1fr; 
+            align-items: center; /* Vertically center the text */
+            gap: 4rem;
         }
         
         .highlight-section {
@@ -40,30 +42,38 @@
         }
 
         .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
+        
         .app-img-stack {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
         
-        /* Individual Image Control */
+        /* --- CRITICAL IMAGE FIXES --- */
+        
+        /* Image 1: Underwear/Socks (Portrait) */
+        /* height: auto ensures NO CROPPING. It shows the full height of the photo. */
         .img-underwear {
             width: 100%;
-            height: 220px; /* Slightly taller to show context */
-            object-fit: cover;
-            object-position: center 30%; /* Focus on the body/underwear area */
+            height: auto; 
             border-radius: 4px;
             border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
+
+        /* Image 2: Shoe Lining (Detail) */
+        /* Fixed height to keep it as a neat detail strip below the main image */
         .img-shoe {
             width: 100%;
-            height: 180px; /* Tighter crop for detail */
-            object-fit: cover;
+            height: 200px; 
+            object-fit: cover; /* Crops nicely to focus on texture */
             object-position: center;
             border-radius: 4px;
             border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        /* Other Components */
         .test-box {
             border: 1px solid #E2E8F0;
             padding: 2rem;
@@ -111,7 +121,6 @@
         @media (max-width: 900px) {
             .split-layout, .split-layout.app-balance { grid-template-columns: 1fr; gap: 2rem; }
             .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
-            .img-underwear, .img-shoe { height: 220px; }
         }
     </style>
 </head>
