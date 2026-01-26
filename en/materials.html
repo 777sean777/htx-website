@@ -9,7 +9,7 @@
     <style>
         /* --- Page Specific Overrides --- */
         
-        /* 1. Force Full Color Images (No Grayscale) */
+        /* 1. Force Full Color Images */
         .card img, .content-image, .thumb img {
             filter: none !important;
             opacity: 1 !important;
@@ -39,7 +39,7 @@
         .section-title-bar h2 { margin: 0; font-size: 1.8rem; color: #2D2D2D; }
         .section-title-bar p { margin: 0; color: #666; font-size: 0.95rem; max-width: 600px; }
 
-        /* 4. Feature Sections (Air Coating / Waterless / Identification) */
+        /* 4. Feature Sections */
         .feature-split {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
@@ -52,7 +52,7 @@
         .feature-video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             background-color: #000;
             border-radius: 4px;
             overflow: hidden;
@@ -73,13 +73,16 @@
         .feature-content li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; }
         .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
 
-        /* 5. Identification Section (Special Style) */
+        /* 5. Identification Section (FIXED FOR MOBILE) */
         .ident-section {
-            background-color: #FAFAFA; /* Very light grey background */
+            background-color: #FAFAFA;
             padding: 4rem 2rem;
-            margin: 0 -2rem 4rem -2rem; /* Stretch full width */
+            /* Removed negative margins to fix mobile clipping */
+            margin: 0 0 4rem 0;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
+            width: 100%; /* Ensure full width */
+            box-sizing: border-box; /* Include padding in width */
         }
         .ident-container {
             max-width: 1100px;
@@ -90,15 +93,14 @@
             align-items: center;
         }
 
-        /* 6. Coming Soon Card Style (New) */
+        /* 6. Coming Soon Card Style */
         .card.coming-soon {
             filter: grayscale(100%);
             opacity: 0.5;
             cursor: default;
-            pointer-events: none; /* Disable hover effects */
+            pointer-events: none;
             border: 1px solid #eee;
         }
-        /* Override the force full color for this specific card */
         .card.coming-soon img {
             filter: grayscale(100%) !important;
             opacity: 0.8 !important;
@@ -108,7 +110,12 @@
         @media (max-width: 900px) {
             .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; }
             .section-intro { padding: 0 1rem; }
-            .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; }
+            
+            /* Fixed Identification Section on Mobile */
+            .ident-section { 
+                padding: 3rem 1.5rem; /* Safe padding */
+                margin: 0 0 3rem 0;   /* No negative margin */
+            }
         }
     </style>
 </head>
@@ -166,7 +173,6 @@
             </div>
 
             <div class="grid-3">
-                
                 <a href="materials/antibacterial.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-antibacterial-metal-fabric-underwear-01.jpg" alt="Antibacterial Metal-Coated Fabrics">
                     <div class="card-content">
@@ -175,29 +181,29 @@
                     </div>
                 </a>
 
-                <div class="card">
+                <a href="materials/thermal-recovery.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-thermal-recovery-metal-layer-02.jpg" alt="Warmth & Recovery Fabrics">
                     <div class="card-content">
-                        <h3>Warmth & Recovery Fabrics</h3>
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Warmth & Recovery Fabrics</h3>
                         <p>Titanium / stainless-based coated textiles designed for warmth retention and comfort. Suitable for jackets, inner sleepwear, and insulation layers.</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
+                <a href="materials/heat-insulation.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-heat-insulation-reflective-fabric-03.jpg" alt="Thermal Insulation (Heat Reflection)">
                     <div class="card-content">
-                        <h3>Thermal Insulation (Heat Reflection)</h3>
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Thermal Insulation (Heat Reflection)</h3>
                         <p>Aluminum-based reflective fabrics for reducing radiant heat. Typical use cases include shading curtains, heat barriers, and thermal management layers.</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
+                <a href="materials/silver-bandage.html" class="card" style="text-decoration: none; color: inherit; display: block;">
                     <img src="../assets/img/materials-silver-bandage-functional-textile-04.jpg" alt="Silver Bandage Textile">
                     <div class="card-content">
-                        <h3>Silver Bandage Textile</h3>
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Silver Bandage Textile</h3>
                         <p>Functional silver-based textile platform intended for dressing and bandage material development. Standardized supply format for downstream conversion.</p>
                     </div>
-                </div>
+                </a>
 
                 <div class="card coming-soon">
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="Transdermal Support Sheet Materials">
@@ -206,7 +212,6 @@
                         <p>Sheet material platforms designed to support enhanced skin interaction and improved absorption of functional formulations. Intended for downstream product integration.</p>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -219,14 +224,10 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">Technology Platform</span>
                 <h3>Air Coating: Engineered at the Surface</h3>
-                <p>
-                    Air Coating is HTX’s proprietary dry surface treatment process applied directly at the material level. 
-                    Positioned as a standardized process platform, it supports functional coatings across multiple material families.
-                </p>
+                <p>Air Coating is HTX’s proprietary dry surface treatment process applied directly at the material level. Positioned as a standardized process platform, it supports functional coatings across multiple material families.</p>
                 <ul>
                     <li>Thin surface treatment designed to minimize visual and tactile impact</li>
                     <li>Designed to preserve the intended color direction and the original breathability, stretch behavior, and flexibility of the textile</li>
@@ -239,18 +240,10 @@
             <div class="feature-content">
                 <span style="display: block; color: var(--c-accent); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;">Sustainability in Process</span>
                 <h3>Waterless & Solvent-Free</h3>
-                <p>
-                    A dry process mindset designed to reduce operational complexity and avoid liquid handling in surface treatment workflows.
-                </p>
-                <p>
-                    Air Coating is performed using a dry, vacuum-based process without water or liquid solvents. 
-                    This approach significantly reduces wastewater generation and chemical discharge, while maintaining stable and repeatable coating quality.
-                </p>
-                <p style="font-weight: 600; color: #4A5568;">
-                    Environmental responsibility is integrated into the process design, not added as an afterthought.
-                </p>
+                <p>A dry process mindset designed to reduce operational complexity and avoid liquid handling in surface treatment workflows.</p>
+                <p>Air Coating is performed using a dry, vacuum-based process without water or liquid solvents. This approach significantly reduces wastewater generation and chemical discharge, while maintaining stable and repeatable coating quality.</p>
+                <p style="font-weight: 600; color: #4A5568;">Environmental responsibility is integrated into the process design, not added as an afterthought.</p>
             </div>
-
             <div>
                 <img src="../assets/img/materials-waterless-solvent-free-process-06.jpg" alt="Waterless Process Concept" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
             </div>
@@ -261,31 +254,19 @@
             <div>
                 <img src="../assets/img/material-identification-air-coating-01.jpg" alt="Material Identification Hangtag" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
             </div>
-
             <div class="feature-content">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Material Identification</h3>
-                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">
-                    Material identification tools help partners clearly explain material-level technologies to end customers.
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    For materials treated with Air Coating, HTX provides optional material identification tags and info cards.
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.
-                </p>
-                <p style="font-size: 1rem; color: #555;">
-                    Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.
-                </p>
+                <p style="font-size: 1.1rem; color: #333; font-weight: 500; margin-bottom: 1.5rem;">Material identification tools help partners clearly explain material-level technologies to end customers.</p>
+                <p style="font-size: 1rem; color: #555;">For materials treated with Air Coating, HTX provides optional material identification tags and info cards.</p>
+                <p style="font-size: 1rem; color: #555;">These identification tools support downstream communication from B to C, allowing brands to explain surface-level technology, functional behavior, and material value in a clear and consistent manner.</p>
+                <p style="font-size: 1rem; color: #555;">Rather than changing product appearance or branding, the hangtag serves as an informational bridge between material engineering and everyday use.</p>
             </div>
         </div>
     </div>
 
     <div class="container" style="padding-bottom: 6rem;">
         <div style="text-align: center; border-top: 1px solid #eee; padding-top: 3rem;">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">
-                Materials presented on this page are standardized platforms.<br>
-                Application-specific integration and commercial discussions are handled separately.
-            </p>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 1.5rem;">Materials presented on this page are standardized platforms.<br>Application-specific integration and commercial discussions are handled separately.</p>
         </div>
     </div>
 
