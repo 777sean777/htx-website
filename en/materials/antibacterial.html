@@ -23,10 +23,10 @@
             align-items: start;
         }
 
-        /* Layout alignment: Back to TOP alignment */
+        /* Typical Applications Alignment: Top Aligned */
         .split-layout.app-balance {
             grid-template-columns: 1.5fr 1fr; 
-            align-items: start; /* Changed from 'end' back to 'start' */
+            align-items: start;
             gap: 4rem;
         }
         
@@ -39,6 +39,15 @@
             border-radius: 4px;
         }
 
+        /* Material ID Section */
+        .id-section {
+            border: 1px solid #eee;
+            padding: 2.5rem;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+            background-color: #fff;
+        }
+
         .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
         
         .app-img-stack {
@@ -47,20 +56,17 @@
             gap: 1.5rem;
         }
         
-        /* --- IMAGE FIXES (Retained) --- */
-        
-        /* Image 1: Underwear/Socks (Cropped Top) */
+        /* Image Controls */
         .img-underwear {
             width: 100%;
             height: 320px; 
             object-fit: cover; 
-            object-position: center 35%; /* Crops the top white space */
+            object-position: center 35%; /* Cropped top white space */
             border-radius: 4px;
             border: 1px solid #eee;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* Image 2: Shoe Lining (Detail) */
         .img-shoe {
             width: 100%;
             height: 200px; 
@@ -71,7 +77,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* Other Components */
         .test-box {
             border: 1px solid #E2E8F0;
             padding: 2rem;
@@ -197,7 +202,6 @@
 
                 <div class="app-img-stack">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Underwear and socks application" class="img-underwear">
-                    
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="Footwear lining textile detail" class="img-shoe">
                 </div>
             </div>
@@ -270,6 +274,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="id-section">
+            <h2 style="border-bottom: 2px solid #eee; margin-bottom: 2rem;">Material Identification</h2>
+            
+            <div class="split-layout" style="align-items: center; gap: 4rem;">
+                <div>
+                    <img src="../../assets/img/htx-47-logo-black.png" alt="HTX-47 Logo" style="width: 100%; max-width: 350px; margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.1rem; color: #2D2D2D; font-weight: 500;">
+                        <strong>HTX-47</strong> is the standard material reference used for antibacterial applications.
+                    </p>
+                    <p style="font-size: 0.95rem; color: #555;">
+                        It represents a silver-based functional surface designed for hygiene-related and close-to-skin use.
+                    </p>
+                </div>
+
+                <div>
+                    <p>For antibacterial material platforms, HTX provides optional material identification tools to support clear and consistent downstream communication. Antibacterial performance is defined at the material level and referenced using standardized HTX material codes.</p>
+                    
+                    <div style="background-color: #f9f9f9; padding: 1rem; border-left: 3px solid #ccc; margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 0;">
+                            The identification tag does not function as branding or certification. It serves as a material reference, allowing partners to explain antibacterial behavior accurately without disclosing proprietary process details.
+                        </p>
+                    </div>
+
+                    <h4 style="margin-top: 1.5rem;">Identification Formats Available</h4>
+                    <ul style="font-size: 0.95rem; color: #555; padding-left: 1.2rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>HTX Standard Hangtag:</strong> Provided upon request. Includes HTX material reference.</li>
+                        <li><strong>Custom or Co-Branded:</strong> Partners may design their own layout while referencing the HTX material code.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: #888; margin-top: 2rem; font-style: italic;">
+                Material identification tools are optional and application-specific. They are provided to support transparency and material education — not to dictate product branding or marketing language.
+            </p>
         </div>
 
         <div class="highlight-section" style="background-color: #fff; border: none; padding: 0; margin-bottom: 0;">
