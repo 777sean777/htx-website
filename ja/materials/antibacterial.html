@@ -21,6 +21,12 @@
             gap: 3rem;
             align-items: start;
         }
+
+        .split-layout.app-balance {
+            grid-template-columns: 1.5fr 1fr; 
+            align-items: start;
+            gap: 4rem;
+        }
         
         .highlight-section {
             background-color: #F8F9FA;
@@ -31,19 +37,41 @@
             border-radius: 4px;
         }
 
+        /* Material ID Section */
+        .id-section {
+            border: 1px solid #eee;
+            padding: 2.5rem;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+            background-color: #fff;
+        }
+
         .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
+        
         .app-img-stack {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
-        .app-img-stack img {
+        
+        .img-underwear {
             width: 100%;
-            height: 280px;
-            object-fit: cover;
+            height: 320px; 
+            object-fit: cover; 
+            object-position: right 35%; /* Right align */
             border-radius: 4px;
             border: 1px solid #eee;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .img-shoe {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .test-box {
@@ -91,7 +119,7 @@
         .disclaimer { font-size: 0.8rem; color: #718096; border-top: 1px solid #eee; padding-top: 1rem; margin-top: 1rem; font-style: italic; }
 
         @media (max-width: 900px) {
-            .split-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .split-layout, .split-layout.app-balance { grid-template-columns: 1fr; gap: 2rem; }
             .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
         }
     </style>
@@ -146,7 +174,7 @@
 
         <div class="highlight-section">
             <h2 style="border-bottom: 2px solid #CBD5E0; margin-bottom: 2rem;">主な用途</h2>
-            <div class="split-layout">
+            <div class="split-layout app-balance">
                 <div class="app-text-col">
                     <h4>肌着・アパレル (Close-to-Skin)</h4>
                     <ul>
@@ -170,8 +198,8 @@
                 </div>
 
                 <div class="app-img-stack">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-01.jpg" alt="肌着用途イメージ">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="テキスタイル詳細">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="肌着用途イメージ" class="img-underwear">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="フットウェア・ライニング詳細" class="img-shoe">
                 </div>
             </div>
         </div>
@@ -245,6 +273,42 @@
             </div>
         </div>
 
+        <div class="id-section">
+            <h2 style="border-bottom: 2px solid #eee; margin-bottom: 2rem;">抗菌用途向けマテリアル識別</h2>
+            
+            <div class="split-layout" style="align-items: center; gap: 4rem;">
+                <div>
+                    <img src="../../assets/img/htx-47-logo-black.png" alt="HTX-47 Logo" style="width: 100%; max-width: 350px; margin-bottom: 1.5rem;">
+                    <p style="font-size: 1.1rem; color: #2D2D2D; font-weight: 500;">
+                        <strong>HTX-47</strong> は、抗菌用途で使用される標準的なマテリアルリファレンスです。
+                    </p>
+                    <p style="font-size: 0.95rem; color: #555;">
+                        これは、衛生関連および肌に密着する用途向けに設計された、銀ベースの機能性表面を表します。
+                    </p>
+                </div>
+
+                <div>
+                    <p>抗菌マテリアル・プラットフォーム向けに、HTXは下流工程での明確かつ一貫したコミュニケーションを支援する、オプションの材料識別ツールを提供しています。HTXマテリアルの抗菌性能は材料レベルで定義され、標準化されたHTXマテリアルコードを使用して参照されます。</p>
+                    
+                    <div style="background-color: #f9f9f9; padding: 1rem; border-left: 3px solid #ccc; margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem; color: #666; margin-bottom: 0;">
+                            この識別タグは、ブランディングや認証として機能するものではありません。これはあくまで材料リファレンスとして機能し、パートナーが独自のプロセス詳細を開示することなく、抗菌挙動を正確に説明できるようにするためのものです。
+                        </p>
+                    </div>
+
+                    <h4 style="margin-top: 1.5rem;">利用可能な識別形式</h4>
+                    <ul style="font-size: 0.95rem; color: #555; padding-left: 1.2rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>HTX標準下げ札：</strong> 要望に応じて提供。HTXマテリアルコードを含む。</li>
+                        <li><strong>カスタムまたは共同ブランド：</strong> パートナーは独自のレイアウトを設計しつつ、HTXマテリアルコードを参照可能。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: #888; margin-top: 2rem; font-style: italic;">
+                材料識別ツールはオプションであり、用途に応じたものです。透明性と材料教育を支援するために提供されており、製品のブランディングやマーケティング言語を強制するものではありません。
+            </p>
+        </div>
+
         <div class="highlight-section" style="background-color: #fff; border: none; padding: 0; margin-bottom: 0;">
             <div class="cta-box">
                 <h3 style="margin-bottom: 0.5rem; color: #2D2D2D;">技術的なご相談</h3>
@@ -256,7 +320,7 @@
                     <p style="font-weight: 600; margin-bottom: 0.5rem; color: #333; font-size: 0.9rem;">可能であれば、以下をお知らせください：</p>
                     <ul>
                         <li>対象用途（例：下着、靴裏地、スポーツウェア）</li>
-                        <li>基布の希望（例：ポリエステル、ナイロン、綿混紡）</li>
+                        <li>基布または糸の希望（例：ポリエステル、綿混紡、モノフィラメント）</li>
                         <li>想定数量または開発段階（プロトタイプ / 量産）</li>
                         <li>特定の性能要件（例：洗濯耐久回数）</li>
                     </ul>
