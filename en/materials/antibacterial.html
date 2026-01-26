@@ -23,12 +23,11 @@
             align-items: start;
         }
 
-        /* Special Layout for Applications: 
-           Text is wider (60%), Images are narrower (40%) but allowed to be taller.
-           This prevents the portrait image from becoming overwhelmingly huge. */
+        /* --- UPDATED ALIGNMENT --- */
+        /* Changed align-items from 'center' to 'end' to align text to the bottom */
         .split-layout.app-balance {
             grid-template-columns: 1.5fr 1fr; 
-            align-items: center; /* Vertically center the text */
+            align-items: end; /* Aligns text bottom with image bottom */
             gap: 4rem;
         }
         
@@ -49,10 +48,7 @@
             gap: 1.5rem;
         }
         
-        /* --- CRITICAL IMAGE FIXES --- */
-        
-        /* Image 1: Underwear/Socks (Portrait) */
-        /* height: auto ensures NO CROPPING. It shows the full height of the photo. */
+        /* Image 1: Underwear/Socks (Full Height) */
         .img-underwear {
             width: 100%;
             height: auto; 
@@ -61,12 +57,11 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        /* Image 2: Shoe Lining (Detail) */
-        /* Fixed height to keep it as a neat detail strip below the main image */
+        /* Image 2: Shoe Lining (Fixed Height Detail) */
         .img-shoe {
             width: 100%;
             height: 200px; 
-            object-fit: cover; /* Crops nicely to focus on texture */
+            object-fit: cover;
             object-position: center;
             border-radius: 4px;
             border: 1px solid #eee;
@@ -158,7 +153,6 @@
                     <p>HTX antibacterial metal-coated fabrics are functional textile platforms engineered for hygiene control in close-to-skin environments. By applying a controlled metal-based surface treatment at the material level, these fabrics are designed to help reduce odor-causing bacteria and support cleaner wear conditions over time.</p>
                     <p>The treatment is engineered to integrate with the textile surface without altering the intended structure, comfort, or wear behavior of the base fabric.</p>
                 </div>
-                
                 <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
                     <h3>Key Material Characteristics</h3>
                     <ul style="padding-left: 1.2rem; margin: 0; font-size: 0.95rem;">
@@ -199,7 +193,6 @@
 
                 <div class="app-img-stack">
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Underwear and socks application" class="img-underwear">
-                    
                     <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="Footwear lining textile detail" class="img-shoe">
                 </div>
             </div>
