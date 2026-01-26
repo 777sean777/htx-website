@@ -25,6 +25,11 @@
         .feature-content li::before { content: "•"; color: var(--c-accent); position: absolute; left: 0; font-weight: bold; }
         .ident-section { background-color: #FAFAFA; padding: 4rem 2rem; margin: 0 -2rem 4rem -2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .ident-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        
+        /* Coming Soon Style */
+        .card.coming-soon { filter: grayscale(100%); opacity: 0.5; cursor: default; pointer-events: none; border: 1px solid #eee; }
+        .card.coming-soon img { filter: grayscale(100%) !important; opacity: 0.8 !important; }
+
         @media (max-width: 900px) { .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; } .section-intro { padding: 0 1rem; } .ident-section { padding: 3rem 1rem; margin: 0 -1rem 3rem -1rem; } }
     </style>
 </head>
@@ -95,10 +100,10 @@
                         <p>針對敷料與繃帶材料開發的機能性銀基紡織平台。以標準化供應形式提供，便於下游轉換加工。</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card coming-soon">
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="經皮吸收支援片材">
                     <div class="card-content">
-                        <h3>經皮吸收支援片材</h3>
+                        <h3>經皮吸收支援片材 <br><span style="font-size: 0.8rem; color: #666; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;">(即將推出)</span></h3>
                         <p>專為提升皮膚交互作用與機能配方吸收率而設計的片材平台。旨在支援下游產品整合與特定應用的開發討論。</p>
                     </div>
                 </div>
