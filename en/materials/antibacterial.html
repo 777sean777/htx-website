@@ -6,7 +6,7 @@
     <title>Antibacterial Metal-Coated Fabrics | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles (Refined & Balanced) --- */
+        /* --- Page Specific Styles (Compact & Engineered) --- */
         img { filter: none !important; opacity: 1 !important; display: block; }
         p, li { line-height: 1.6; color: #444; margin-bottom: 0.8rem; font-size: 1rem; }
         h2 { font-size: 1.6rem; color: #2D2D2D; border-bottom: 2px solid #2D2D2D; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
@@ -16,7 +16,6 @@
         .container { max-width: 1000px; padding-bottom: 4rem; }
         .section-spacing { margin-bottom: 4rem; }
         
-        /* Default Split Layout */
         .split-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -24,12 +23,11 @@
             align-items: start;
         }
 
-        /* --- UPDATED CSS FOR BETTER BALANCE --- */
-        /* Custom split for Application section: Wider text, narrower images, centered vertically */
+        /* Balance for Application Section */
         .split-layout.app-balance {
-            grid-template-columns: 1.5fr 1fr; /* 60% Text / 40% Image */
-            align-items: center; /* Center text vertically against images */
-            gap: 4rem;
+            grid-template-columns: 1.4fr 1fr; /* Text wider */
+            align-items: center;
+            gap: 3rem;
         }
         
         .highlight-section {
@@ -41,24 +39,31 @@
             border-radius: 4px;
         }
 
-        /* Application Section - Adjusted Image Sizing */
         .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
         .app-img-stack {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
         }
-        .app-img-stack img {
+        
+        /* Individual Image Control */
+        .img-underwear {
             width: 100%;
-            /* Reduced height to stop aggressive cropping of underwear and create tight crop for shoes */
-            height: 180px; 
+            height: 220px; /* Slightly taller to show context */
             object-fit: cover;
+            object-position: center 30%; /* Focus on the body/underwear area */
             border-radius: 4px;
             border: 1px solid #eee;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .img-shoe {
+            width: 100%;
+            height: 180px; /* Tighter crop for detail */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+            border: 1px solid #eee;
         }
 
-        /* Other components */
         .test-box {
             border: 1px solid #E2E8F0;
             padding: 2rem;
@@ -106,7 +111,7 @@
         @media (max-width: 900px) {
             .split-layout, .split-layout.app-balance { grid-template-columns: 1fr; gap: 2rem; }
             .highlight-section { margin: 2rem -1rem; padding: 2rem 1rem; }
-            .app-img-stack img { height: 220px; } /* Slightly taller on mobile */
+            .img-underwear, .img-shoe { height: 220px; }
         }
     </style>
 </head>
@@ -184,9 +189,9 @@
                 </div>
 
                 <div class="app-img-stack">
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Underwear and socks application" style="object-position: top center;">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-02.jpg" alt="Underwear and socks application" class="img-underwear">
                     
-                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="Footwear lining textile detail">
+                    <img src="../../assets/img/materials-antibacterial-underwear-hundr-03.jpg" alt="Footwear lining textile detail" class="img-shoe">
                 </div>
             </div>
         </div>
