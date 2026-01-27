@@ -6,7 +6,7 @@
     <title>About HTX | Surface Engineering Platform</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles --- */
+        /* --- Page Specific Styles (Re-balanced Layout) --- */
         body { color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         
         .container-wide {
@@ -27,12 +27,11 @@
 
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
-        /* 1. Hero Section (Updated: Matches Materials Page Style) */
+        /* 1. Hero Section (Adjusted Height) */
         .page-hero {
             position: relative;
             width: 100%;
-            /* Removed fixed height 70vh, using padding for content-based height */
-            padding: 7rem 0; 
+            padding: 6rem 0; /* Reduced padding for better proportion on desktop */
             background-image: url('../assets/img/htx-about-hero-engineering-tools-textile.jpg');
             background-position: center;
             background-size: cover;
@@ -41,90 +40,92 @@
             color: #fff;
             text-align: center;
         }
-
-        /* Dark overlay for text readability */
         .page-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.35); /* Subtle dark overlay */
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3); /* Slightly lighter overlay */
             z-index: 1;
         }
+        .page-hero .container { position: relative; z-index: 2; }
+        .page-hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
 
-        .page-hero .container {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .page-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #fff;
-            letter-spacing: -0.02em;
-        }
-
-        .page-hero p {
-            font-size: 1.2rem;
-            color: #f0f0f0;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* 2. About Section */
+        /* 2. About Section (Balanced 1:1) */
         .about-split {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
+            gap: 4rem;
+            align-items: center; /* Vertically center */
             margin-bottom: 6rem;
         }
         .about-text { padding-right: 1rem; }
-        .about-img { width: 100%; height: 500px; object-fit: cover; display: block; }
-
-        /* 3. Company Info Section */
-        .info-section { background-color: #F8F9FA; padding: 4rem; margin-top: 4rem; }
-        .info-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: stretch; }
-        .info-content { display: flex; flex-direction: column; justify-content: space-between; }
         
-        .company-name-block { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #E2E8F0; }
-        .company-name-title { font-size: 1.4rem; font-weight: 700; color: #111; margin: 0; }
+        /* FIX: Make building image taller to match text height */
+        .about-img { 
+            width: 100%; 
+            height: 550px; /* Taller fixed height for presence */
+            object-fit: cover; 
+            display: block; 
+            border-radius: 2px;
+        }
+
+        /* 3. Company Info Section (Dashboard Style) */
+        .info-section { 
+            background-color: #F8F9FA; /* Grey background to ground the section */
+            padding: 4rem; 
+            margin-top: 4rem;
+            border-radius: 4px;
+        }
+        
+        .info-layout { 
+            display: grid; 
+            grid-template-columns: 1.6fr 1fr; /* Text area wider */
+            gap: 4rem; 
+            align-items: stretch; 
+        }
+        
+        .info-content { 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        
+        .company-name-block { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #E2E8F0; }
+        .company-name-title { font-size: 1.5rem; font-weight: 700; color: #111; margin: 0; }
         .company-name-sub { font-size: 1rem; color: #666; margin-top: 0.2rem; }
 
-        .office-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+        /* FIX: Grid for Offices (Side by Side) to fill space */
+        .office-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 2rem; 
+            margin-top: 1rem; 
+        }
         
-        .contact-label { font-size: 0.85rem; color: #888; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; display: block; }
+        .contact-label { font-size: 0.8rem; color: #888; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; display: block; }
         .contact-detail { font-size: 1rem; color: #111; margin-bottom: 0.3rem; font-weight: 500; }
-        
         .email-link { font-size: 1.2rem; font-weight: 600; color: #111; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
         .email-link:hover { border-bottom: 2px solid #111; }
 
-        /* Image for Contact Section */
+        /* FIX: Towel image fills the height */
         .info-img { 
             width: 100%; 
             height: 100%; 
-            min-height: 350px; 
+            min-height: 400px; 
             object-fit: cover; 
             object-position: center; 
             border-radius: 2px;
         }
 
-        /* Footer */
         .legal-footer { border-top: 1px solid #eee; padding: 3rem 0; text-align: center; margin-top: 0; }
         .legal-note { font-size: 0.85rem; color: #999; }
 
         @media (max-width: 900px) {
-            .page-hero { padding: 5rem 1rem; }
-            .page-hero h1 { font-size: 2.2rem; }
             .container-wide { padding: 0 1.5rem 4rem 1.5rem; }
             .about-split { grid-template-columns: 1fr; gap: 2rem; }
-            .about-img { height: 300px; order: -1; }
+            .about-img { height: 300px; order: -1; } /* Image on top on mobile */
+            
             .info-section { padding: 2rem; }
             .info-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .office-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .office-grid { grid-template-columns: 1fr; gap: 2rem; } /* Stack offices on mobile */
             .info-img { height: 250px; }
         }
     </style>
@@ -168,51 +169,4 @@
         </div>
 
         <div class="info-section">
-            <h2 style="border-bottom: none; margin-bottom: 1rem;">Company Information</h2>
-            
-            <div class="info-layout">
-                <div class="info-content">
-                    
-                    <div class="company-name-block">
-                        <span class="contact-label">Operating Company</span>
-                        <h3 class="company-name-title">Huntertex Corp.</h3>
-                        <p class="company-name-sub">(漢特科技股份有限公司)</p>
-                    </div>
-
-                    <div style="margin-bottom: 2rem;">
-                        <span class="contact-label">General Inquiries</span>
-                        <a href="mailto:htx@huntertex.com" class="email-link">htx@huntertex.com</a>
-                    </div>
-
-                    <div class="office-grid">
-                        <div>
-                            <span class="contact-label">Taiwan Office</span>
-                            <p class="contact-detail">No. 8, Zhanye 1st Rd.</p>
-                            <p class="contact-detail">Hsinchu City 300, Taiwan</p>
-                            <p class="contact-detail">+886 3-659-0058</p>
-                        </div>
-                        <div>
-                            <span class="contact-label">Japan Office</span>
-                            <p class="contact-detail">Daiichi Tosho Bldg. 6F-C</p>
-                            <p class="contact-detail">1-5 Hanasakicho, Naka-ku</p>
-                            <p class="contact-detail">Yokohama 231-0063, Japan</p>
-                            <p class="contact-detail">+81 45-294-9399</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <img src="../assets/img/htx-about-contact-lifestyle.jpg" alt="Huntertex Lifestyle Texture" class="info-img">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        <div class="container-wide legal-footer">
-            <p class="legal-note">HTX is the brand and technology platform operated by Huntertex Corp.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <h2
