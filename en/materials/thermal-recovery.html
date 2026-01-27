@@ -24,7 +24,7 @@
             align-items: start;
         }
 
-        /* Application Section: Text aligned to top */
+        /* Application Section: Text wider, aligned to top */
         .split-layout.app-balance {
             grid-template-columns: 1.4fr 1fr; 
             align-items: start;
@@ -51,22 +51,23 @@
 
         .app-text-col ul { margin-bottom: 2rem; padding-left: 1.2rem; margin-top: 0; }
         
-        /* Image Stack for Applications */
-        .app-img-stack {
+        /* Image Stack for Applications & Platform */
+        .img-stack {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
         
-        .app-img-stack img {
+        .img-stack img {
             width: 100%;
-            height: 180px; /* Consistent height for neat stacking */
+            height: 200px; /* Consistent height for neat stacking */
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid #eee;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        /* Contact Box */
         .cta-box { 
             background-color: #fff; 
             border: 1px solid #e0e0e0; 
@@ -97,8 +98,8 @@
             <a href="../../en/contact.html">Contact</a>
             <span class="lang-switch">
                 <a href="#" class="active">EN</a>
-                <a href="../../zh/materials/thermal-recovery.html" style="opacity: 0.5; pointer-events: none;">繁中</a>
-                <a href="../../ja/materials/thermal-recovery.html" style="opacity: 0.5; pointer-events: none;">JP</a>
+                <a href="#" style="opacity: 0.5; pointer-events: none;">繁中</a>
+                <a href="#" style="opacity: 0.5; pointer-events: none;">JP</a>
             </span>
         </nav>
     </header>
@@ -117,7 +118,8 @@
             <div class="split-layout">
                 <div>
                     <p>HTX Warmth & Thermal Comfort materials are standardized functional textile platforms defined at the material level. They are designed to enhance perceived thermal comfort during wear, without relying on bulky insulation or heavy structural layers.</p>
-                    <p>Through a titanium-alloy-based surface functional architecture, these materials help reduce unnecessary heat loss during daily wear and low-activity conditions, while maintaining overall comfort and thermal stability. The material platform integrates seamlessly into existing fabric designs without altering garment silhouette, appearance, or pattern structure.</p>
+                    <p>Through a titanium-alloy-based surface functional architecture, these materials help reduce unnecessary heat loss during daily wear and low-activity conditions, while maintaining overall comfort and thermal stability.</p>
+                    <p>The material platform integrates seamlessly into existing fabric designs without altering garment silhouette, appearance, or pattern structure.</p>
                 </div>
                 
                 <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
@@ -160,12 +162,10 @@
                     <p style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 1rem;">Final garment design and application methods are defined by downstream partners.</p>
                 </div>
 
-                <div class="app-img-stack">
-                    <img src="../../assets/img/materials-warmth-urban-light-jacket-scene-05.jpg" alt="Urban lightweight jacket application">
+                <div class="img-stack">
+                    <img src="../../assets/img/materials-warmth-light-jacket-scene-05.jpg" alt="Urban lightweight jacket application">
                     
-                    <img src="../../assets/img/materials-warmth-control-lining-swatch-03.jpg" alt="Soft inner lining texture">
-                    
-                    <img src="../../assets/img/materials-warmth-ti-alloy-swatch-04.jpg" alt="Titanium alloy surface effect">
+                    <img src="../../assets/img/materials-warmth-ti-alloy-swatch-ch-06.jpg" alt="Recovery apparel application">
                 </div>
             </div>
         </div>
@@ -176,12 +176,19 @@
                 <div>
                     <p>HTX Warmth & Thermal Comfort materials are offered as standardized material platforms, with functional behavior defined at the material surface level.</p>
                     <p>Materials may be produced on HTX internal lines or by qualified manufacturing partners under controlled process conditions. They are designed for direct integration into existing apparel manufacturing workflows without requiring additional equipment or structural changes.</p>
+                    
+                    <div style="background-color: #fff; border: 1px solid #eee; padding: 1.5rem; border-radius: 4px; margin-top: 2rem;">
+                        <h4 style="margin-top: 0;">Thermal Comfort Design Positioning</h4>
+                        <p style="font-size: 0.95rem; color: #555;">This material platform is not designed to block airflow or increase garment thickness. Instead, it supports thermal stability by managing surface-level heat behavior, contributing to a warmer yet lightweight wearing experience.</p>
+                        <p style="font-size: 0.95rem; color: #555;">This allows garments to remain comfortable during both active and static conditions, making them suitable for extended wear, rest, and recovery scenarios.</p>
+                        <p style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.5rem;">Actual thermal performance depends on fabric construction, garment design, and usage conditions.</p>
+                    </div>
                 </div>
                 
-                <div style="background-color: #fff; border: 1px solid #eee; padding: 1.5rem; border-radius: 4px;">
-                    <h4 style="margin-top: 0;">Thermal Comfort Design Positioning</h4>
-                    <p style="font-size: 0.95rem; color: #555;">This material platform is not designed to block airflow or increase garment thickness. Instead, it supports thermal stability by managing surface-level heat behavior, contributing to a warmer yet lightweight wearing experience.</p>
-                    <p style="font-size: 0.95rem; color: #555;">This allows garments to remain comfortable during both active and static conditions, making them suitable for extended wear, rest, and recovery scenarios.</p>
+                <div class="img-stack">
+                    <img src="../../assets/img/materials-warmth-ti-alloy-swatch-04.jpg" alt="Titanium alloy surface effect">
+                    
+                    <img src="../../assets/img/materials-warmth-control-lining-swatch-03.jpg" alt="Control lining fabric roll">
                 </div>
             </div>
         </div>
