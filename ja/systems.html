@@ -4,74 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>製造システム | HTX</title>
-    <link rel="preload" as="image" href="../assets/img/hero-machinery.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        .page-hero { background-image: url('../assets/img/sys-automation.jpg'); background-position: center; background-size: cover; }
+        .intro-text { max-width: 800px; margin: 0 auto 4rem auto; }
+        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .system-card { border: 1px solid #eee; border-radius: 4px; overflow: hidden; transition: transform 0.2s; }
+        .system-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .system-card img { width: 100%; height: 240px; object-fit: cover; filter: grayscale(100%); transition: filter 0.3s; }
+        .system-card:hover img { filter: none; }
+        .card-body { padding: 1.5rem; }
+        .card-body h3 { margin-top: 0; font-size: 1.2rem; color: #2D2D2D; }
+        .card-body p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+    </style>
 </head>
 <body>
 
     <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
+        <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo"></a>
         <nav>
             <a href="systems.html" class="active">システム</a>
             <a href="materials.html">マテリアル</a>
-            <a href="contact.html">お問い合わせ</a>
+            <a href="about.html">About</a>
             <span class="lang-switch">
                 <a href="../en/systems.html">EN</a>
                 <a href="../zh/systems.html">繁中</a>
-                <a href="systems.html" class="active">JP</a>
+                <a href="#" class="active">JP</a>
             </span>
         </nav>
     </header>
 
-    <div class="page-hero" style="background-image: url('../assets/img/hero-machinery.png');">
+    <div class="page-hero">
         <div class="container">
-            <h1>製造システムと金型技術</h1>
-            <p>長期的な稼働安定性を備えた工業用量産システムの構築。精密コーティング、自動化、およびR2Rプロセスを核心能力としています。</p>
+            <h1>製造システム</h1>
+            <p>長期的な運用安定性のために設計されています。精密コーティング、自動化、およびスケーラブルなR2Rプロセス。</p>
         </div>
     </div>
 
     <div class="container" style="margin-top: 4rem;">
-        <div class="grid-3">
-            
-            <a href="systems/long-fiber.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-monofilament.jpg" alt="Monofilament Coating" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">モノフィラメント・コーティング</h3>
-                <p>精密な繊維ハンドリングと制御された堆積挙動に焦点を当て、連続繊維上の均一なコーティング厚を保証します。</p>
-            </a>
-
-            <a href="systems/roll-to-roll.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-r2r.jpg" alt="Roll-to-Roll Systems" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">ロール・トゥ・ロール (R2R 1.6m)</h3>
-                <p>長時間の連続稼働を想定した広幅搬送安定性。デリケートな基材に最適化された張力制御。</p>
-            </a>
-
-            <a href="systems/tbc.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-tbc.jpg" alt="Thermal Barrier Coatings" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">遮熱コーティング (TBC)</h3>
-                <p>熱管理および高温環境での使用向けに設計された、厚膜・多層コーティングシステム。</p>
-            </a>
-
-            <a href="systems/powder.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-powder.jpg" alt="Powder Coating Systems" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">粉体塗装システム</h3>
-                <p>先進的な粉体技術のためのプロセス開発とシステム統合。大量生産市場ではなく、新興用途をターゲットとしています。</p>
-            </a>
-
-            <a href="systems/automation.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-automation.jpg" alt="Automation Integration" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">自動化と統合</h3>
-                <p>ロボットによるハンドリングとシステムレベルの統合。再現性のある動作と手動介入の削減を実現します。</p>
-            </a>
-
-            <a href="systems/process.html" class="card" style="text-decoration: none; color: inherit; display: block;">
-                <img src="../assets/img/sys-process.jpg" alt="サプライチェーン統合とODMサービス" style="filter: none !important;">
-                <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">サプライチェーン統合とODMサービス</h3>
-                <p>エンジニアリング主導のODMサービスとサプライチェーン調整により、設計・プロセス・量産実行を確実にサポートします。</p>
-            </a>
-
+        
+        <div class="intro-text">
+            <h2>システムアーキテクチャ</h2>
+            <p>HTXは、量産対応の真空コーティングシステムを設計および統合します。当社の装置は、プロセスの安定性、メンテナンスの容易さ、および既存の製造ラインへのシームレスな統合に重点を置いています。</p>
         </div>
+
+        <div class="system-grid">
+            <div class="system-card">
+                <img src="../assets/img/sys-process-parts.jpg" alt="真空スパッタリングチャンバー">
+                <div class="card-body">
+                    <h3>真空スパッタリングシステム</h3>
+                    <p>ロール・ツー・ロールのテキスタイルおよびフィルム処理用に設計された高効率連続スパッタリング装置。金属ターゲットの利用率と成膜の均一性を最適化しています。</p>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <img src="../assets/img/sys-automation-cabinet.jpg" alt="自動化制御">
+                <div class="card-body">
+                    <h3>プロセス自動化</h3>
+                    <p>産業規模の生産に必要な精密な張力制御、真空安定性、およびリアルタイムのプロセス監視を保証する統合PLC制御システム。</p>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <img src="../assets/img/sys-monofilament.jpg" alt="R2Rハンドリング">
+                <div class="card-body">
+                    <h3>ロール・ツー・ロール統合</h3>
+                    <p>繊細な機能性テキスタイルやフィルム用に設計された高度なウェブハンドリング機構により、高いスループット速度を維持しながら材料の損傷を防ぎます。</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 2rem 0; border-top: 1px solid #eee; color: #999; font-size: 0.85rem;">
+            <p>HTXは、Huntertex Technology Co., Ltd. が運営するブランドおよび技術プラットフォームです。</p>
+        </div>
+    </footer>
+
 </body>
 </html>
