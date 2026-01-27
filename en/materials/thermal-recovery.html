@@ -67,6 +67,29 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        /* Chart Images */
+        .chart-img {
+            width: 100%; 
+            max-height: 280px; 
+            object-fit: contain; 
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .data-table th, .data-table td {
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .data-table th { background-color: #f8f9fa; font-weight: 600; color: #4a5568; }
+
         /* Contact Box */
         .cta-box { 
             background-color: #fff; 
@@ -98,8 +121,8 @@
             <a href="../../en/contact.html">Contact</a>
             <span class="lang-switch">
                 <a href="#" class="active">EN</a>
-                <a href="#" style="opacity: 0.5; pointer-events: none;">繁中</a>
-                <a href="#" style="opacity: 0.5; pointer-events: none;">JP</a>
+                <a href="../../zh/materials/thermal-recovery.html" style="opacity: 0.5; pointer-events: none;">繁中</a>
+                <a href="../../ja/materials/thermal-recovery.html" style="opacity: 0.5; pointer-events: none;">JP</a>
             </span>
         </nav>
     </header>
@@ -118,8 +141,7 @@
             <div class="split-layout">
                 <div>
                     <p>HTX Warmth & Thermal Comfort materials are standardized functional textile platforms defined at the material level. They are designed to enhance perceived thermal comfort during wear, without relying on bulky insulation or heavy structural layers.</p>
-                    <p>Through a titanium-alloy-based surface functional architecture, these materials help reduce unnecessary heat loss during daily wear and low-activity conditions, while maintaining overall comfort and thermal stability.</p>
-                    <p>The material platform integrates seamlessly into existing fabric designs without altering garment silhouette, appearance, or pattern structure.</p>
+                    <p>Through a titanium-alloy-based surface functional architecture, these materials help reduce unnecessary heat loss during daily wear and low-activity conditions, while maintaining overall comfort and thermal stability. The material platform integrates seamlessly into existing fabric designs without altering garment silhouette, appearance, or pattern structure.</p>
                 </div>
                 
                 <div style="background: #F8F9FA; padding: 1.5rem; border-radius: 4px; border: 1px solid #E2E8F0;">
@@ -163,7 +185,7 @@
                 </div>
 
                 <div class="img-stack">
-                    <img src="../../assets/img/materials-warmth-light-jacket-scene-05.jpg" alt="Urban lightweight jacket application">
+                    <img src="../../assets/img/materials-warmth-light-jacket-scene-05.jpg" alt="Lightweight jacket lining application">
                     
                     <img src="../../assets/img/materials-warmth-ti-alloy-swatch-ch-06.jpg" alt="Recovery apparel application">
                 </div>
@@ -189,6 +211,28 @@
                     <img src="../../assets/img/materials-warmth-ti-alloy-swatch-04.jpg" alt="Titanium alloy surface effect">
                     
                     <img src="../../assets/img/materials-warmth-control-lining-swatch-03.jpg" alt="Control lining fabric roll">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-spacing">
+            <h2>Photothermal Performance</h2>
+            <div class="split-layout">
+                <div>
+                    <p style="margin-bottom: 1.5rem;"><strong>Test Method:</strong> JIS L 1926 (2019)</p>
+                    <p>Under controlled light exposure, Air-Coated variants demonstrate higher temperature rise compared to untreated control materials.</p>
+                    
+                    <h4 style="margin-top: 2rem; margin-bottom: 0.5rem;">Photothermal Temperature Rise (ΔT)</h4>
+                    <table class="data-table">
+                        <tr><th>Variant</th><th>Temp Rise (ΔT)</th></tr>
+                        <tr><td>Ti + Al (Air-Coated)</td><td style="color: var(--c-accent); font-weight: 700;">9.4°C</td></tr>
+                        <tr><td>Ti (Air-Coated)</td><td>8.7°C</td></tr>
+                        <tr><td style="color: #888;">Uncoated Control</td><td style="color: #888;">6.2°C</td></tr>
+                    </table>
+                </div>
+                <div class="img-stack">
+                    <img src="../../assets/img/materials-warmth-photothermal-curve-jis1926-01.jpg" alt="Photothermal Curve Chart" class="chart-img">
+                    <img src="../../assets/img/materials-warmth-photothermal-deltaT-jis1926-02.jpg" alt="Delta T Comparison Chart" class="chart-img">
                 </div>
             </div>
         </div>
