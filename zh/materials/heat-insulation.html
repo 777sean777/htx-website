@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>反射型隔熱遮蔽材料 (HTX-13) | HTX Materials</title>
+    <title>反射型隔熱遮蔽材料 | HTX Materials</title>
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <style>
         img { filter: none !important; opacity: 1 !important; display: block; }
@@ -21,6 +21,10 @@
         .img-stack { display: flex; flex-direction: column; gap: 1.5rem; }
         .img-stack img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .chart-img { width: 100%; max-height: 350px; object-fit: contain; border: 1px solid #eee; padding: 15px; border-radius: 4px; background: #fff; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin-top: 1.5rem; margin-bottom: 1rem; }
+        .data-table th, .data-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; }
+        .data-table th { background-color: #f8f9fa; font-weight: 600; color: #4a5568; }
+        .data-table .highlight-val { color: var(--c-accent); font-weight: 700; }
         .cta-box { background-color: #fff; border: 1px solid #e0e0e0; border-left: 4px solid var(--c-accent); padding: 2rem; margin-top: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
         .req-list { font-size: 0.95rem; color: #555; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
         .req-list li { list-style: none; margin-bottom: 0.3rem; }
@@ -45,7 +49,7 @@
 
     <div class="page-hero" style="background-image: url('../../assets/img/materials-thermal-hero-automotive-sunroof-htx13-01.jpg'); background-position: center; background-size: cover;">
         <div class="container">
-            <h1>反射型隔熱遮蔽材料 (HTX-13)</h1>
+            <h1>反射型隔熱遮蔽材料</h1>
             <p>標準化機能性紡織平台，透過表面反射機制減少熱穿透並管理輻射能量。</p>
         </div>
     </div>
@@ -109,13 +113,35 @@
             <h2>隔熱遮蔽性能參考</h2>
             <div class="split-layout">
                 <div>
-                    <p>HTX 反射材料的隔熱行為已透過常用於車用窗簾系統的標準化測試方法進行評估。</p>
-                    <p>測試重點在於比較未處理對照組與 HTX 處理後的反射材料，在受控輻射熱曝曬下的隨時間升溫情形。</p>
-                    <div style="margin-top: 1.5rem; padding: 1rem; background-color: #f9f9f9; border-left: 3px solid #ccc;">
-                        <p style="font-size: 0.95rem; margin-bottom: 0.5rem; color: #333;"><strong>關鍵發現：</strong></p>
-                        <p style="font-size: 0.9rem; color: #555; margin-bottom: 0;">結果顯示，HTX 處理後的樣品相較於對照布料，表現出較緩慢的升溫速度以及較低的最終平衡溫度，顯示其有效減少了熱穿透。</p>
-                    </div>
-                    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #666;">此性能支援需要持續日照曝曬且要求熱舒適性的應用，同時不阻擋氣流或增加材料厚度。</p>
+                    <p>HTX 反射材料的隔熱行為已透過常用於車用窗簾系統的標準化測試方法進行評估。測試重點在於比較未處理對照組與 HTX 處理後的反射材料，在受控輻射熱曝曬下的隨時間升溫情形。</p>
+                    
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: #2D2D2D;">黑板溫度 (平衡溫度)</h4>
+                    <table class="data-table">
+                        <tr>
+                            <th>測試樣品</th>
+                            <th>溫度 (°C)</th>
+                            <th>性能表現</th>
+                        </tr>
+                        <tr>
+                            <td style="color:#888;">未處理對照組</td>
+                            <td style="color:#888;">68°C</td>
+                            <td style="color:#888;">基準</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HTX 處理 (樣品 #1)</strong></td>
+                            <td class="highlight-val">42°C</td>
+                            <td class="highlight-val">降低 -26°C</td>
+                        </tr>
+                        <tr>
+                            <td>HTX 處理 (樣品 #2)</td>
+                            <td>51°C</td>
+                            <td>降低 -17°C</td>
+                        </tr>
+                    </table>
+
+                    <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+                        <strong>結果：</strong> HTX 處理後的樣品顯示出顯著較低的熱吸收，與對照布料相比，溫度降低幅度最高可達 38%。
+                    </p>
                 </div>
                 <div>
                     <img src="../../assets/img/materials-thermal-heatshield-temp-curve-jis-01.jpg" alt="升溫比較曲線圖" class="chart-img">
