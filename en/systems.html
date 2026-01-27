@@ -6,21 +6,91 @@
     <title>Manufacturing Systems | HTX</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Systems Page Specific Styles --- */
+        /* --- Page Specific Styles --- */
+        body { color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
+
+        h2 { font-size: 2rem; color: #111; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 1rem; border-bottom: 2px solid #111; }
+        p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
+
+        /* 1. Hero Section (Left-Aligned, Consistent with Materials) */
         .page-hero {
-            background-image: url('../assets/img/sys-automation.jpg'); /* 假設這是您的系統頁Hero圖 */
+            position: relative;
+            width: 100%;
+            height: 60vh; /* Fixed height match */
+            min-height: 400px;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            /* 請確認您的 Hero 圖片檔名，這邊預設為 hero-systems.jpg */
+            background-image: url('../assets/img/hero-systems.jpg'); 
             background-position: center;
             background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 5rem;
+            color: #fff;
+            text-align: left; /* Left Aligned */
         }
-        .intro-text { max-width: 800px; margin: 0 auto 4rem auto; }
-        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-        .system-card { border: 1px solid #eee; border-radius: 4px; overflow: hidden; transition: transform 0.2s; }
-        .system-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .system-card img { width: 100%; height: 240px; object-fit: cover; filter: grayscale(100%); transition: filter 0.3s; }
+        .page-hero::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4); 
+            z-index: 1;
+        }
+        .page-hero .container { position: relative; z-index: 2; padding-bottom: 0; width: 100%; }
+        .page-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .page-hero p { font-size: 1.2rem; color: #f0f0f0; font-weight: 400; max-width: 700px; margin: 0; }
+
+        /* 2. Intro Text */
+        .intro-text { max-width: 900px; margin-bottom: 4rem; }
+
+        /* 3. System Grid (6 Cards) */
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .system-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .system-card img {
+            width: 100%;
+            height: 240px; 
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #eee;
+            /* Optional: Grayscale effect on hover */
+            filter: grayscale(100%);
+            transition: 0.3s;
+        }
+        
         .system-card:hover img { filter: none; }
-        .card-body { padding: 1.5rem; }
-        .card-body h3 { margin-top: 0; font-size: 1.2rem; color: #2D2D2D; }
-        .card-body p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+        .card-body { padding: 2rem; }
+        .card-body h3 { font-size: 1.3rem; color: #2D2D2D; margin-top: 0; margin-bottom: 1rem; font-weight: 600; }
+        .card-body p { font-size: 0.95rem; color: #666; margin-bottom: 0; line-height: 1.6; }
+
+        /* Footer */
+        .legal-footer { border-top: 1px solid #eee; padding: 3rem 0; text-align: center; margin-top: 0; }
+        .legal-note { font-size: 0.85rem; color: #999; }
+
+        @media (max-width: 900px) {
+            .page-hero { height: 50vh; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .system-grid { grid-template-columns: 1fr; gap: 2rem; } /* Stack on mobile */
+            .container { padding: 0 1.5rem 4rem 1.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -46,7 +116,7 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: 4rem;">
+    <div class="container">
         
         <div class="intro-text">
             <h2>System Architecture</h2>
@@ -77,13 +147,37 @@
                     <p>Advanced web handling mechanisms designed for delicate functional textiles and films, preventing damage while maintaining high throughput speeds.</p>
                 </div>
             </div>
+
+            <div class="system-card">
+                <img src="../assets/img/sys-automation.jpg" alt="Plasma Pre-treatment">
+                <div class="card-body">
+                    <h3>Plasma Pre-treatment</h3>
+                    <p>Inline plasma cleaning and surface activation units to enhance adhesion and coating durability on various substrates.</p>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <img src="../assets/img/sys-process-parts.jpg" alt="Reactive Process Control">
+                <div class="card-body">
+                    <h3>Reactive Process Control</h3>
+                    <p>Advanced gas flow management systems for stable reactive sputtering, enabling precise color control and functional oxide layers.</p>
+                </div>
+            </div>
+
+            <div class="system-card">
+                <img src="../assets/img/sys-automation-cabinet.jpg" alt="Turnkey Solutions">
+                <div class="card-body">
+                    <h3>Turnkey Solutions</h3>
+                    <p>End-to-end system design, including vacuum chambers, pumping systems, and peripheral equipment, tailored to specific production layouts.</p>
+                </div>
+            </div>
         </div>
 
     </div>
 
     <footer>
-        <div class="container" style="text-align: center; padding: 2rem 0; border-top: 1px solid #eee; color: #999; font-size: 0.85rem;">
-            <p>HTX is the brand and technology platform operated by Huntertex Corp.</p>
+        <div class="container legal-footer">
+            <p class="legal-note">HTX is the brand and technology platform operated by Huntertex Corp.</p>
         </div>
     </footer>
 
