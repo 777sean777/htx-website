@@ -14,39 +14,37 @@
         h2 { font-size: 2rem; color: #111; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 1rem; border-bottom: 2px solid #111; }
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
-        /* 1. Hero Section (Left-Aligned, Consistent with Materials) */
+        /* 1. Hero Section (Restored Dark Chamber Image) */
         .page-hero {
             position: relative;
             width: 100%;
-            height: 60vh; /* Fixed height match */
-            min-height: 400px;
-            display: flex;
-            align-items: center; /* Vertically center content */
-            /* 請確認您的 Hero 圖片檔名，這邊預設為 hero-systems.jpg */
-            background-image: url('../assets/img/hero-systems.jpg'); 
+            padding: 7rem 0; 
+            /* 使用這張深色腔體圖作為 Hero */
+            background-image: url('../assets/img/sys-process-parts.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             margin-bottom: 5rem;
             color: #fff;
-            text-align: left; /* Left Aligned */
+            text-align: left;
         }
+        /* Dark overlay for text readability */
         .page-hero::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.4); 
+            background: rgba(0,0,0,0.5); /* Darker overlay for machine vibe */
             z-index: 1;
         }
-        .page-hero .container { position: relative; z-index: 2; padding-bottom: 0; width: 100%; }
+        .page-hero .container { position: relative; z-index: 2; padding-bottom: 0; }
         .page-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
         .page-hero p { font-size: 1.2rem; color: #f0f0f0; font-weight: 400; max-width: 700px; margin: 0; }
 
         /* 2. Intro Text */
         .intro-text { max-width: 900px; margin-bottom: 4rem; }
 
-        /* 3. System Grid (6 Cards) */
+        /* 3. System Grid (6 Cards Restored) */
         .system-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(3, 1fr); /* 3 Columns */
             gap: 2.5rem;
             margin-bottom: 6rem;
         }
@@ -57,6 +55,7 @@
             border-radius: 4px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Suggests interactivity */
         }
         
         .system-card:hover {
@@ -70,12 +69,7 @@
             object-fit: cover;
             display: block;
             border-bottom: 1px solid #eee;
-            /* Optional: Grayscale effect on hover */
-            filter: grayscale(100%);
-            transition: 0.3s;
         }
-        
-        .system-card:hover img { filter: none; }
 
         .card-body { padding: 2rem; }
         .card-body h3 { font-size: 1.3rem; color: #2D2D2D; margin-top: 0; margin-bottom: 1rem; font-weight: 600; }
@@ -86,9 +80,9 @@
         .legal-note { font-size: 0.85rem; color: #999; }
 
         @media (max-width: 900px) {
-            .page-hero { height: 50vh; }
+            .page-hero { padding: 5rem 0; }
             .page-hero h1 { font-size: 2.2rem; }
-            .system-grid { grid-template-columns: 1fr; gap: 2rem; } /* Stack on mobile */
+            .system-grid { grid-template-columns: 1fr; } /* Stack on mobile */
             .container { padding: 0 1.5rem 4rem 1.5rem; }
         }
     </style>
@@ -128,7 +122,7 @@
                 <img src="../assets/img/sys-process-parts.jpg" alt="Vacuum Sputtering Chamber">
                 <div class="card-body">
                     <h3>Vacuum Sputtering Systems</h3>
-                    <p>High-efficiency continuous sputtering equipment designed for roll-to-roll textile and film processing. Optimized for metal target utilization and uniform deposition.</p>
+                    <p>High-efficiency continuous sputtering equipment designed for roll-to-roll textile and film processing. Optimized for metal target utilization.</p>
                 </div>
             </div>
 
@@ -136,7 +130,7 @@
                 <img src="../assets/img/sys-automation-cabinet.jpg" alt="Automation Control">
                 <div class="card-body">
                     <h3>Process Automation</h3>
-                    <p>Integrated PLC control systems ensuring precise tension control, vacuum stability, and real-time process monitoring for industrial-scale production.</p>
+                    <p>Integrated PLC control systems ensuring precise tension control, vacuum stability, and real-time monitoring for industrial scale.</p>
                 </div>
             </div>
 
@@ -144,7 +138,7 @@
                 <img src="../assets/img/sys-monofilament.jpg" alt="R2R Processing">
                 <div class="card-body">
                     <h3>Roll-to-Roll Integration</h3>
-                    <p>Advanced web handling mechanisms designed for delicate functional textiles and films, preventing damage while maintaining high throughput speeds.</p>
+                    <p>Advanced web handling mechanisms designed for delicate functional textiles and films, preventing damage at high speeds.</p>
                 </div>
             </div>
 
@@ -157,18 +151,18 @@
             </div>
 
             <div class="system-card">
-                <img src="../assets/img/sys-process-parts.jpg" alt="Reactive Process Control">
+                <img src="../assets/img/materials-antibacterial-swatch-closeup-03.jpg" alt="Long Fiber Coating">
                 <div class="card-body">
-                    <h3>Reactive Process Control</h3>
-                    <p>Advanced gas flow management systems for stable reactive sputtering, enabling precise color control and functional oxide layers.</p>
+                    <h3>Long Fiber Coating</h3>
+                    <p>Specialized coating modules for continuous fiber and yarn processing, ensuring 360-degree uniform functional layer deposition.</p>
                 </div>
             </div>
 
             <div class="system-card">
-                <img src="../assets/img/sys-automation-cabinet.jpg" alt="Turnkey Solutions">
+                <img src="../assets/img/sys-automation-cabinet.jpg" alt="Turnkey Solutions" style="object-position: top;">
                 <div class="card-body">
                     <h3>Turnkey Solutions</h3>
-                    <p>End-to-end system design, including vacuum chambers, pumping systems, and peripheral equipment, tailored to specific production layouts.</p>
+                    <p>End-to-end system design, including vacuum chambers, pumping systems, and peripheral equipment, tailored to production layouts.</p>
                 </div>
             </div>
         </div>
