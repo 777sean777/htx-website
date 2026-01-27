@@ -27,19 +27,22 @@
 
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
-        /* 1. Hero Section (UPDATED: Strictly matches Materials page style) */
+        /* 1. Hero Section (FIXED: Matches Material Page Alignment) */
         .page-hero {
             position: relative;
             width: 100%;
-            /* Changed from fixed height to padding-based height to match Materials */
-            padding: 7rem 0; 
+            height: 60vh; /* Fixed height for vertical centering */
+            min-height: 400px;
+            display: flex;
+            align-items: center; /* Vertically Center Text */
+            justify-content: flex-start; /* Horizontally Left */
             background-image: url('../assets/img/htx-about-hero-engineering-tools-textile.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
             margin-bottom: 5rem;
             color: #fff;
-            text-align: left; /* Left Aligned */
+            text-align: left; /* Left Align Text */
         }
         
         .page-hero::before {
@@ -51,14 +54,14 @@
         .page-hero .container {
             position: relative;
             z-index: 2;
-            max-width: 1000px; /* Same max-width as Materials hero content */
+            width: 100%;
+            max-width: 1200px; /* Match content width */
             padding: 0 2rem;
             margin: 0 auto;
-            width: 100%;
         }
 
         .page-hero h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: #fff;
@@ -105,7 +108,7 @@
         .legal-note { font-size: 0.85rem; color: #999; }
 
         @media (max-width: 900px) {
-            .page-hero { padding: 5rem 0; } /* Mobile padding */
+            .page-hero { height: 50vh; padding: 0; }
             .page-hero h1 { font-size: 2.2rem; }
             .container-wide { padding: 0 1.5rem 4rem 1.5rem; }
             .about-split { grid-template-columns: 1fr; gap: 2rem; }
