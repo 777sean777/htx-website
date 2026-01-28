@@ -11,16 +11,25 @@
         h2 { font-size: 2rem; margin-bottom: 1.5rem; font-weight: 700; padding-bottom: 1rem; border-bottom: 2px solid #111; }
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
-        /* HERO FIX: Padding based, No fixed height */
+        /* --- HERO FIX: Strictly matched to Materials Page --- */
         .page-hero {
-            position: relative; width: 100%;
-            padding: 7rem 0; /* Match Materials Page */
+            position: relative;
+            width: 100%;
+            height: 60vh;        /* Fixed Height for Desktop */
+            min-height: 400px;   /* Minimum safety height */
+            display: flex;       /* Use Flexbox for centering */
+            align-items: center; /* Vertically Center */
             background-image: url('../assets/img/htx-about-hero-engineering-tools-textile.jpg');
-            background-position: center; background-size: cover; background-repeat: no-repeat;
-            margin-bottom: 5rem; color: #fff; text-align: left;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 5rem;
+            color: #fff;
+            text-align: left;
+            padding: 0;          /* Remove padding to avoid double spacing */
         }
         .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.35); z-index: 1; }
-        .page-hero .container { position: relative; z-index: 2; max-width: 1000px; padding: 0 2rem; margin: 0 auto; width: 100%; }
+        .page-hero .container { position: relative; z-index: 2; width: 100%; max-width: 1200px; padding: 0 2rem; margin: 0 auto; }
         .page-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
         .page-hero p { font-size: 1.2rem; color: #f0f0f0; max-width: 600px; margin: 0; }
 
@@ -43,7 +52,11 @@
         .legal-note { font-size: 0.85rem; color: #999; }
 
         @media (max-width: 900px) {
-            .page-hero { padding: 5rem 0; } /* Mobile Padding Adjustment */
+            .page-hero { 
+                height: 50vh;      /* Enforce Mobile Height */
+                min-height: 300px;
+                padding: 0; 
+            }
             .page-hero h1 { font-size: 2.2rem; }
             .container-wide { padding: 0 1.5rem 4rem 1.5rem; }
             .about-split { grid-template-columns: 1fr; gap: 2rem; }
