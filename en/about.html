@@ -12,14 +12,14 @@
         h2 { font-size: 2rem; color: #111; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 1rem; border-bottom: 2px solid #111; }
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
-        /* --- HERO SECTION (FINAL ADJUSTMENT) --- */
+        /* --- HERO SECTION (FINAL FIXED HEIGHT: 40vh) --- */
         .page-hero {
             position: relative;
             width: 100%;
             
-            /* Desktop: Fixed height to match Material Page standard (approx 50% of viewport) */
-            height: 50vh; 
-            min-height: 400px; /* Safety minimum */
+            /* Desktop: Fixed height at 40vh (Shorter/Sleeker) */
+            height: 40vh; 
+            min-height: 320px; /* Minimum safety height */
             
             /* Flexbox for perfect centering */
             display: flex;
@@ -33,13 +33,13 @@
             margin-bottom: 5rem;
             color: #fff;
             text-align: left;
-            padding: 0; /* No padding needed when height is fixed */
+            padding: 0;
         }
         
         /* Overlay */
         .page-hero::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.4); /* Contrast overlay */
+            background: rgba(0,0,0,0.4);
             z-index: 1;
         }
 
@@ -48,7 +48,7 @@
             position: relative;
             z-index: 2;
             width: 100%;
-            max-width: 1200px; /* Match content width */
+            max-width: 1200px;
             padding: 0 2rem;
             margin: 0 auto;
             box-sizing: border-box;
@@ -88,11 +88,10 @@
 
         /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 900px) {
-            /* Mobile Hero: Switch to padding-based height for natural fit */
             .page-hero { 
                 height: auto; 
                 min-height: auto; 
-                padding: 5rem 0; /* Reduced padding prevents "too tall" look on mobile */
+                padding: 4rem 0; /* Compact padding for mobile */
             }
             .page-hero h1 { font-size: 2.2rem; }
             .page-hero p { font-size: 1.1rem; }
