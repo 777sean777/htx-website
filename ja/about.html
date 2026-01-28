@@ -6,10 +6,9 @@
     <title>HTXについて | 表面工学技術プラットフォーム</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Global Reset --- */
+        /* --- Global Styles --- */
         body { color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; }
         .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 2rem 6rem 2rem; }
-        
         h2 { font-size: 2rem; color: #111; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: -0.02em; padding-bottom: 1rem; border-bottom: 2px solid #111; }
         p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
 
@@ -17,8 +16,10 @@
         .page-hero {
             position: relative;
             width: 100%;
-            /* デスクトップ版はPaddingで高さを調整 */
-            padding: 8rem 0; 
+            height: 40vh; /* Fixed height match */
+            min-height: 320px;
+            display: flex;
+            align-items: center; 
             background-image: url('../assets/img/htx-about-hero-engineering-tools-textile.jpg');
             background-position: center;
             background-size: cover;
@@ -26,18 +27,22 @@
             margin-bottom: 5rem;
             color: #fff;
             text-align: left;
+            padding: 0;
         }
         
         .page-hero::before {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.45);
+            background: rgba(0,0,0,0.4);
             z-index: 1;
         }
 
         .page-hero .container {
-            position: relative; z-index: 2;
-            width: 100%; max-width: 1200px;
-            padding: 0 2rem; margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 2rem;
+            margin: 0 auto;
             box-sizing: border-box;
         }
 
@@ -48,15 +53,14 @@
 
         .page-hero p {
             font-size: 1.25rem; color: #f0f0f0; font-weight: 400;
-            max-width: 700px; margin: 0;
+            max-width: 700px; margin: 0; 
         }
 
-        /* --- ABOUT SECTION --- */
+        /* --- CONTENT SECTIONS --- */
         .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 6rem; }
         .about-text { padding-right: 1rem; }
         .about-img { width: 100%; height: 500px; object-fit: cover; display: block; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
 
-        /* --- COMPANY INFO --- */
         .info-section { background-color: #F8F9FA; padding: 4rem; margin-top: 4rem; border-radius: 4px; }
         .info-layout { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: stretch; }
         .info-content { display: flex; flex-direction: column; justify-content: center; }
@@ -68,7 +72,6 @@
         .office-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
         .contact-label { font-size: 0.8rem; color: #888; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; display: block; }
         .contact-detail { font-size: 1rem; color: #111; margin-bottom: 0.3rem; font-weight: 500; }
-        
         .email-link { font-size: 1.2rem; font-weight: 600; color: #111; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
         .email-link:hover { border-bottom: 2px solid #111; }
 
@@ -81,17 +84,15 @@
             .page-hero { 
                 height: auto; 
                 min-height: auto; 
-                padding: 4rem 0; /* モバイル版はPaddingを減らす */
+                padding: 4rem 0; /* Auto height with padding */
             }
-            .page-hero h1 { font-size: 2rem; }
+            .page-hero h1 { font-size: 2.2rem; }
             .page-hero p { font-size: 1.1rem; }
             .page-hero .container { padding: 0 1.5rem; }
 
             .container-wide { padding: 0 1.5rem 4rem 1.5rem; }
-            
             .about-split { grid-template-columns: 1fr; gap: 2rem; }
             .about-img { height: 300px; order: -1; }
-            
             .info-section { padding: 2rem; }
             .info-layout { grid-template-columns: 1fr; gap: 2rem; }
             .office-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -110,7 +111,7 @@
             <span class="lang-switch">
                 <a href="../en/about.html">EN</a>
                 <a href="../zh/about.html">繁中</a>
-                <a href="#" class="active">JP</a>
+                <a href="../ja/about.html">JP</a>
             </span>
         </nav>
     </header>
