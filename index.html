@@ -15,7 +15,7 @@
             width: 100%;
             height: 85vh; /* Full impact height */
             
-            /* ▼▼▼ 修改這裡：更換成您的新圖片檔名 ▼▼▼ */
+            /* Root目錄的路徑：直接 assets/... 不用加 ../ */
             background-image: url('assets/img/home-hero-new.jpg');
             
             background-position: center;
@@ -28,7 +28,7 @@
             color: #fff;
         }
 
-        /* Overlay to make text readable */
+        /* Overlay */
         .home-hero::before {
             content: '';
             position: absolute;
@@ -58,7 +58,7 @@
             opacity: 0.9;
         }
 
-        /* Dual Action Buttons */
+        /* Buttons */
         .hero-actions {
             display: flex;
             gap: 2rem;
@@ -103,7 +103,6 @@
         <nav>
             <a href="en/systems.html">Systems</a>
             <a href="en/materials.html">Materials</a>
-            
             <a href="en/about.html">About</a>
             
             <span class="lang-switch">
