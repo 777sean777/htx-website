@@ -4,136 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manufacturing Systems | HTX</title>
+    <link rel="preload" as="image" href="../assets/img/hero-machinery.png">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        /* --- Page Specific Styles --- */
-        body { color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        /* Force images to show in full color as requested */
+        .card img { filter: none !important; }
+
+        /* --- New Styles Copied from Materials Page for Consistency --- */
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
-
-        /* Typography */
-        h2 { font-size: 1.8rem; color: #111; margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.02em; }
-        p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1.2rem; }
-
-        /* 1. Hero Section (Dark Chamber Image) */
-        .page-hero {
-            position: relative;
-            width: 100%;
-            height: 50vh; /* Fixed height match */
-            min-height: 400px;
-            display: flex;
-            align-items: center; 
-            /* Hero Image */
-            background-image: url('../assets/img/sys-process-parts.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin-bottom: 5rem;
-            color: #fff;
-            text-align: left;
+        /* Grey Box Style */
+        .supply-model-box { 
+            background-color: #F4F6F8; 
+            border-left: 4px solid #2D2D2D; 
+            padding: 2rem; 
+            margin: 3rem 0; 
         }
-        .page-hero::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5); /* Dark overlay */
-            z-index: 1;
-        }
-        .page-hero .container { position: relative; z-index: 2; width: 100%; padding-bottom: 0; }
-        .page-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-        .page-hero p { font-size: 1.2rem; color: #f0f0f0; font-weight: 400; max-width: 700px; margin: 0; }
-
-        /* 2. Text Layout (Matching Materials Page) */
-        .intro-section { margin-bottom: 5rem; max-width: 900px; }
-        
-        /* Delivery Model Box */
-        .delivery-model-box {
-            margin-top: 3rem;
-            padding: 2rem;
-            background-color: #F8F9FA;
-            border-left: 4px solid #2D3748; /* Accent Color */
-            border-radius: 2px;
-        }
-        .delivery-model-box h3 { font-size: 1.4rem; font-weight: 700; margin-top: 0; margin-bottom: 1rem; color: #2D3748; }
-        .delivery-model-box p { font-size: 1rem; color: #555; margin-bottom: 1rem; }
-        .delivery-model-box p:last-child { margin-bottom: 0; }
-
-        /* 3. Grid Header */
-        .grid-header {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1rem;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .grid-title { font-size: 1.8rem; font-weight: 700; margin: 0; color: #111; }
-        .grid-subtitle { font-size: 0.9rem; color: #666; margin: 0; max-width: 600px; text-align: right; }
-
-        /* 4. System Grid */
-        .system-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-            margin-bottom: 6rem;
-        }
-
-        .system-card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none; /* For link */
-            display: block;
-            height: 100%;
-        }
-        
-        .system-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .system-card img {
-            width: 100%;
-            height: 240px; 
-            object-fit: cover;
-            display: block;
-            border-bottom: 1px solid #eee;
-        }
-
-        .card-body { padding: 2rem; }
-        .card-body h3 { 
-            font-size: 1.3rem; 
-            color: #2D3748; /* Link color hint */
+        .supply-model-box h3 { 
             margin-top: 0; 
-            margin-bottom: 1rem; 
-            font-weight: 600; 
-            text-decoration: underline; 
-            text-decoration-color: transparent;
-            transition: 0.3s;
+            color: #2D2D2D; 
+            font-size: 1.4rem; 
         }
-        .system-card:hover .card-body h3 { text-decoration-color: #2D3748; }
-        .card-body p { font-size: 0.95rem; color: #666; margin-bottom: 0; line-height: 1.6; }
-
-        /* Footer */
-        .legal-footer { border-top: 1px solid #eee; padding: 3rem 0; text-align: center; margin-top: 0; }
-        .legal-note { font-size: 0.85rem; color: #999; }
-
-        @media (max-width: 900px) {
-            .page-hero { height: 50vh; }
-            .page-hero h1 { font-size: 2.2rem; }
-            .grid-header { flex-direction: column; align-items: flex-start; }
-            .grid-subtitle { text-align: left; }
-            .system-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .container { padding: 0 1.5rem 4rem 1.5rem; }
+        
+        /* Intro Text Layout */
+        .section-intro { 
+            max-width: 800px; 
+            margin: 0 auto 4rem auto; 
+            text-align: left; 
+        }
+        
+        /* Title Bar with Thicker Dark Line */
+        .section-title-bar { 
+            border-bottom: 2px solid #2D2D2D; /* Matching Materials thickness */
+            padding-bottom: 1rem; 
+            margin-bottom: 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end; 
+            gap: 1rem; 
+            flex-wrap: wrap; 
+        }
+        .section-title-bar h2 { 
+            margin: 0; 
+            font-size: 1.8rem; 
+            color: #2D2D2D; 
+        }
+        .section-title-bar p { 
+            margin: 0; 
+            color: #666; 
+            font-size: 0.95rem; 
+            max-width: 600px; 
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo"></a>
+        <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
+        </a>
         <nav>
             <a href="systems.html" class="active">Systems</a>
             <a href="materials.html">Materials</a>
@@ -146,96 +74,99 @@
         </nav>
     </header>
 
-    <div class="page-hero">
+    <div class="page-hero" style="background-image: url('../assets/img/hero-machinery.png');">
         <div class="container">
             <h1>Manufacturing Systems</h1>
             <p>Engineered for long-term operational stability. Precision coating, automation, and scalable R2R processes.</p>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-top: 4rem; padding-bottom: 6rem;">
         
-        <div class="intro-section">
-            <h2>System Overview</h2>
-            <p>HTX systems are manufacturing-oriented platforms developed for vacuum-based surface engineering.</p>
-            <p>Each system is engineered to support stable long-term operation, controlled coating behavior, and scalable production deployment across industrial environments.</p>
-            <p>Systems are delivered as integrated platforms rather than isolated machines, with architecture defined by process requirements, operational reliability, and future expandability.</p>
-
-            <div class="delivery-model-box">
+        <div class="section-intro">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; color: #2D2D2D;">System Overview</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 2rem;">
+                HTX systems are manufacturing-oriented platforms developed for vacuum-based surface engineering. 
+                Each system is engineered to support stable long-term operation, controlled coating behavior, and scalable production deployment across industrial environments.
+                Systems are delivered as integrated platforms rather than isolated machines, with architecture defined by process requirements, operational reliability, and future expandability.
+            </p>
+            
+            <div class="supply-model-box">
                 <h3>Platform & Delivery Model</h3>
-                <p>HTX defines system architectures, process stability criteria, and operational parameters for all systems delivered.</p>
-                <p>System development may be executed on HTX internal platforms or in collaboration with qualified manufacturing partners under controlled engineering standards.</p>
-                <p>Systems are supplied as production-capable engineering platforms, independent of material supply programs.</p>
-                <p>Process validation and optimization are conducted through structured technical collaboration prior to scale-up.</p>
+                <p style="margin-bottom: 0.5rem; color: #444; line-height: 1.6;">
+                    HTX defines system architectures, process stability criteria, and operational parameters for all systems delivered.
+                    System development may be executed on HTX internal platforms or in collaboration with qualified manufacturing partners under controlled engineering standards.
+                </p>
+                <p style="font-weight: 700; color: #2D2D2D; margin-top: 1rem;">
+                    Systems are supplied as production-capable engineering platforms, independent of material supply programs.
+                </p>
+                <p style="margin-top: 1rem; color: #444; line-height: 1.6;">
+                    Process validation and optimization are conducted through structured technical collaboration prior to scale-up.
+                </p>
             </div>
         </div>
 
-        <div class="grid-header">
-            <div>
-                <h2 class="grid-title">Standard System Platforms</h2>
+        <div style="margin-bottom: 6rem;">
+            <div class="section-title-bar">
+                <h2>Standard System Platforms</h2>
+                <p>Choose from established system architectures designed for repeatable industrial operation.<br>
+                Custom configurations follow once target substrates, coating requirements, throughput constraints, and automation scope are confirmed.</p>
             </div>
-            <p class="grid-subtitle">Choose from established system architectures designed for repeatable industrial operation.</p>
-        </div>
-        
-        <p style="margin-bottom: 3rem; color: #666; max-width: 800px;">Custom configurations follow once target substrates, coating requirements, throughput constraints, and automation scope are confirmed.</p>
 
-        <div class="system-grid">
-            <a href="systems/vacuum-sputtering.html" class="system-card">
-                <img src="../assets/img/sys-process-parts.jpg" alt="Vacuum Sputtering Chamber">
-                <div class="card-body">
-                    <h3>Vacuum Sputtering Systems</h3>
-                    <p>High-efficiency continuous sputtering equipment designed for roll-to-roll textile and film processing. Optimized for metal target utilization.</p>
-                </div>
-            </a>
+            <div class="grid-3">
+                
+                <a href="systems/long-fiber.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-monofilament.jpg" alt="Monofilament Coating">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Monofilament Coating</h3>
+                        <p>Focus on precision fiber handling and controlled deposition behavior. Ensuring uniform coating thickness on continuous filaments.</p>
+                    </div>
+                </a>
 
-            <a href="systems/automation.html" class="system-card">
-                <img src="../assets/img/sys-automation-cabinet.jpg" alt="Automation Control">
-                <div class="card-body">
-                    <h3>Process Automation</h3>
-                    <p>Integrated PLC control systems ensuring precise tension control, vacuum stability, and real-time monitoring for industrial scale.</p>
-                </div>
-            </a>
+                <a href="systems/roll-to-roll.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-r2r.jpg" alt="Roll-to-Roll Systems">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Roll-to-Roll Systems (1.6m)</h3>
+                        <p>Wide-format transport stability designed for long-run operation. Optimized tension control for delicate substrates.</p>
+                    </div>
+                </a>
 
-            <a href="systems/roll-to-roll.html" class="system-card">
-                <img src="../assets/img/sys-monofilament.jpg" alt="R2R Processing">
-                <div class="card-body">
-                    <h3>Roll-to-Roll Integration</h3>
-                    <p>Advanced web handling mechanisms designed for delicate functional textiles and films, preventing damage while maintaining high throughput speeds.</p>
-                </div>
-            </a>
+                <a href="systems/tbc.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-tbc.jpg" alt="Thermal Barrier Coatings">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Thermal Barrier Coatings</h3>
+                        <p>Thick-film, multi-layered coating systems engineered for heat management and high-temperature industrial applications.</p>
+                    </div>
+                </a>
 
-            <a href="systems/plasma.html" class="system-card">
-                <img src="../assets/img/sys-automation.jpg" alt="Plasma Pre-treatment">
-                <div class="card-body">
-                    <h3>Plasma Pre-treatment</h3>
-                    <p>Inline plasma cleaning and surface activation units to enhance adhesion and coating durability on various substrates.</p>
-                </div>
-            </a>
+                <a href="systems/powder.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-powder.jpg" alt="Powder Coating Systems">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Powder Coating Systems</h3>
+                        <p>Process development and system integration for advanced powder-based technologies. Targeting emerging material applications.</p>
+                    </div>
+                </a>
 
-            <a href="systems/long-fiber.html" class="system-card">
-                <img src="../assets/img/materials-antibacterial-swatch-closeup-03.jpg" alt="Long Fiber Coating">
-                <div class="card-body">
-                    <h3>Long Fiber Coating</h3>
-                    <p>Specialized coating modules for continuous fiber and yarn processing, ensuring 360-degree uniform functional layer deposition.</p>
-                </div>
-            </a>
+                <a href="systems/automation.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-automation.jpg" alt="Automation Integration">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Automation Integration</h3>
+                        <p>Robotic handling and system-level integration. Designed for repeatable operation and reduced manual intervention.</p>
+                    </div>
+                </a>
 
-            <a href="systems/process.html" class="system-card">
-                <img src="../assets/img/htx-about-system-architecture-abstract.jpg" alt="Supply Chain Integration">
-                <div class="card-body">
-                    <h3>ODM & Supply Chain Integration</h3>
-                    <p>Leveraging Huntertex’s textile resources to provide end-to-end product development. From material sourcing to final functional coating, ensuring seamless mass production.</p>
-                </div>
-            </a>
+                <a href="systems/process.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                    <img src="../assets/img/sys-process.jpg" alt="ODM & Supply Chain Integration">
+                    <div class="card-content">
+                        <h3 style="color: var(--c-accent); text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">ODM & Supply Chain Integration</h3>
+                        <p>Engineering-driven ODM services with supply chain coordination for reliable production execution.</p>
+                    </div>
+                </a>
+
+            </div>
         </div>
 
     </div>
-
-    <footer>
-        <div class="container legal-footer">
-            <p class="legal-note">HTX is the brand and technology platform operated by Huntertex Corp.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
