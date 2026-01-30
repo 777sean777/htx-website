@@ -10,7 +10,7 @@
         /* Force images to show in full color */
         .card img, .content-image, .thumb img { filter: none !important; opacity: 1 !important; }
         
-        /* --- Page Specific Styles (Matching Systems Page) --- */
+        /* --- Page Specific Styles --- */
         .supply-model-box { 
             background-color: #F4F6F8; 
             border-left: 4px solid #2D2D2D; 
@@ -51,7 +51,7 @@
             max-width: 600px; 
         }
         
-        /* Feature Splits (Video & Text) */
+        /* Feature Splits */
         .feature-split { 
             display: grid; 
             grid-template-columns: 1.2fr 0.8fr; 
@@ -64,7 +64,7 @@
         .feature-video-container { 
             position: relative; 
             width: 100%; 
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             background-color: #000; 
             border-radius: 4px; 
             overflow: hidden; 
@@ -81,21 +81,13 @@
         .feature-content p { font-size: 1.05rem; line-height: 1.7; color: #444; margin-bottom: 1rem; }
         .feature-content ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
         .feature-content li { 
-            position: relative; 
-            padding-left: 1.2rem; 
-            margin-bottom: 0.5rem; 
-            color: #555; 
-            line-height: 1.6; 
+            position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; color: #555; line-height: 1.6; 
         }
         .feature-content li::before { 
-            content: "•"; 
-            color: #4A5568; 
-            position: absolute; 
-            left: 0; 
-            font-weight: bold; 
+            content: "•"; color: #4A5568; position: absolute; left: 0; font-weight: bold; 
         }
         
-        /* Ident Section (Grey Background) */
+        /* Ident Section */
         .ident-section { 
             background-color: #FAFAFA; 
             padding: 4rem 2rem; 
@@ -106,12 +98,7 @@
             box-sizing: border-box; 
         }
         .ident-container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 4rem; 
-            align-items: center; 
+            max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; 
         }
         
         /* Coming Soon Card Style */
@@ -126,7 +113,6 @@
         .card.coming-soon img { filter: grayscale(100%) brightness(0.8) !important; opacity: 1 !important; }
         .card.coming-soon h3, .card.coming-soon p { color: #888; }
         
-        /* Mobile Responsive */
         @media (max-width: 900px) { 
             .feature-split, .feature-split.reverse, .ident-container { grid-template-columns: 1fr; gap: 2rem; } 
             .section-intro { padding: 0 1rem; } 
@@ -212,13 +198,13 @@
                     </div>
                 </a>
 
-                <a href="materials/silver-bandage.html" class="card" style="text-decoration: none; color: inherit; display: block;">
+                <div class="card coming-soon">
                     <img src="../assets/img/materials-silver-bandage-functional-textile-04.jpg" alt="Silver Bandage Textile">
                     <div class="card-content">
-                        <h3 style="color: #4A5568; text-decoration: underline; text-decoration-color: transparent; transition: 0.3s;">Silver Bandage Textile</h3>
+                        <h3>Silver Bandage Textile <br><span style="font-size: 0.8rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;">(Coming Soon)</span></h3>
                         <p>Functional silver-based textile platform intended for dressing and bandage material development. Standardized supply format for downstream conversion.</p>
                     </div>
-                </a>
+                </div>
 
                 <div class="card coming-soon">
                     <img src="../assets/img/materials-transdermal-support-mask-sheet-05.jpg" alt="Transdermal Support Sheet Materials">
