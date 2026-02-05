@@ -6,134 +6,86 @@
     <title>HTX | 先進表面工程技術平台</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QX0LPZ2EEP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QX0LPZ2EEP');
-</script>
-    
-    <style>
-        /* --- Homepage Specific Styles --- */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; margin: 0; }
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX0LPZ2EEP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QX0LPZ2EEP');
+    </script>
 
-        /* Hero Section */
+    <style>
+        body { font-family: "Microsoft JhengHei", Helvetica, Arial, sans-serif; margin: 0; }
+
         .home-hero {
             position: relative;
-            width: 100%;
-            height: 85vh; 
-            /* 注意：子資料夾需用 ../ 回上一層 */
-            background-image: url('../assets/img/home-hero-new.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            height: 85vh;
+            background: url('../assets/img/home-hero-new.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             color: #fff;
         }
 
         .home-hero::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.4); z-index: 1;
+            content:'';
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,.4);
         }
 
         .hero-content {
-            position: relative; z-index: 2; max-width: 900px; padding: 2rem;
+            position:relative;
+            z-index:2;
+            text-align:center;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;
-        }
-
-        .hero-content p {
-            font-size: 1.4rem; font-weight: 300; margin-bottom: 4.5rem; opacity: 0.9;
-        }
-
-        /* --- Redesigned Navigation Frames (Flattened) --- */
-        .hero-actions { display: flex; gap: 2rem; justify-content: center; }
+        .hero-actions { display:flex; gap:2rem; justify-content:center; }
 
         .nav-frame {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            /* 扁平長方形設定 */
-            min-width: 240px;
-            padding: 1rem 3rem;
-            
-            border: 2px solid rgba(255, 255, 255, 0.7); 
-            color: #fff; text-decoration: none;
-            cursor: pointer; transition: all 0.3s ease;
+            min-width:240px;
+            padding:1rem 3rem;
+            border:2px solid rgba(255,255,255,.7);
+            color:#fff;
+            text-decoration:none;
         }
 
-        .nav-frame:hover {
-            border-color: rgba(255, 255, 255, 1);
-            background-color: rgba(255, 255, 255, 0.05);
-        }
+        .nav-frame:hover { background:rgba(255,255,255,.05); }
 
-        .nav-action-label {
-            font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-            opacity: 0.9; margin-bottom: 0.3rem;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-
-        .nav-subject-label {
-            font-size: 1.5rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #fff;
-            /* 中文微調：防止字體過大 */
-            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; 
-        }
-
-        @media (max-width: 768px) {
-            .home-hero { height: 70vh; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .hero-content p { font-size: 1.1rem; }
-            .hero-actions { flex-direction: column; gap: 1.5rem; width: 100%; max-width: 300px; margin: 0 auto; }
-            .nav-frame { width: 100%; box-sizing: border-box; }
+        @media(max-width:768px){
+            .hero-actions{flex-direction:column;}
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="HTX Logo" class="brand-logo">
-        </a>
-        
-        <nav>
-            <a href="about.html">關於我們</a>
-            
-            <span class="lang-switch">
-                <a href="../index.html">EN</a>
-                <a href="#" class="active">繁中</a>
-                <a href="../ja/index.html">JP</a>
-            </span>
-        </nav>
-    </header>
+<header>
+    <a href="../index.html"><img src="../assets/img/logo.png" alt="HTX Logo"></a>
+    <nav>
+        <a href="about.html">關於我們</a>
+        <span class="lang-switch">
+            <a href="../index.html">EN</a>
+            <a href="#" class="active">繁中</a>
+            <a href="../ja/index.html">JP</a>
+        </span>
+    </nav>
+</header>
 
-    <div class="home-hero">
-        <div class="hero-content">
-            <h1>先進表面工程技術</h1>
-            <p>系統整合與機能材料平台</p>
-            
-            <div class="hero-actions">
-                <a href="systems.html" class="nav-frame">
-                    <span class="nav-action-label">探索</span>
-                    <span class="nav-subject-label">系統設備</span>
-                </a>
-                <a href="materials.html" class="nav-frame">
-                    <span class="nav-action-label">檢視</span>
-                    <span class="nav-subject-label">機能材料</span>
-                </a>
-            </div>
+<div class="home-hero">
+    <div class="hero-content">
+        <h1>先進表面工程技術</h1>
+        <p>系統整合與機能材料平台</p>
+        <div class="hero-actions">
+            <a href="systems.html" class="nav-frame">系統設備</a>
+            <a href="materials.html" class="nav-frame">機能材料</a>
         </div>
     </div>
+</div>
 
-    <footer>
-        <div class="container" style="text-align: center; padding: 2rem 0; border-top: none; color: #666; font-size: 0.85rem;">
-            <p>HTX 是由漢特科技股份有限公司 (Huntertex Corp.) 營運的品牌與技術平台。</p>
-        </div>
-    </footer>
+<footer style="text-align:center; padding:2rem 0; font-size:.85rem;">
+    HTX 是由漢特科技股份有限公司（Huntertex Corp.）營運的品牌與技術平台
+</footer>
 
 </body>
 </html>
